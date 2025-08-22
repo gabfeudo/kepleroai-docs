@@ -1,0 +1,258 @@
+---
+title: "Chatbot AI - Funzionalità"
+description: "Assistenza continua 24/7 integrata in ogni canale di comunicazione"
+---
+
+## Chatbot AI
+
+Il **Chatbot AI** di Keplero offre ai tuoi clienti un'assistenza continua, disponibile 24 ore su 24 e 7 giorni su 7, perfettamente integrata in ogni canale di comunicazione: sito web, social, WhatsApp e Email.
+
+<Card
+  title="Configura Chatbot"
+  icon="settings"
+  href="/dashboard/addestramento/base-conoscenza"
+>
+  Inizia a configurare il tuo assistente AI personalizzato.
+</Card>
+
+## Caratteristiche Principali
+
+### Assistenza Omnicanale
+
+Il chatbot AI di Keplero si integra perfettamente in tutti i tuoi canali di comunicazione:
+
+<Columns cols={2}>
+  <Card title="Sito Web" icon="globe">
+    Widget chat personalizzabile per il tuo sito web
+  </Card>
+  <Card title="WhatsApp" icon="message-square">
+    Integrazione nativa con WhatsApp Business API
+  </Card>
+  <Card title="Social Media" icon="share-2">
+    Supporto per Instagram DM, Facebook Messenger
+  </Card>
+  <Card title="Email" icon="mail">
+    Gestione automatica delle richieste via email
+  </Card>
+</Columns>
+
+### Intelligenza Artificiale Avanzata
+
+<AccordionGroup>
+<Accordion title="Comprensione del Contesto">
+  Il chatbot mantiene il contesto della conversazione, ricordando informazioni precedenti e fornendo risposte coerenti e pertinenti.
+</Accordion>
+
+<Accordion title="Apprendimento Continuo">
+  L'AI migliora costantemente le sue risposte basandosi sui feedback dei clienti e sulle interazioni precedenti.
+</Accordion>
+
+<Accordion title="Personalizzazione">
+  Adatta il tono di voce e lo stile di comunicazione al tuo brand e al target di riferimento.
+</Accordion>
+
+<Accordion title="Multilingua">
+  Supporta conversazioni in italiano e altre lingue per clienti internazionali.
+</Accordion>
+</AccordionGroup>
+
+## Integrazione Sito Web
+
+### Widget Chat Personalizzabile
+
+<Steps>
+<Step title="Genera Codice">
+  Nella sezione **Impostazioni > Integrazioni > Sito Web**:
+  
+  - Genera il codice del widget
+  - Personalizza colori e stile
+  - Configura posizione e comportamento
+  
+  <Tip>
+  Il widget si adatta automaticamente al design del tuo sito web.
+  </Tip>
+</Step>
+
+<Step title="Inserisci nel Sito">
+  Aggiungi il codice JavaScript al tuo sito:
+  
+  ```html
+  <!-- Inserisci questo codice prima della chiusura del tag </body> -->
+  <script src="https://widget.keplero.ai/chat.js"></script>
+  <script>
+    KepleroChat.init({
+      apiKey: 'YOUR_API_KEY',
+      theme: 'light', // o 'dark'
+      position: 'bottom-right' // bottom-left, top-right, top-left
+    });
+  </script>
+  ```
+</Step>
+
+<Step title="Testa l'Integrazione">
+  - Verifica che il widget appaia correttamente
+  - Testa una conversazione di prova
+  - Controlla la responsività su dispositivi mobili
+</Step>
+</Steps>
+
+### Personalizzazione Avanzata
+
+<CardGroup cols={2}>
+<Card title="Tema e Colori" icon="palette">
+  Personalizza colori, font e stile del widget
+</Card>
+
+<Card title="Messaggi di Benvenuto" icon="message-circle">
+  Configura il messaggio iniziale e i saluti
+</Card>
+
+<Card title="Orari di Disponibilità" icon="clock">
+  Imposta quando il chatbot è attivo
+</Card>
+
+<Card title="Escalation Automatica" icon="phone">
+  Configura il passaggio al supporto umano
+</Card>
+</CardGroup>
+
+## Integrazione WhatsApp
+
+### Configurazione WhatsApp Business
+
+<Steps>
+<Step title="Verifica Account">
+  - Completa la verifica del tuo account WhatsApp Business
+  - Ottieni l'approvazione per l'API Business
+  - Configura il numero di telefono aziendale
+</Step>
+
+<Step title="Connetti API">
+  Nella dashboard Keplero:
+  
+  - Inserisci le credenziali WhatsApp Business API
+  - Configura il webhook per ricevere messaggi
+  - Testa la connessione
+  
+  <Warning>
+  Assicurati di rispettare le policy di WhatsApp per evitare sospensioni.
+  </Warning>
+</Step>
+
+<Step title="Personalizza Esperienza">
+  - Configura messaggi di benvenuto
+  - Imposta risposte automatiche
+  - Definisci orari di disponibilità
+</Step>
+</Steps>
+
+### Funzionalità WhatsApp
+
+<Columns cols={2}>
+  <Card title="Messaggi Testuali" icon="type">
+    Risposte automatiche a messaggi di testo
+  </Card>
+  <Card title="Media e File" icon="image">
+    Gestione di immagini, documenti e audio
+  </Card>
+  <Card title="Pulsanti Interattivi" icon="mouse-pointer">
+    Menu e pulsanti per navigazione rapida
+  </Card>
+  <Card title="Broadcast" icon="megaphone">
+    Invio di messaggi di massa autorizzati
+  </Card>
+</Columns>
+
+## Gestione Conversazioni
+
+### Dashboard in Tempo Reale
+
+Monitora tutte le conversazioni dalla dashboard:
+
+- **Conversazioni attive**: Visualizza chat in corso
+- **Cronologia**: Accedi a conversazioni passate
+- **Metriche**: Analizza performance e soddisfazione
+- **Interventi umani**: Gestisci escalation manuali
+
+### Escalation Intelligente
+
+Il chatbot passa automaticamente al supporto umano quando:
+
+- Non riesce a rispondere in modo soddisfacente
+- La richiesta è troppo complessa
+- Il cliente richiede esplicitamente un operatore
+- Si raggiungono limiti di tempo o tentativi
+
+<Tip>
+Configura le regole di escalation per ottimizzare l'esperienza del cliente e ridurre i costi di supporto.
+</Tip>
+
+## Analytics e Performance
+
+### Metriche Chiave
+
+Monitora le performance del tuo chatbot:
+
+<CardGroup cols={2}>
+<Card title="Tempo di Risposta" icon="zap">
+  Velocità media delle risposte dell'AI
+</Card>
+
+<Card title="Tasso di Risoluzione" icon="check-circle">
+  Percentuale di conversazioni risolte senza intervento umano
+</Card>
+
+<Card title="Soddisfazione Cliente" icon="star">
+  Rating medio delle conversazioni
+</Card>
+
+<Card title="Volume Conversazioni" icon="trending-up">
+  Numero di conversazioni gestite per periodo
+</Card>
+</CardGroup>
+
+### Insights e Ottimizzazioni
+
+Analizza i dati per migliorare le performance:
+
+- **Domande frequenti**: Identifica le richieste più comuni
+- **Punti di fallimento**: Scopri dove l'AI ha difficoltà
+- **Orari di picco**: Pianifica il supporto umano
+- **Canali preferiti**: Focalizza l'attenzione sui canali più utilizzati
+
+## Sicurezza e Privacy
+
+### Protezione Dati
+
+Keplero AI garantisce la massima sicurezza:
+
+- **Crittografia end-to-end**: Tutte le conversazioni sono crittografate
+- **GDPR compliance**: Rispetto delle normative sulla privacy
+- **Backup automatici**: Protezione dei dati aziendali
+- **Accesso controllato**: Gestione permessi e ruoli
+
+### Controllo Accessi
+
+<Info>
+Configura chi può accedere alla dashboard e gestire le conversazioni, con diversi livelli di autorizzazione.
+</Info>
+
+## Prossimi Passi
+
+<CardGroup cols={2}>
+<Card title="Configura Base Conoscenza" icon="book" href="/dashboard/addestramento/base-conoscenza">
+  Crea la base di conoscenza per il tuo chatbot
+</Card>
+
+<Card title="Testa Chatbot" icon="test-tube" href="/dashboard/prova-chatbot/test">
+  Prova il chatbot prima di attivarlo
+</Card>
+
+<Card title="Analizza Performance" icon="bar-chart" href="/dashboard/analisi/metriche">
+  Monitora le performance del chatbot
+</Card>
+
+<Card title="Gestione Conversazioni" icon="message-circle" href="/dashboard/conversazioni/overview">
+  Gestisci le conversazioni in tempo reale
+</Card>
+</CardGroup>

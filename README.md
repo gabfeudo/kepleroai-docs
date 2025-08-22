@@ -1,44 +1,75 @@
-# Mintlify Starter Kit
+# Documentazione Keplero AI
 
-Use the starter kit to get your docs deployed and ready to customize.
+Documentazione tecnica completa per la piattaforma N.1 in Italia per automatizzare l'assistenza clienti con l'intelligenza artificiale.
 
-Click the green **Use this template** button at the top of this repo to copy the Mintlify starter kit. The starter kit contains examples with
+## Informazioni su Keplero AI
 
-- Guide pages
-- Navigation
-- Customizations
-- API reference pages
-- Use of popular components
+Keplero AI riduce all'osso la tua assistenza clienti, automatizzando 8 conversazioni su 10 in tutti i canali. La piattaforma offre:
 
-**[Follow the full quickstart guide](https://starter.mintlify.com/quickstart)**
+- **Chatbot AI**: Assistenza continua 24/7 integrata in ogni canale
+- **Call Center AI**: Voice AI avanzata per conversazioni vocali
+- **WhatsApp Marketing**: Automatizzazione delle comunicazioni WhatsApp
+- **Analytics Avanzate**: Dashboard completa per monitorare le performance
 
-## Development
+## Struttura della Documentazione
 
-Install the [Mintlify CLI](https://www.npmjs.com/package/mint) to preview your documentation changes locally. To install, use the following command:
+La documentazione è organizzata per riflettere la struttura della dashboard Keplero AI:
 
-```
+### Dashboard
+- **Conversazioni**: Gestione e monitoraggio delle conversazioni in tempo reale
+- **Addestramento**: Configurazione della base di conoscenza e training dell'AI
+- **Automazioni**: Creazione di flussi automatizzati per conversazioni complesse
+- **Contatti**: Gestione del database contatti e segmentazione
+- **Campagne**: Creazione e monitoraggio di campagne di marketing
+- **Prova Chatbot**: Testing e simulazione delle conversazioni
+- **Analisi**: Metriche e report per ottimizzare le performance
+- **Impostazioni**: Configurazione generale e integrazioni
+- **Supporto**: FAQ, contatti e gestione notifiche
+
+### Guida Rapida
+- Guide per iniziare con Keplero AI
+- Funzionalità principali della piattaforma
+
+### API Reference
+- Documentazione completa delle API
+- Esempi di integrazione
+
+## Sviluppo Locale
+
+Installa la [Mintlify CLI](https://www.npmjs.com/package/mint) per visualizzare le modifiche alla documentazione in locale. Per installare, usa il seguente comando:
+
+```bash
 npm i -g mint
 ```
 
-Run the following command at the root of your documentation, where your `docs.json` is located:
+Esegui il seguente comando nella root della documentazione, dove si trova il file `docs.json`:
 
-```
+```bash
 mint dev
 ```
 
-View your local preview at `http://localhost:3000`.
+Visualizza l'anteprima locale su `http://localhost:3000`.
 
-## Publishing changes
+## Pubblicazione delle Modifiche
 
-Install our GitHub app from your [dashboard](https://dashboard.mintlify.com/settings/organization/github-app) to propagate changes from your repo to your deployment. Changes are deployed to production automatically after pushing to the default branch.
+Installa la nostra app GitHub dal [dashboard](https://dashboard.mintlify.com/settings/organization/github-app) per propagare le modifiche dal repository al deployment. Le modifiche vengono distribuite in produzione automaticamente dopo il push al branch predefinito.
 
-## Need help?
+## Hai Bisogno di Aiuto?
 
-### Troubleshooting
+### Risoluzione Problemi
 
-- If your dev environment isn't running: Run `mint update` to ensure you have the most recent version of the CLI.
-- If a page loads as a 404: Make sure you are running in a folder with a valid `docs.json`.
+- Se l'ambiente di sviluppo non funziona: Esegui `mint update` per assicurarti di avere la versione più recente della CLI.
+- Se una pagina si carica come 404: Assicurati di eseguire in una cartella con un `docs.json` valido.
 
-### Resources
-- [Mintlify documentation](https://mintlify.com/docs)
-- [Mintlify community](https://mintlify.com/community)
+### Risorse
+
+- [Documentazione Mintlify](https://mintlify.com/docs)
+- [Community Mintlify](https://mintlify.com/community)
+- [Sito Web Keplero AI](https://keplero.ai)
+- [Dashboard Keplero AI](https://app.keplero.ai)
+
+## Contatti
+
+Per supporto tecnico o domande sulla documentazione:
+- Email: support@keplero.ai
+- Sito web: [keplero.ai](https://keplero.ai)

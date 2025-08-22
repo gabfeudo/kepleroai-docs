@@ -1,0 +1,75 @@
+---
+title: "Installa il widget"
+description: "Come installare il widget nel tuo sito"
+---
+
+# Lo script da inserire sul tuo sito
+
+Copia il **codice** che trovi nella sezione evidenziata in blu nell'immagine seguente (usa il tasto evidenziato in verde).
+
+<Frame>
+  <img
+    src="/images/dashboard/test/test-8.png"
+    alt="Installa il widget"
+    noZoom
+    height="300"
+    className="rounded-lg"
+  />
+</Frame>
+
+## Installazione su HTML generico
+
+Se hai accesso al codice HTML della tua pagina web puoi installare il chatbot di Keplero seguendo questi passaggi:
+
+1. Copia il codice del widget come descritto all'inzio di questa pagina
+2. Incolla il codice precedentemente copiato prima della chiusura del tag `<body>`
+
+## Installazione su Shopify
+
+Per installare il tuo chatbot widget su Shopify segui questi passagi:
+
+1. Premi su "**Themes**" nel pannello sulla sinistra
+2. Premi sui **tre puntini** del tema corrente e premi su "**Edit code**"
+3. Copia il codice del widget nella sezione **Panoramica** nella **Console di Keplero**
+4. Premi sul file **theme.liquid**
+5. Scrolla fino alla fine del file e incolla il codice copiato nel punto 3 sopra il tag `</body>`.
+
+## Installazione su WordPress
+
+1. Vai nella sezione <strong>Plugin</strong> e premi su <strong>Add new</strong>.
+2. Cerca il plugin <strong>Simple Custom CSS & JS</strong> e installalo.
+   <Frame>
+     <img
+       src="/images/dashboard/test/installa/wp.jpeg"
+       alt="Installazione plugin Simple Custom CSS & JS su WordPress"
+       noZoom
+       height="300"
+       className="rounded-lg"
+     />
+   </Frame>
+3. Cerca il plugin nella sidebar di WordPress.
+4. Premi <strong>Add custom HTML</strong>.
+5. Copia il codice del widget come descritto all'inizio di questa pagina.
+6. Dai un nome all'elemento HTML che stai per inserire (ad esempio, "Keplero widget").
+7. Incolla il codice del widget nell'elemento HTML.
+8. Premi su <strong>Footer</strong> nelle opzioni situate nel pannello a destra.
+9. Premi su <strong>Publish</strong>.
+
+## Installazione su Prestashop
+
+1. Scaricare il plug HTMLbox da qui: http://mypresta.eu/modules/front-office-features/html-box.html
+2. Su Prestashop clicca su **Aggiungi nuovo modulo**
+3. Clicca su **Scegli file** e seleziona il file scaricato prima
+4. Clicca su **Carica modulo**
+5. Vai su **Moduli > Moduli** e cerca HTMLbox
+6. Clicca su **Installa**
+7. Poi clicca su **Configura**
+8. Incolla lo script del widget come descritto all'inzio di questa pagina e salva
+
+## Attributi avanzati
+
+Aggiungendo le seguenti proprietà al tag HTML del widget è possibile modificarne l'aspetto o il comportamento.
+
+- **fullSize="true"**: Il chatbot non apparirà come pulsate nella parte in basso a destra dello schermo, ma come un componente che riempirà interamente lo spazio del contentitore
+- **identifiedOnly="true"**: Il chatbot mostrerà un form di acquisizione lead che dovrà essere compilato dall'utente prima di iniziare a chattare
+- **bottom="10"**: Aggiungendo l'attributo `bottom` possiamo alzare o abbassare l'icona tonda del chat widget

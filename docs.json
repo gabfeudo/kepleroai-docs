@@ -1,68 +1,155 @@
 {
   "$schema": "https://mintlify.com/docs.json",
-  "theme": "mint",
-  "name": "Mint Starter Kit",
+  "theme": "almond",
+  "name": "Keplero AI",
   "colors": {
-    "primary": "#16A34A",
-    "light": "#07C983",
-    "dark": "#15803D"
+    "primary": "#3A44D5",
+    "light": "#EBF2F9",
+    "dark": "#7881D6"
   },
   "favicon": "/favicon.svg",
   "navigation": {
     "tabs": [
       {
-        "tab": "Guides",
+        "tab": "Documentazione",
+        "icon": "book",
         "groups": [
           {
-            "group": "Getting started",
+            "group": "Introduzione",
             "pages": [
-              "index",
-              "quickstart",
-              "development"
+              "documentazione/quickstart",
+              "documentazione/documentazione"
             ]
           },
           {
-            "group": "Customization",
+            "group": "Novità",
             "pages": [
-              "essentials/settings",
-              "essentials/navigation"
-            ]
-          },
-          {
-            "group": "Writing content",
-            "pages": [
-              "essentials/markdown",
-              "essentials/code",
-              "essentials/images",
-              "essentials/reusable-snippets"
-            ]
-          },
-          {
-            "group": "AI tools",
-            "pages": [
-              "ai-tools/cursor",
-              "ai-tools/claude-code",
-              "ai-tools/windsurf"
+              "documentazione/news/introduzione"
             ]
           }
         ]
       },
       {
-        "tab": "API reference",
+        "tab": "Dashboard",
+        "icon": "sidebar",
         "groups": [
           {
-            "group": "API documentation",
+            "group": "Dashboard",
             "pages": [
-              "api-reference/introduction"
+              "dashboard/introduzione/introduzione",
+              {
+                "group": "Conversazioni",
+                "icon": "messages",
+                "pages": [
+                  "dashboard/conversazioni/overview",
+                  "dashboard/conversazioni/filtri",
+                  "dashboard/conversazioni/cartelle",
+                  "dashboard/conversazioni/etichette",
+                  "dashboard/conversazioni/controllo-manuale",
+                  "dashboard/conversazioni/salva-contatto",
+                  "dashboard/conversazioni/elimina-chat", 
+                  "dashboard/conversazioni/riassumi",
+                  "dashboard/conversazioni/traduci",
+                  "dashboard/conversazioni/promemoria",
+                  "dashboard/conversazioni/nuovo-messaggio"
+                ]
+              },
+              {
+                "group": "Addestramento",
+                "icon": "head-side-brain",
+                "pages": [
+                  "dashboard/addestramento/base-conoscenza",
+                  "dashboard/addestramento/prompt",
+                  "dashboard/addestramento/integrazioni"
+                ]
+              },
+              {
+                "group": "Automazioni",
+                "icon": "bolt",
+                "pages": [
+                  "dashboard/automazioni/automazioni"
+                ]
+              },
+              {
+                "group": "Contatti",
+                "icon": "id-card",
+                "pages": [
+                  "dashboard/contatti/sezione-contatti",
+                  "dashboard/contatti/liste",
+                  "dashboard/contatti/contatti",
+                  "dashboard/contatti/kanban"
+                ]
+              },
+              {
+                "group": "Campagne",
+                "icon": "megaphone",
+                "pages": [
+                  "dashboard/campagne/panoramica",
+                  "dashboard/campagne/creare-campagna"
+                ]
+              },
+              {
+                "group": "Prova Chatbot",
+                "icon": "robot",
+                "pages": [
+                  "dashboard/prova-chatbot/test",
+                  "dashboard/prova-chatbot/installa",
+                  "dashboard/prova-chatbot/condividi"
+                ]
+              },
+              {
+                "group": "Analisi",
+                "icon": "chart-simple",
+                "pages": [
+                  "dashboard/analisi/metriche"
+                ]
+              },
+              {
+                "group": "Impostazioni",
+                "icon": "gear",
+                "pages": [
+                  "dashboard/impostazioni/chatbot",
+                  "dashboard/impostazioni/conversazioni",
+                  "dashboard/impostazioni/contatti",
+                  "dashboard/impostazioni/team",
+                  "dashboard/impostazioni/analisi",
+                  "dashboard/impostazioni/lingua-e-privacy",
+                  "dashboard/impostazioni/canali"
+                ]
+              }
             ]
-          },
+          }
+        ]
+      },
+      {
+        "tab": "Integrazioni",
+        "icon": "bolt",
+        "groups": [
           {
-            "group": "Endpoint examples",
+            "group": "Integrazioni",
             "pages": [
-              "api-reference/endpoint/get",
-              "api-reference/endpoint/create",
-              "api-reference/endpoint/delete",
-              "api-reference/endpoint/webhook"
+              "integrazioni/intro",
+              {
+                "group": "WhatsApp",
+                "icon": "messages",
+                "pages": [
+                  "integrazioni/whatsapp",
+                  "integrazioni/templates-whatsapp"
+                ]
+              },
+              "integrazioni/auto-labeling"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Automazioni",
+        "icon": "robot",
+        "groups": [
+          {
+            "group": "Automazioni",
+            "pages": [
+              "automazioni/automazioni"
             ]
           }
         ]
@@ -71,57 +158,59 @@
     "global": {
       "anchors": [
         {
-          "anchor": "Documentation",
-          "href": "https://mintlify.com/docs",
-          "icon": "book-open-cover"
+          "anchor": "Dashboard",
+          "href": "https://console.keplero.ai/",
+          "icon": "sidebar"
         },
         {
-          "anchor": "Community",
-          "href": "https://mintlify.com/community",
-          "icon": "slack"
+          "anchor": "Sito Web",
+          "href": "https://keplero.ai",
+          "icon": "browser"
         },
         {
-          "anchor": "Blog",
-          "href": "https://mintlify.com/blog",
-          "icon": "newspaper"
+          "anchor": "Supporto",
+          "href": "mailto:support@keplero.ai",
+          "icon": "headset"
         }
       ]
     }
   },
   "logo": {
-    "light": "/logo/light.svg",
-    "dark": "/logo/dark.svg"
+    "light": "/logo/black.png",
+    "dark": "/logo/white.png"
   },
   "navbar": {
     "links": [
       {
-        "label": "Support",
-        "href": "mailto:hi@mintlify.com"
+        "label": "Supporto",
+        "href": "mailto:support@keplero.ai"
       }
     ],
     "primary": {
       "type": "button",
       "label": "Dashboard",
-      "href": "https://dashboard.mintlify.com"
+      "href": "https://app.keplero.ai"
     }
   },
   "contextual": {
     "options": [
-     "copy",
-     "view",
-     "chatgpt",
-     "claude",
-     "perplexity",
-     "mcp",
-     "cursor",
-     "vscode"
-   ]
+      "copy",
+      "view",
+      "chatgpt",
+      "claude",
+      "perplexity",
+      "mcp",
+      "cursor",
+      "vscode"
+    ]
   },
   "footer": {
     "socials": {
-      "x": "https://x.com/mintlify",
-      "github": "https://github.com/mintlify",
-      "linkedin": "https://linkedin.com/company/mintlify"
+      "linkedin": "https://it.linkedin.com/company/keplero-ai",
+      "instagram": "https://www.instagram.com/keplero.ai/"
     }
+  },
+  "styling": {
+    "eyebrows": "breadcrumbs"
   }
 }
