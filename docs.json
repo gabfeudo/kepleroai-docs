@@ -1,6 +1,6 @@
 {
   "$schema": "https://mintlify.com/docs.json",
-  "theme": "almond",
+  "theme": "mint",
   "name": "Keplero AI",
   "colors": {
     "primary": "#3A44D5",
@@ -11,7 +11,7 @@
   "navigation": {
     "tabs": [
       {
-        "tab": "Documentazione",
+        "tab": "Guida",
         "icon": "book",
         "groups": [
           {
@@ -131,13 +131,117 @@
               "integrazioni/intro",
               {
                 "group": "WhatsApp",
-                "icon": "messages",
+                "icon": "whatsapp",
                 "pages": [
-                  "integrazioni/whatsapp",
-                  "integrazioni/templates-whatsapp"
+                  "integrazioni/whatsapp/whatsapp",
+                  "integrazioni/whatsapp/templates-whatsapp"
                 ]
               },
-              "integrazioni/auto-labeling"
+              {
+                "group": "Google",
+                "icon": "google",
+                "pages": [
+                  "integrazioni/google/google-sheet",
+                  "integrazioni/google/google-calendar"
+                ]
+              },
+              {
+                "group": "Email",
+                "icon": "envelope",
+                "pages": [
+                  "integrazioni/invio-email"
+                ]
+              }, 
+              {
+                "group": "Etichette",
+                "icon": "tag",
+                "pages": [
+                  "integrazioni/auto-labeling"
+                ]
+              },
+              {
+                "group": "Ecommerce",
+                "icon": "cart-shopping",
+                "pages": [
+                  {
+                    "group": "Shopify",
+                    "icon": "shopify",
+                    "pages": [
+                      "integrazioni/ecommerce/shopify"
+                    ]
+                  },
+                  {
+                    "group": "WooCommerce",
+                    "icon": "wordpress",
+                    "pages": [
+                      "integrazioni/ecommerce/woocommerce"
+                    ]
+                  },
+                  {
+                    "group": "Magento",
+                    "icon": "magento",
+                    "pages": [
+                      "integrazioni/ecommerce/magento"
+                    ]
+                  },
+                  {
+                    "group": "Qapla",
+                    "icon": "q",
+                    "pages": [
+                      "integrazioni/ecommerce/qapla"
+                    ]
+                  },
+                  {
+                    "group": "PrestaShop",
+                    "icon": "p",
+                    "pages": [
+                      "integrazioni/ecommerce/prestashop"
+                    ]
+                  }
+                ]
+              },
+              {
+                "group": "Hotel",
+                "icon": "hotel",
+                "pages": [
+                  {
+                    "group": "Booking Expert",
+                    "pages": [
+                      "integrazioni/hotel/booking-expert"
+                    ]
+                  },
+                  {
+                    "group": "Blastness",
+                    "pages": [
+                      "integrazioni/hotel/blastness"
+                    ]
+                  },
+                  {
+                    "group": "Cloud Village",
+                    "pages": [
+                      "integrazioni/hotel/cloud-village"
+                    ]
+                  },
+                  {
+                    "group": "Simple Booking",
+                    "pages": [
+                      "integrazioni/hotel/simple-booking"
+                    ]
+                  },
+                  {
+                    "group": "Slope",
+                    "pages": [
+                      "integrazioni/hotel/slope"
+                    ]
+                  },
+                  {
+                    "group": "Vertical Booking",
+                    "pages": [
+                      "integrazioni/hotel/vertical-booking"
+                    ]
+                  }
+                ]
+              }
             ]
           }
         ]
@@ -158,17 +262,12 @@
     "global": {
       "anchors": [
         {
-          "anchor": "Dashboard",
+          "anchor": "Apri Keplero AI",
           "href": "https://console.keplero.ai/",
           "icon": "sidebar"
         },
         {
-          "anchor": "Sito Web",
-          "href": "https://keplero.ai",
-          "icon": "browser"
-        },
-        {
-          "anchor": "Supporto",
+          "anchor": "Richiedi supporto",
           "href": "mailto:support@keplero.ai",
           "icon": "headset"
         }
@@ -188,7 +287,7 @@
     ],
     "primary": {
       "type": "button",
-      "label": "Dashboard",
+      "label": "Apri Keplero AI",
       "href": "https://app.keplero.ai"
     }
   },

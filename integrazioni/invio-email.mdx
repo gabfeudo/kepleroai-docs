@@ -1,0 +1,87 @@
+---
+title: "Mail automatiche"
+description: "Fai in modo che Keplero AI invii automaticamente email"
+---
+Con questa integrazione potrai far sì che Keplero AI ricontatti i tuoi lead su WhatsApp in base a specifici trigger.
+
+<Steps>
+    <Step title="">
+        1. Accedi alla sezione Addestramento nella dashboard di Keplero AI
+        2. Clicca su **Integrazioni**
+        3. Clicca su **+ Nuova integrazione**
+        4. Seleziona **Send Email**
+
+
+        <Frame>
+            <img
+                src="/images/integrazioni/send-email/email-1.png"
+                alt="Invio email"
+                noZoom
+                height="300"
+                className="rounded-lg"
+            />
+        </Frame>
+    </Step>
+    <Step title="Inserisci il nome dell'azione">
+        Nella prima casella di input (**Nome dell'azione**), usa un nome descrittivo per l'azione, ad esempio `richiesta_preventivo`
+    </Step>
+    <Step title="Spiega a Keplero quando utilizzare questa azione">
+        Nella seconda casella di input (**Quando attivare questa azione**), spiega a Keplero quando utilizzare questa azione. 
+        <Tip>Puoi scrivere la condizione anche in Italiano, ad esempio: 'Usa questa azione quando un utente richiede un preventivo'.</Tip>
+    </Step>
+    <Step title="Specifica eventuali dati che Keplero deve raccogliere">
+        Cliccando su **+ Aggiungi dati in input**, puoi aggiungere campi che Keplero deve raccogliere dall'utente prima di inviare la mail.
+        <Frame>
+            <img
+                src="/images/integrazioni/send-email/email-2.png"
+                alt="Invio email"
+                noZoom
+                height="300"
+                className="rounded-lg"
+            />
+        </Frame>
+        <Tip>Scrivi il **nome** del campo, specifica il **tipo** (ad esempio **testo**, **numero**, **booleano**, **Data**), e la **descrizione** (spiega quindi a Keplero cosa è quel dato). Indica poi se è un dato necessario (quindi flag su **Richiesto**) o se è una lista di dati e non un dato solo (quindi flag su **Array**).</Tip>
+    </Step>
+    <Step title="Inserisci il destinatario dell'email">
+        Nella casella di input (**A**), inserisci l'indirizzo email del destinatario.
+        <Tip>Inserisci eventuali mail da mettere in copia (**CC**).</Tip>
+        <Frame>
+            <img
+                src="/images/integrazioni/send-email/email-3.png"
+                alt="Invio email"
+                noZoom
+                height="300"
+                className="rounded-lg"
+            />
+        </Frame>
+    </Step>
+    <Step title="Specifica l'oggetto dell'email">
+        Nella casella di input (**Oggetto**), inserisci l'oggetto dell'email.
+    </Step>
+    <Step title="Scrivi il contenuto della mail">
+        Nella casella di input (**Body**), scrivi il contenuto della mail.
+        <Tip>Puoi usare i dati raccolti dall'utente per personalizzare la mail come nell'immagine seguente</Tip>
+           <Frame>
+            <img
+                src="/images/integrazioni/send-email/email-4.png"
+                alt="Invio email"
+                noZoom
+                height="300"
+                className="rounded-lg"
+            />
+        </Frame>
+    </Step>
+    <Step title="Salva l'azione">
+       Clicca su **Salva** per salvare l'automazione.
+       Nella schermata delle Integrazioni, accertati di attivare l'integrazione appena creata.
+       <Frame>
+            <img
+                src="/images/integrazioni/send-email/email-5.png"
+                alt="Invio email"
+                noZoom
+                height="300"
+                className="rounded-lg"
+            />
+        </Frame>
+    </Step>
+</Steps>

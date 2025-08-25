@@ -1,0 +1,98 @@
+---
+title: "Templates WhatsApp"
+description: "Crea e gestisci i Templates e personalizza il tuo profilo WhatsApp"
+---
+Dopo aver integrato Whatsapp, in **Impostazioni** > **Canali** > **Whatsapp**, potrai creare e gestire i Templates - oltre a personalizzare il tuo profilo.
+
+<Frame>
+  <img
+    src="/images/integrazioni/whatsapp/wa-1.png"
+    alt="Canali"
+    noZoom
+    height="300"
+    className="rounded-lg"
+  />
+</Frame>
+
+## Creare un template WhatsApp
+
+<Steps title="Crea un template" >
+    <Step title="Clicca su + Nuovo modello">
+        Per creare un template, clicca su **+ Nuovo modello**.
+    </Step>
+    <Step title="Inserisci il nome del template">
+        Inserisci il nome del template.
+    </Step>
+    <Step title="Imposta la categoria del template">
+        Imposta la categoria del template tra: 
+        - **Marketing**: per inviare messaggi di marketing
+        - **Utility**: per inviare messaggi di servizio
+        
+        <Check>Imposta la categoria in base al tipo di messaggio che vuoi inviare. Ad esempio, se vuoi inviare un messaggio promozionale, scegli **Marketing**. Se invece vuoi inviare un messaggio non commerciale, scegli **Utility**.</Check>
+        <Note>Sarà comunque **Meta** a decidere se il tuo template è Marketing o Utility</Note>
+    </Step>
+    <Step title="Seleziona la lingua del template">
+        Seleziona la lingua del template in base al testo che scriverai.
+    </Step>
+    <Step title="Inserisci una eventuale intestazione">
+        Molto spesso non necessaria, ma puoi inserire una intestazione per il tuo template.
+    </Step>
+    <Step title="Inserisci il testo del template">
+        Inserisci il testo del template. 
+        
+        Valuta l'inserimento di eventuali variabili cliccando su **+ Aggiungi variabile**. 
+        
+        Per aggiungere una variabile nel testo, dovrai specificare un esempio reale di quella variabile, per far capire a Meta di cosa si tratta. Sposta poi le graffe nel testo per posizionare la variabile e definisci l'intero corpo del modello come mostrato nell'immagine seguente.
+        <Frame caption="In questo caso, sfrutteremo la variabile {{1}} per inserire il nome del cliente. Per far validare correttamente il modello a Meta, abbiamo inserito un nome reale d'esempio, come Gabriele.">
+            <img
+                src="/images/integrazioni/whatsapp/wa-3.png"
+                alt="Canali"
+                noZoom
+                height="300"
+                className="rounded-lg"
+            />
+        </Frame>
+    </Step>
+    <Step title="Inserisci un eventuale Piè di pagina">
+        Anche questo spesso non necessario, ma puoi inserire un piè di pagina per il tuo template (*ad esempio il dominio del tuo sito web*).
+    </Step>
+    <Step title="Inserisci eventuali pulsanti">
+        Puoi inserire dei pulsanti cliccabili in WhatsApp: 
+        - `QUICK_REPLY`: per rispondere con un messaggio predefinito
+        - `PHONE_NUMBER`: per chiamare il tuo numero di telefono
+        - `URL`: per aprire un link esterno
+        - `COPY_CODE`: per copiare un codice
+    </Step>
+    <Step title="Salva il template">
+        Clicca su **Invia** per salvare il template. In questo modo, Meta valuterà il modello e lo abiliterà se conforme.
+
+        Vedrai apparire il template nella tabella dei modelli, dove potrai vedere lo stato di validazione.
+        <Frame caption="Il template è ancora in attesa di validazione. Quando sarà validato, potrai inviarlo ai tuoi clienti.">
+            <img
+                src="/images/integrazioni/whatsapp/wa-5.png"
+                alt="Canali"
+                noZoom
+                height="300"
+            />
+        </Frame>
+        <Check>
+            Quando il template è validato, lo stato passerà da **PENDENTE** a **APPROVATO**. Dopo qualche minuto, fai un refresh dell'interfaccia per vedere se Meta ha validato il modello.
+        </Check>
+        <Note>Il tempo di validazione può variare a seconda del tipo di modello. In genere, il processo richiede qualche minuto - ma può arrivare a qualche giorno.</Note>
+    </Step>
+</Steps>
+
+
+## Personalizza il tuo profilo WhatsApp
+
+Per personalizzare il tuo profilo WhatsApp, clicca su **Impostazioni del profilo**. 
+
+<Frame caption="Queste informazioni verranno mostrate al tuo cliente quando cliccherà sul tuo profilo in WhatsApp">
+  <img
+    src="/images/integrazioni/whatsapp/wa-2.png"
+    alt="Canali"
+    noZoom
+    height="300"
+    className="rounded-lg"
+  />
+</Frame>
