@@ -98,6 +98,13 @@
                   "dashboard/impostazioni/lingua-e-privacy",
                   "dashboard/impostazioni/canali"
                 ]
+              },
+              {
+                "group": "Profilo",
+                "icon": "user",
+                "pages": [
+                  "dashboard/profilo/profilo"
+                ]
               }
             ]
           },
