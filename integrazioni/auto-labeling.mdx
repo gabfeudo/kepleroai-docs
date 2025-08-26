@@ -5,45 +5,77 @@ description: "Utilizza l'auto-labeling per etichettare automaticamente le conver
 
 Questa procedura descrive i passaggi necessari per creare un'azione di auto-etichettatura in Keplero, facilitando la gestione delle conversazioni con i clienti.
 
-<iframe
-  className="w-full aspect-video rounded-xl"
-  src="https://www.loom.com/embed/d95c512dc70940a9b11658574c2b6737"
-  title="Video tutorial auto-labeling Keplero AI"
-  frameBorder="0"
-  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-  allowFullScreen
-></iframe>
+<Frame caption="Video-guida: come configurare l'auto-labeling in Keplero">
+  <iframe
+    className="w-full aspect-video rounded-xl"
+    src="https://www.loom.com/embed/d95c512dc70940a9b11658574c2b6737"
+    title="Video tutorial auto-labeling Keplero AI"
+    frameBorder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    allowFullScreen
+  ></iframe>
+</Frame>
 
-
-## Come etichettare automaticamente le conversazioni
+## Passaggi chiave per l'Auto-Labeling
 
 <Steps>
-    <Step title="Crea una nuova azione">
-        1. Accedi alla sezione Addestramento nella dashboard di Keplero AI
-        2. Clicca su **Integrazioni**
-        3. Clicca su **+ Nuova integrazione**
-    </Step>
-    <Step title="Seleziona Auto Labelling">
-        Seleziona l'azione dedicata all'auto-etichettatura dall’elenco.
-    </Step>
-    <Step title="Crea una nuova etichetta">
-        Nella prima select, specifica il nome dell'etichetta.
-        <Note>Se non ne hai ancora, clicca su 'Crea Etichetta'.</Note>
-    </Step>
-    <Step title="Specifica la condizione per l'etichetta">
-        Definisci la condizione in cui Keplero utilizzerà l'etichetta 
-        <Tip>Puoi scrivere la condizione anche in Italiano, ad esempio: 'Il cliente effettua una richiesta di reso'.</Tip>
-    </Step>
-    <Step title="Aggiungi eventuali etichette e condizioni aggiuntive">
-        - Se necessario, crea ulteriori etichette.
-        - Specifica le condizioni per ciascuna etichetta.
-    </Step>
-    <Step title="Salva e attiva l'azione">
-        Clicca su **Salva** per abilitare l'azione.
-    </Step>
+  <Step title="Accesso alle Azioni">
+    <Frame>
+      <img src="https://loom.com/i/a9c6985ff7b444f884c94fb6a5e11c5f?workflows_screenshot=true" alt="Accesso alle azioni in Keplero" />
+    </Frame>
+    - Accedi alla sezione <b>Addestramento</b> nella dashboard di Keplero AI.<br />
+    - Spostati nella sezione <b>Azioni</b>.<br />
+    - Clicca su <b>Nuova Azione</b>.
+  </Step>
+
+  <Step title="Selezione dell'Azione di Auto-labelling">
+    <Frame>
+      <img src="https://loom.com/i/a9c6985ff7b444f884c94fb6a5e11c5f?workflows_screenshot=true" alt="Selezione auto-labeling" />
+    </Frame>
+    Seleziona l'azione dedicata all'auto-etichettatura dall’elenco.
+  </Step>
+
+  <Step title="Creazione di una Nuova Etichetta">
+    <Frame>
+      <img src="https://loom.com/i/0ab5f086b82c47be88f8028dc900feb4?workflows_screenshot=true" alt="Creazione nuova etichetta" />
+    </Frame>
+    - Nella prima select, specifica il nome dell'etichetta.<br />
+    <Note>Se non ne hai ancora, clicca su <b>Crea Etichetta</b>.</Note>
+  </Step>
+
+  <Step title="Specifica la Condizione per l'Etichetta">
+    <Frame>
+      <img src="https://loom.com/i/73252443df2a4dc79b3bbbc6a0d4c8ec?workflows_screenshot=true" alt="Definizione condizione etichetta" />
+    </Frame>
+    - Definisci la condizione in cui Keplero utilizzerà l'etichetta.<br />
+    <Tip>Puedescrivere la condizione anche in italiano, ad esempio: <i>Il cliente effettua una richiesta di reso</i>.</Tip>
+  </Step>
+
+  <Step title="Aggiunta di Etichette Aggiuntive">
+    <Frame>
+      <img src="https://loom.com/i/0b5ee15d9ee344bfbd75cf6364677bd3?workflows_screenshot=true" alt="Aggiunta etichette aggiuntive" />
+    </Frame>
+    - Se necessario, crea ulteriori etichette.<br />
+    - Specifica le condizioni per ciascuna etichetta.
+  </Step>
+
+  <Step title="Modifica delle Etichette Esistenti">
+    <Frame>
+      <img src="https://loom.com/i/8f4991e10ac84449af5c98a38cf2dcbc?workflows_screenshot=true" alt="Gestione etichette esistenti" />
+    </Frame>
+    - Per gestire le etichette, vai in <b>Impostazioni</b> → <b>Conversazioni</b>.<br />
+    - Seleziona la tab <b>Etichette</b> per visualizzare e modificare le etichette create.
+  </Step>
+
+  <Step title="Filtraggio delle Conversazioni">
+    <Frame>
+      <img src="https://loom.com/i/e67db51899044e72971cf34386d9af7d?workflows_screenshot=true" alt="Filtraggio conversazioni tramite etichette" />
+    </Frame>
+    Utilizza le etichette per filtrare le conversazioni in base alle condizioni specificate.
+  </Step>
 </Steps>
 
-## Consigli utili
+## Consigli per l'efficienza
 
 - Assicurati di definire chiaramente le condizioni per ogni etichetta per evitare confusione.
 - Controlla regolarmente le etichette create per mantenerle aggiornate e pertinenti.

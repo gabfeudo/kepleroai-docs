@@ -1,13 +1,13 @@
 {
   "$schema": "https://mintlify.com/docs.json",
-  "theme": "mint",
+  "theme": "almond",
   "name": "Keplero AI",
   "colors": {
     "primary": "#3A44D5",
     "light": "#EBF2F9",
     "dark": "#7881D6"
   },
-  "favicon": "/favicon.svg",
+  "favicon": "/logo/logo.png",
   "navigation": {
     "tabs": [
       {
@@ -15,19 +15,8 @@
         "icon": "book",
         "groups": [
           {
-            "group": "Introduzione",
-            "pages": [
-              "documentazione/quickstart"
-            ]
-          },
-          {
-            "group": "Novità",
-            "pages": [
-              "documentazione/news/introduzione"
-            ]
-          },
-          {
             "group": "Dashboard",
+            "icon": "sidebar",
             "pages": [
               "dashboard/introduzione/introduzione",
               {
@@ -114,6 +103,7 @@
           },
           {
             "group": "Integrazioni",
+            "icon": "bolt",
             "pages": [
               "integrazioni/intro",
               {
@@ -121,7 +111,8 @@
                 "icon": "whatsapp",
                 "pages": [
                   "integrazioni/whatsapp/whatsapp",
-                  "integrazioni/whatsapp/templates-whatsapp"
+                  "integrazioni/whatsapp/templates-whatsapp",
+                  "integrazioni/whatsapp/q&a"
                 ]
               },
               {
@@ -150,91 +141,49 @@
                 "group": "Ecommerce",
                 "icon": "cart-shopping",
                 "pages": [
-                  {
-                    "group": "Shopify",
-                    "icon": "shopify",
-                    "pages": [
-                      "integrazioni/ecommerce/shopify"
-                    ]
-                  },
-                  {
-                    "group": "WooCommerce",
-                    "icon": "wordpress",
-                    "pages": [
-                      "integrazioni/ecommerce/woocommerce"
-                    ]
-                  },
-                  {
-                    "group": "Magento",
-                    "icon": "magento",
-                    "pages": [
-                      "integrazioni/ecommerce/magento"
-                    ]
-                  },
-                  {
-                    "group": "Qapla",
-                    "icon": "q",
-                    "pages": [
-                      "integrazioni/ecommerce/qapla"
-                    ]
-                  },
-                  {
-                    "group": "PrestaShop",
-                    "icon": "p",
-                    "pages": [
-                      "integrazioni/ecommerce/prestashop"
-                    ]
-                  }
+                  "integrazioni/ecommerce/shopify",
+                  "integrazioni/ecommerce/woocommerce",
+                  "integrazioni/ecommerce/magento",
+                  "integrazioni/ecommerce/qapla",
+                  "integrazioni/ecommerce/prestashop"
                 ]
               },
               {
                 "group": "Hotel",
                 "icon": "hotel",
                 "pages": [
-                  {
-                    "group": "Booking Expert",
-                    "pages": [
-                      "integrazioni/hotel/booking-expert"
-                    ]
-                  },
-                  {
-                    "group": "Blastness",
-                    "pages": [
-                      "integrazioni/hotel/blastness"
-                    ]
-                  },
-                  {
-                    "group": "Cloud Village",
-                    "pages": [
-                      "integrazioni/hotel/cloud-village"
-                    ]
-                  },
-                  {
-                    "group": "Simple Booking",
-                    "pages": [
-                      "integrazioni/hotel/simple-booking"
-                    ]
-                  },
-                  {
-                    "group": "Slope",
-                    "pages": [
-                      "integrazioni/hotel/slope"
-                    ]
-                  },
-                  {
-                    "group": "Vertical Booking",
-                    "pages": [
-                      "integrazioni/hotel/vertical-booking"
-                    ]
-                  }
+                  "integrazioni/hotel/booking-expert",
+                  "integrazioni/hotel/blastness",
+                  "integrazioni/hotel/cloud-village",
+                  "integrazioni/hotel/simple-booking",
+                  "integrazioni/hotel/slope",
+                  "integrazioni/hotel/vertical-booking"
+                ]
+              },
+              {
+                "group": "Social",
+                "icon": "thumbs-up",
+                "pages": [
+                  "integrazioni/social/instagram",
+                  "integrazioni/social/messenger"
                 ]
               }
             ]
           },
           {
             "group": "Automazioni",
+            "icon": "robot",
             "pages": [
-              "automazioni/automazioni"
+              "automazioni/intro",
+              "automazioni/ricontatto-lead",
+              "automazioni/automazioni-shopify"
+            ]
+          },
+          {
+            "group": "Novità",
+            "icon": "stars",
+            "pages": [
+              "news/introduzione"
             ]
           }
         ]
