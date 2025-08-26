@@ -17,8 +17,7 @@
           {
             "group": "Introduzione",
             "pages": [
-              "documentazione/quickstart",
-              "documentazione/documentazione"
+              "documentazione/quickstart"
             ]
           },
           {
@@ -26,13 +25,7 @@
             "pages": [
               "documentazione/news/introduzione"
             ]
-          }
-        ]
-      },
-      {
-        "tab": "Dashboard",
-        "icon": "sidebar",
-        "groups": [
+          },
           {
             "group": "Dashboard",
             "pages": [
@@ -118,13 +111,7 @@
                 ]
               }
             ]
-          }
-        ]
-      },
-      {
-        "tab": "Integrazioni",
-        "icon": "bolt",
-        "groups": [
+          },
           {
             "group": "Integrazioni",
             "pages": [
@@ -243,13 +230,7 @@
                 ]
               }
             ]
-          }
-        ]
-      },
-      {
-        "tab": "Automazioni",
-        "icon": "robot",
-        "groups": [
+          },
           {
             "group": "Automazioni",
             "pages": [
