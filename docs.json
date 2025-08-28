@@ -145,6 +145,13 @@
                 ]
               },
               {
+                "group": "Contatti",
+                "icon": "user",
+                "pages": [
+                  "integrazioni/crea-contatto"
+                ]
+              },
+              {
                 "group": "Ecommerce",
                 "icon": "cart-shopping",
                 "pages": [
