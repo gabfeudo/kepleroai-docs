@@ -1,0 +1,129 @@
+---
+title: "Chiamata Outbound"
+description: "Guida passo-passo per configurare un'automazione che effettua chiamate outbound tramite Keplero AI"
+---
+
+# Creazione di un'Automazione per Chiamate Outbound con Keplero
+
+<iframe
+  className="w-full aspect-video rounded-xl"
+  src="https://www.loom.com/embed/8103599597764715b36e4be4b4538b39"
+  title="Video guida chiamata outbound Keplero AI"
+  frameBorder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+  allowFullScreen
+></iframe>
+
+
+Questa procedura ti guida nella creazione di un'automazione che consente a Keplero AI di effettuare chiamate outbound in modo efficace e personalizzato.
+
+<Note>
+Assicurati di aver collegato il canale **Telefono** nella sezione [Canali](/dashboard/impostazioni/canali) prima di procedere con la configurazione dell'automazione.
+</Note>
+
+<Steps>
+<Step title="Crea una nuova automazione">
+  Accedi alla sezione <strong>Automazioni</strong> nella Console Keplero e clicca su <strong>Nuova automazione</strong>.
+
+  <Frame>
+    <img src="https://loom.com/i/c114585ce4a9499788d278fbbc9a3670?workflows_screenshot=true" alt="Creazione nuova automazione" />
+  </Frame>
+</Step>
+
+<Step title="Imposta il trigger">
+  Scegli un trigger per l'automazione e salva le impostazioni.
+
+  <Frame>
+    <img src="https://loom.com/i/a2b51fc4e522485fa3de273eaa33d304?workflows_screenshot=true" alt="Impostazione trigger" />
+  </Frame>
+</Step>
+
+<Step title="Seleziona l'azione di chiamata">
+  Aggiungi una nuova azione e seleziona <strong>Chiamata in Uscita</strong>.
+
+  <Frame>
+    <img src="https://loom.com/i/be4ab1a3ace44542b85701dfe4ccfd9d?workflows_screenshot=true" alt="Azione chiamata in uscita" />
+  </Frame>
+</Step>
+
+<Step title="Imposta il campo numero di telefono">
+  Definisci quale campo contiene il numero di telefono da utilizzare per la chiamata (ad esempio, il campo <strong>telefono whatsapp</strong> del contatto).
+
+  <Frame>
+    <img src="https://loom.com/i/be4ab1a3ace44542b85701dfe4ccfd9d?workflows_screenshot=true" alt="Campo numero di telefono" />
+  </Frame>
+</Step>
+
+<Step title="Descrivi il prompt dell'agente AI">
+  Scrivi il prompt che guiderà il comportamento dell'agente durante la chiamata. Specifica cosa deve dire e come deve interagire con il destinatario.
+
+  <Frame>
+    <img src="https://loom.com/i/a32f7ad0d052433e9b37fa314aaea996?workflows_screenshot=true" alt="Prompt agente AI" />
+  </Frame>
+</Step>
+
+<Step title="Aggiungi variabili nel prompt">
+  Personalizza il prompt inserendo variabili come il <strong>nome del contatto</strong> per rendere la chiamata più efficace.
+
+  <Frame>
+    <img src="https://loom.com/i/a32f7ad0d052433e9b37fa314aaea996?workflows_screenshot=true" alt="Variabili nel prompt" />
+  </Frame>
+</Step>
+
+<Step title="Seleziona la voce e il messaggio di benvenuto">
+  Scegli la voce dell'assistente AI e ascolta l'anteprima del messaggio di benvenuto che verrà riprodotto all'inizio della chiamata.
+
+  <Frame>
+    <img src="https://loom.com/i/ce399cf724ae4812bf1984e69440ec6a?workflows_screenshot=true" alt="Voce e messaggio di benvenuto" />
+  </Frame>
+</Step>
+
+<Step title="Imposta integrazioni e tentativi di chiamata">
+  Seleziona le integrazioni da utilizzare (ad esempio, CRM o altri sistemi) e imposta il numero massimo di tentativi di chiamata in caso di mancata risposta.
+
+  <Frame>
+    <img src="https://loom.com/i/ce399cf724ae4812bf1984e69440ec6a?workflows_screenshot=true" alt="Integrazioni e tentativi" />
+  </Frame>
+</Step>
+
+<Step title="Definisci fasce orarie e numeri di escalation">
+  Imposta le fasce orarie in cui l'automazione può effettuare chiamate e specifica eventuali numeri di escalation a cui trasferire la chiamata se necessario.
+
+  <Frame>
+    <img src="https://loom.com/i/b8519ad471f7458c8e632f2a3b26b08d?workflows_screenshot=true" alt="Fasce orarie e escalation" />
+  </Frame>
+</Step>
+
+<Step title="Testa l'automazione">
+  Utilizza la funzione <strong>Test Chiamata</strong> inserendo il tuo numero di telefono per verificare che l'automazione funzioni come previsto.
+
+  <Frame>
+    <img src="https://loom.com/i/8d66d015bfdc4802b17e3f3d6e44f758?workflows_screenshot=true" alt="Test chiamata" />
+  </Frame>
+</Step>
+
+<Step title="Modifica e ripeti i test se necessario">
+  Se necessario, modifica il prompt, la voce o altri parametri e ripeti il test fino a ottenere il risultato desiderato.
+
+  <Frame>
+    <img src="https://loom.com/i/b8069e28ef9a4ef19f2b49e7055ee7b9?workflows_screenshot=true" alt="Modifica e nuovi test" />
+  </Frame>
+</Step>
+
+<Step title="Salva e attiva l'automazione">
+  Una volta soddisfatto della configurazione, salva e attiva l'automazione per renderla operativa.
+
+  <Frame>
+    <img src="https://loom.com/i/7e221f48d4f841e9b26c4ba90da520e2?workflows_screenshot=true" alt="Salvataggio e attivazione" />
+  </Frame>
+</Step>
+</Steps>
+
+<Warning>
+Prima di attivare l'automazione, verifica che tutte le informazioni inserite siano corrette.
+</Warning>
+
+<Tip>
+Usa nomi chiari e descrittivi per trigger e azioni, così da facilitare la gestione delle automazioni nel tempo.<br />
+Testa l'automazione in diverse condizioni per assicurarti che funzioni correttamente in ogni scenario.
+</Tip>

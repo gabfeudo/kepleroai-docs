@@ -123,6 +123,15 @@
                 ]
               },
               {
+                "group": "Social",
+                "icon": "thumbs-up",
+                "pages": [
+                  "integrazioni/social/instagram",
+                  "integrazioni/social/messenger",
+                  "integrazioni/social/q&a"
+                ]
+              },
+              {
                 "group": "Google",
                 "icon": "google",
                 "pages": [
@@ -134,7 +143,8 @@
                 "group": "Email",
                 "icon": "envelope",
                 "pages": [
-                  "integrazioni/invio-email"
+                  "integrazioni/email/account-email",
+                  "integrazioni/email/invio-email"
                 ]
               }, 
               {
@@ -173,14 +183,6 @@
                   "integrazioni/hotel/slope",
                   "integrazioni/hotel/vertical-booking"
                 ]
-              },
-              {
-                "group": "Social",
-                "icon": "thumbs-up",
-                "pages": [
-                  "integrazioni/social/instagram",
-                  "integrazioni/social/messenger"
-                ]
               }
             ]
           },
@@ -190,7 +192,8 @@
             "pages": [
               "automazioni/intro",
               "automazioni/ricontatto-lead",
-              "automazioni/automazioni-shopify"
+              "automazioni/automazioni-shopify",
+              "automazioni/chiamata-outbound"
             ]
           },
           {
