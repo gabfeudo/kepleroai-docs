@@ -3,7 +3,7 @@ title: "Prompt"
 description: "Definisci il comportamento del tuo assistente AI"
 ---
 
-## Cos'è un Prompt?
+## Prompt (AI Behavior)
 
 Un **prompt** è una breve istruzione o descrizione che definisce il comportamento, l'identità e la personalità del tuo assistente AI. In pratica, serve a spiegare all'AI **come deve rispondere** agli utenti, quali regole seguire e quale tono utilizzare nelle conversazioni.
 
@@ -15,7 +15,7 @@ Il prompt non è visibile agli utenti finali che parleranno con il tuo assistent
 
 ### Impostare il Prompt
 
-Per impostare il prompt, in **Addestramento**, clicca su **"Prompt"** nella barra di sinistra
+Per impostare il prompt, in **Addestramento**, clicca su **"Prompt"** (AI Behavior) nella barra di sinistra
 
 <Frame>
   <img
@@ -46,7 +46,7 @@ Nella casella evidenziata in verde nell'immagine seguente, puoi spiegare all'AI 
 
 ### Prompt Chatbot vs Prompt Voice
 
-Troverai in alto lo switch per passare da **Prompt Chatbot** a **Prompt Voice**.
+Puoi selezionare direttamente il **Prompt del Chatbot** o il **Prompt di Voice**.
 
 <Frame>
   <img
@@ -115,3 +115,51 @@ Vedrai apparire un pannello che ti permette di scegliere quale versione del prom
 </Frame>
 
 <Note>Aprendo un Prompt precedente, vedrai evidenziate le modifiche rispetto alla versione attuale. Cliccando su **"Ripristina"** il prompt verrà ripristinato con quello che stai visualizzando</Note>
+
+## Escalation all'operatore umano
+
+La sezione **"Human Operator"** ti permette di definire quando passare la conversazione all'umano, ovvero i casi in cui l'AI dovrà smettere di rispondere e passare il controllo all'operatore umano.
+
+<Frame>
+  <img
+    src="/images/dashboard/addestramento/prompt/prompt-7.png"
+    alt="Vista della sezione Prompt nella dasbhaord di Keplero AI"
+    noZoom
+    height="300"
+    className="rounded-lg"
+  />
+</Frame>
+
+<Note>
+Se questa opzione è disattivata, quando un utente richiede l’intervento di un operatore umano con frasi come *"Voglio parlare con un operatore"* o *"Voglio parlare con un umano"*, il chatbot risponde informando che al momento non è possibile parlare con un operatore. Il messaggio viene adattato in base al contesto della conversazione.
+</Note>
+
+Attivando l'escalation, potrai impostare i criteri per passare la conversazione all'operatore umano ed i giorni e orari in cui l'escalation è attiva.
+
+<Frame>
+  <img
+    src="/images/dashboard/addestramento/prompt/prompt-8.png"
+    alt="Vista della sezione Prompt nella dasbhaord di Keplero AI"
+    noZoom
+    height="300"
+    className="rounded-lg"
+  />
+</Frame>
+
+Abilitando questa funzionalità, quando gli utenti chiederanno di parlare con un operatore umano, il tuo chatbot risponderà dicendo che un operatore umano sta arrivando.
+
+Troverai la chat, nell'elenco delle conversazioni, evidenziata in giallo con l'icona dell'operatore, così potrai identificarla facilmente.
+
+<Frame caption="Quando un utente chiederà di parlare con un operatore umano, il tuo chatbot risponderà dicendo che un operatore umano sta arrivando.">
+  <img
+    src="/images/dashboard/impostazioni/chatbot/chat-operatore/chat-operatore-3.png"
+    alt="Chat operatore attivato"
+    noZoom
+    height="300"
+    className="rounded-lg"
+  />
+</Frame>
+
+<Warning>
+  Se prendi il controllo della chat, ricorda poi di rilasciare il controllo a Keplero per fare in modo che possa continuare a rispondere a quell'utente.
+</Warning>
