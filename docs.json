@@ -33,7 +33,8 @@
                   "dashboard/conversazioni/riassumi",
                   "dashboard/conversazioni/traduci",
                   "dashboard/conversazioni/promemoria",
-                  "dashboard/conversazioni/nuovo-messaggio"
+                  "dashboard/conversazioni/nuovo-messaggio",
+                  "dashboard/conversazioni/revisiona"
                 ]
               },
               {
