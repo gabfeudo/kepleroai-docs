@@ -10,7 +10,9 @@ Un **prompt** è una breve istruzione o descrizione che definisce il comportamen
 Ad esempio, puoi usare il prompt per specificare se l'assistente deve essere formale o informale, se deve rispondere in modo sintetico o dettagliato, oppure se deve evitare certi argomenti.
 
 <Note>
-Il prompt non è visibile agli utenti finali che parleranno con il tuo assistente AI: è uno strumento che ti permette di personalizzare l'esperienza e l'efficacia delle risposte dell'AI.
+  Il prompt non è visibile agli utenti finali che parleranno con il tuo
+  assistente AI: è uno strumento che ti permette di personalizzare l'esperienza
+  e l'efficacia delle risposte dell'AI.
 </Note>
 
 ### Impostare il Prompt
@@ -40,8 +42,9 @@ Nella casella evidenziata in verde nell'immagine seguente, puoi spiegare all'AI 
 </Frame>
 
 <Tip>
-  Non serve scrivere in maniera tecnica: spiega ciò che vuoi ottenere in maniera chiara e concisa.
-  Ad esempio: "*Rispondi sempre in modo educato usando emoji in base al contesto della conversazione*"
+  Non serve scrivere in maniera tecnica: spiega ciò che vuoi ottenere in maniera
+  chiara e concisa. Ad esempio: "*Rispondi sempre in modo educato usando emoji
+  in base al contesto della conversazione*"
 </Tip>
 
 ### Prompt Chatbot vs Prompt Voice
@@ -58,9 +61,16 @@ Puoi selezionare direttamente il **Prompt del Chatbot** o il **Prompt di Voice**
   />
 </Frame>
 
-<Tip>I due sistemi hanno prompt separati e dedicati, così da personalizzare il comportamento dell'AI in base al canale di comunicazione.</Tip>
+<Tip>
+  I due sistemi hanno prompt separati e dedicati, così da personalizzare il
+  comportamento dell'AI in base al canale di comunicazione.
+</Tip>
 
-<Warning>Lo switch dei due prompt è visibile solo per coloro che hanno Keplero AI Voice nel loro abbonamento. Se hai solo la parte relativa al Chatbot, non vedrai questo switch</Warning>
+<Warning>
+  Lo switch dei due prompt è visibile solo per coloro che hanno Keplero AI Voice
+  nel loro abbonamento. Se hai solo la parte relativa al Chatbot, non vedrai
+  questo switch
+</Warning>
 
 ### Visualizzare e modificare il Prompt
 
@@ -114,52 +124,141 @@ Vedrai apparire un pannello che ti permette di scegliere quale versione del prom
   />
 </Frame>
 
-<Note>Aprendo un Prompt precedente, vedrai evidenziate le modifiche rispetto alla versione attuale. Cliccando su **"Ripristina"** il prompt verrà ripristinato con quello che stai visualizzando</Note>
-
-## Escalation all'operatore umano
-
-La sezione **Operatore Umano** ti permette di definire quando passare la conversazione all'umano, ovvero i casi in cui l'AI dovrà smettere di rispondere e passare il controllo all'operatore umano.
-
-<Frame>
-  <img
-    src="/images/dashboard/addestramento/prompt/prompt-7.png"
-    alt="Vista della sezione Prompt nella dasbhaord di Keplero AI"
-    noZoom
-    height="300"
-    className="rounded-lg"
-  />
-</Frame>
-
 <Note>
-Se questa opzione è disattivata, quando un utente richiede l’intervento di un operatore umano con frasi come *"Voglio parlare con un operatore"* o *"Voglio parlare con un umano"*, il chatbot risponde informando che al momento non è possibile parlare con un operatore. Il messaggio viene adattato in base al contesto della conversazione.
+  Aprendo un Prompt precedente, vedrai evidenziate le modifiche rispetto alla
+  versione attuale. Cliccando su **"Ripristina"** il prompt verrà ripristinato
+  con quello che stai visualizzando
 </Note>
 
-Attivando l'escalation, potrai impostare i criteri per passare la conversazione all'operatore umano ed i giorni e orari in cui l'escalation è attiva.
+## Escalation / Trasferimento all'operatore umano
 
-<Frame>
-  <img
-    src="/images/dashboard/addestramento/prompt/prompt-8.png"
-    alt="Vista della sezione Prompt nella dasbhaord di Keplero AI"
-    noZoom
-    height="300"
-    className="rounded-lg"
-  />
-</Frame>
+<Tabs>
+  <Tab title="Chat Agent" icon="message">
+      La sezione **Operatore Umano** ti permette di definire quando passare la conversazione all'umano, ovvero i casi in cui l'AI dovrà smettere di rispondere e passare il controllo all'operatore umano.
 
-Abilitando questa funzionalità, quando gli utenti chiederanno di parlare con un operatore umano, il tuo chatbot risponderà dicendo che un operatore umano sta arrivando.
+      <Frame>
+        <img
+          src="/images/dashboard/addestramento/prompt/prompt-7.png"
+          alt="Vista della sezione Prompt nella dasbhaord di Keplero AI"
+          noZoom
+          height="300"
+          className="rounded-lg"
+        />
+      </Frame>
 
-Troverai la chat, nell'elenco delle conversazioni, evidenziata in giallo con l'icona dell'operatore, così potrai identificarla facilmente.
+      <Note>
+        Se questa opzione è disattivata, quando un utente richiede l’intervento di un
+        operatore umano con frasi come *"Voglio parlare con un operatore"* o *"Voglio
+        parlare con un umano"*, il chatbot risponde informando che al momento non è
+        possibile parlare con un operatore. Il messaggio viene adattato in base al
+        contesto della conversazione.
+      </Note>
 
-<Frame caption="Quando un utente chiederà di parlare con un operatore umano, il tuo chatbot risponderà dicendo che un operatore umano sta arrivando.">
-  <img
-    src="/images/dashboard/impostazioni/chatbot/chat-operatore/chat-operatore-3.png"
-    alt="Chat operatore attivato"
-    noZoom
-    height="300"
-    className="rounded-lg"
-  />
-</Frame>
+      Attivando l'escalation, potrai impostare i criteri per passare la conversazione all'operatore umano ed i giorni e orari in cui l'escalation è attiva.
 
-<Warning>
-  Se prendi il controllo della chat, ricorda poi di rilasciare il controllo a Keplero per fare in modo che possa continuare a rispondere a quell'utente.
-</Warning>
+      <Frame>
+        <img
+          src="/images/dashboard/addestramento/prompt/prompt-8.png"
+          alt="Vista della sezione Prompt nella dasbhaord di Keplero AI"
+          noZoom
+          height="300"
+          className="rounded-lg"
+        />
+      </Frame>
+
+      Abilitando questa funzionalità, quando gli utenti chiederanno di parlare con un operatore umano, il tuo chatbot risponderà dicendo che un operatore umano sta arrivando.
+
+      Troverai la chat, nell'elenco delle conversazioni, evidenziata in giallo con l'icona dell'operatore, così potrai identificarla facilmente.
+
+      <Frame caption="Quando un utente chiederà di parlare con un operatore umano, il tuo chatbot risponderà dicendo che un operatore umano sta arrivando.">
+        <img
+          src="/images/dashboard/impostazioni/chatbot/chat-operatore/chat-operatore-3.png"
+          alt="Chat operatore attivato"
+          noZoom
+          height="300"
+          className="rounded-lg"
+        />
+      </Frame>
+
+      <Warning>
+        Se prendi il controllo della chat, ricorda poi di rilasciare il controllo a Keplero per fare in modo che possa continuare a rispondere a quell'utente.
+      </Warning>
+  </Tab>
+  <Tab title="Voice Agent" icon="phone">
+    La sezione **Operatore Umano** ti permette di definire quando passare la telefonata all'umano, ovvero i casi in cui l'AI dovrà smettere di rispondere e trasferire direttamente la telefonata all'operatore umano.
+
+    <Frame>
+      <img
+        src="/images/dashboard/addestramento/prompt/prompt-9.png"
+        alt="Sezione trasferimento all'operatore umano"
+        noZoom
+        height="300"
+        className="rounded-lg"
+      />
+    </Frame>
+
+    <Steps>
+      <Step title="Attivazione" icon="check">
+        Attiva il trasferimento di chiamata cliccando su **"Abilita escalation"**.
+        <Frame>
+          <img
+            src="/images/dashboard/addestramento/prompt/prompt-10.png"
+            alt="Sezione trasferimento all'operatore umano"
+            noZoom
+            height="300"
+            className="rounded-lg"
+          />
+        </Frame>
+
+      </Step>
+      <Step title="Specifica quando Keplero dovrà trasferire la telefonata all'operatore umano" icon="clock">
+        Spiega a Keplero in quali casi desideri che inoltri la conversazione ad un numero di telefono presidiato da un umano.
+
+        <Frame>
+          <img
+            src="/images/dashboard/addestramento/prompt/prompt-11.png"
+            alt="Sezione trasferimento all'operatore umano"
+            noZoom
+            height="300"
+            className="rounded-lg"
+          />
+        </Frame>
+
+        <Note>
+          Specifica uno o più casi in cui Keplero dovrà trasferire la telefonata all'operatore umano cliccando su **"+ Aggiungi"**.
+        </Note>
+      </Step>
+      <Step title="Indica uno o più numeri di telefono" icon="phone">
+        Indica uno o più numeri di telefono a cui Keplero dovrà trasferire la telefonata, specificando il nome del Team a cui è associato quel numero (*ad esempio: "Sales"*).
+
+        <Frame>
+          <img
+            src="/images/dashboard/addestramento/prompt/prompt-12.png"
+            alt="Sezione trasferimento all'operatore umano"
+            noZoom
+            height="300"
+            className="rounded-lg"
+          />
+        </Frame>
+
+        <Tip>
+          Puoi anche impostare un numero prioritario per trasferimento cliccando laterlamente al box contenente la bandiera del paese. Apparirà una ⭐ per indicarti che quel numero è stato salvato come preferito.
+        </Tip>
+      </Step>
+
+      <Step title="Configura i giorni e gli orari in cui permettere il trasferimento di chiamata" icon="calendar">
+        Configura i giorni e gli orari in cui permettere il trasferimento di chiamata. Puoi impostare la modalità **"Sempre disponibile, 24 ore su 24, 7 giorni su 7"** o personalizzare i giorni e gli orari singolarmente.
+
+        <Frame>
+          <img
+            src="/images/dashboard/addestramento/prompt/prompt-13.png"
+            alt="Sezione trasferimento all'operatore umano"
+            noZoom
+            height="300"
+            className="rounded-lg"
+          />
+        </Frame>
+      </Step>
+    </Steps>
+  </Tab>
+</Tabs>
