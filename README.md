@@ -66,7 +66,7 @@ Installa la nostra app GitHub dal [dashboard](https://dashboard.mintlify.com/set
 - [Documentazione Mintlify](https://mintlify.com/docs)
 - [Community Mintlify](https://mintlify.com/community)
 - [Sito Web Keplero AI](https://keplero.ai)
-- [Dashboard Keplero AI](https://app.keplero.ai)
+- [Dashboard Keplero AI](https://console.keplero.ai)
 
 ## Contatti
 

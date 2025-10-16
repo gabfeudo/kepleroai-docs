@@ -238,7 +238,7 @@
     "primary": {
       "type": "button",
       "label": "Apri Keplero AI",
-      "href": "https://app.keplero.ai"
+      "href": "https://console.keplero.ai"
     }
   },
   "contextual": {
