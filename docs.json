@@ -1,6 +1,6 @@
 {
   "$schema": "https://mintlify.com/docs.json",
-  "theme": "almond",
+  "theme": "aspen",
   "name": "Keplero AI",
   "colors": {
     "primary": "#3A44D5",
@@ -8,6 +8,9 @@
     "dark": "#7881D6"
   },
   "favicon": "/logo/logo.png",
+  "fonts": {
+  "family": "DM Sans"
+},
   "navigation": {
     "tabs": [
       {
@@ -195,8 +198,8 @@
               "automazioni/ricontatto-lead",
               "automazioni/followup-wa",
               "automazioni/automazioni-shopify",
-              "automazioni/chiamata-outbound"
-     
+              "automazioni/chiamata-outbound",
+              "automazioni/invio-massivo"
             ]
           },
           {
