@@ -9,8 +9,8 @@
   },
   "favicon": "/logo/logo.png",
   "fonts": {
-  "family": "DM Sans"
-},
+    "family": "DM Sans"
+  },
   "navigation": {
     "tabs": [
       {
@@ -32,7 +32,7 @@
                   "dashboard/conversazioni/etichette",
                   "dashboard/conversazioni/controllo-manuale",
                   "dashboard/conversazioni/salva-contatto",
-                  "dashboard/conversazioni/elimina-chat", 
+                  "dashboard/conversazioni/elimina-chat",
                   "dashboard/conversazioni/riassumi",
                   "dashboard/conversazioni/traduci",
                   "dashboard/conversazioni/promemoria",
@@ -150,7 +150,7 @@
                   "integrazioni/email/account-email",
                   "integrazioni/email/invio-email"
                 ]
-              }, 
+              },
               {
                 "group": "Etichette",
                 "icon": "tag",
@@ -195,11 +195,30 @@
             "icon": "robot",
             "pages": [
               "automazioni/intro",
-              "automazioni/ricontatto-lead",
-              "automazioni/followup-wa",
-              "automazioni/automazioni-shopify",
-              "automazioni/chiamata-outbound",
-              "automazioni/invio-massivo"
+              {
+                "group": "WhatsApp",
+                "icon": "whatsapp",
+                "pages": [
+                  "automazioni/whatsapp/invio-massivo",
+                  "automazioni/whatsapp/ricontatto-lead",
+                  "automazioni/whatsapp/followup-wa"
+                ]
+              },
+              {
+                "group": "Voice",
+                "icon": "phone",
+                "pages": [
+                  "automazioni/voice/chiamata-outbound",
+                  "automazioni/voice/chiamate-multiple"
+                ]
+              },
+              {
+                "group": "Ecommerce",
+                "icon": "cart-shopping",
+                "pages": [
+                  "automazioni/ecommerce/automazioni-shopify"
+                ]
+              }
             ]
           },
           {
