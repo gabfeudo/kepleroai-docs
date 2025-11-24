@@ -1,0 +1,153 @@
+---
+title: 'Eventi del Widget'
+description: 'Eventi del Widget di Keplero AI'
+---
+
+## Panoramica
+
+Il widget chatbot di Keplero emette eventi personalizzati che puoi ascoltare nella tua applicazione. Questi eventi ti permettono di tracciare le interazioni degli utenti con la chat e implementare analitiche personalizzate o comportamenti specifici.
+
+
+## Eventi disponibili
+
+### `keplero_chat_aperta`
+
+Emesso quando il widget della chat viene aperto.
+
+**Dettagli dell'evento**: 
+
+```ts
+{
+  chatbotId: string;
+}
+```
+
+**Esempio**: 
+
+```js
+window.addEventListener("keplero_chat_aperta", (event) => {
+  console.log("Chat aperta per il chatbot:", event.detail.chatbotId);
+  // La tua logica personalizzata qui
+});
+```
+
+### `keplero_chat_chiusa`
+
+Emesso quando il widget della chat viene chiuso.
+
+**Dettagli dell'evento**: 
+
+```ts
+{
+  chatbotId: string;
+}
+```
+
+**Esempio**: 
+
+```js
+window.addEventListener("keplero_chat_chiusa", (event) => {
+  console.log("Chat chiusa per il chatbot:", event.detail.chatbotId);
+  // La tua logica personalizzata qui
+});
+```
+
+### `keplero_chat_interaction`
+
+Emesso quando l'utente invia un messaggio nella chat.
+
+**Dettagli dell'evento**: 
+
+```ts
+{
+  chatbotId: string;
+  message: string;
+  sessionId?: string;
+}
+```
+
+**Esempio**: 
+
+```js
+window.addEventListener("keplero_chat_interaction", (event) => {
+  console.log("L'utente ha inviato il messaggio:", event.detail.message);
+  console.log("ID della sessione:", event.detail.sessionId);
+  // La tua logica personalizzata qui (es. tracking analytics)
+});
+```
+
+### `keplero_chat_interaction_60sec`
+
+Emesso quando la chat è rimasta aperta per più di 60 secondi.
+
+**Dettagli dell'evento**: 
+
+```ts
+{
+  chatbotId: string;
+}
+```
+
+**Esempio**: 
+
+```js
+window.addEventListener("keplero_chat_interaction_60sec", (event) => {
+  console.log("La chat è stata aperta per 60 secondi");
+  // La tua logica personalizzata qui (es. tracking del coinvolgimento)
+});
+```
+### Esempio di utilizzo completo
+
+Ecco un esempio completo di come ascoltare tutti gli eventi della chat Keplero:
+
+```html 
+<!DOCTYPE html>
+<html>
+  <head>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Chat aperta
+        window.addEventListener("keplero_chat_aperta", (e) => {
+          console.log("✅ Chat aperta:", e.detail);
+          // Esempio: Traccia nelle analytics
+          // gtag('event', 'chat_aperta', { chatbot_id: e.detail.chatbotId });
+        });
+
+        // Chat chiusa
+        window.addEventListener("keplero_chat_chiusa", (e) => {
+          console.log("❌ Chat chiusa:", e.detail);
+          // Esempio: Traccia nelle analytics
+          // gtag('event', 'chat_chiusa', { chatbot_id: e.detail.chatbotId });
+        });
+
+        // Interazione utente (messaggio inviato)
+        window.addEventListener("keplero_chat_interaction", (e) => {
+          console.log("💬 Interazione utente:", e.detail);
+          // Esempio: Traccia nelle analytics
+          // gtag('event', 'chat_messaggio_inviato', {
+          //   chatbot_id: e.detail.chatbotId,
+          //   session_id: e.detail.sessionId
+          // });
+        });
+
+        // Chat aperta per 60 secondi
+        window.addEventListener("keplero_chat_interaction_60sec", (e) => {
+          console.log("⏱️ Chat aperta per 60 secondi:", e.detail);
+          // Esempio: Traccia il coinvolgimento
+          // gtag('event', 'chat_coinvolgimento_60s', { chatbot_id: e.detail.chatbotId });
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <kepleroai-chat chatbot="your-chatbot-id" side="right"></kepleroai-chat>
+  </body>
+</html>
+```
+
+### Note importanti
+- Tutti gli eventi sono oggetti `CustomEvent` emessi sull'oggetto `window`
+- Gli eventi funzionano sia in modalità fullsize che popover
+- L'evento `keplero_chat_interaction_60sec` viene emesso una sola volta per sessione di chat
+- In modalità fullsize, l'evento `keplero_chat_aperta` viene emesso quando il componente viene montato
+- In modalità popover, gli eventi `keplero_chat_aperta` e `keplero_chat_chiusa` vengono emessi quando il popover si apre/chiude

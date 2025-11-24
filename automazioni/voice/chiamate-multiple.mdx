@@ -1,0 +1,135 @@
+---
+title: "Invio massivo di chiamate outbound"
+description: "Guida passo-passo per configurare un'automazione che effettua chiamate outbound in modo massivo tramite Keplero AI"
+---
+
+# Chiamare una lista di contatti con Keplero AI Voice
+
+<iframe
+  className="w-full aspect-video rounded-xl"
+  src="https://www.loom.com/embed/460be2c584fb46e3a5dbbd4b28d9a5ea"
+  title="Video guida invio massivo di chiamate outbound"
+  frameBorder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+  allowFullScreen
+></iframe>
+
+Questa guida ti mostra come configurare un'automazione che effettua chiamate outbound in modo massivo verso una lista di contatti.
+
+<Steps>
+<Step title="Prepara il file CSV (se necessario)">
+  Prepara un CSV contenente i numeri di telefono dei contatti da contattare. Verifica che i numeri includano il prefisso internazionale corretto.
+
+  <Frame>
+    <img src="https://loom.com/i/4b0ebbd5b667489db075ed5068333c16?workflows_screenshot=true" alt="Esempio CSV per invio massivo" />
+  </Frame>
+</Step>
+
+<Step title="Crea una nuova automazione">
+  Vai su <strong>Automazioni</strong> nella Console Keplero e clicca su <strong>+</strong> per creare una nuova automazione.
+
+  <Frame>
+    <img src="https://loom.com/i/93fa636da3494f12aeee30b902bffaa0?workflows_screenshot=true" alt="Creazione nuova automazione" />
+  </Frame>
+</Step>
+
+<Step title="Imposta il trigger per l'invio massivo">
+  Seleziona **Keplero** come **Nuovo Evento di Azione** e **Invio Massivo** come trigger.
+
+  <Frame>
+    <img src="https://loom.com/i/a2b51fc4e522485fa3de273eaa33d304?workflows_screenshot=true" alt="Impostazione trigger" />
+  </Frame>
+</Step>
+
+<Step title="Scegli la lista o carica il CSV">
+  Seleziona una lista di contatti esistente oppure carica il CSV preparato per creare la lista dei destinatari.
+
+  <Frame>
+    <img src="https://loom.com/i/201bc5d47b7e4847937b7fb8bb968f45?workflows_screenshot=true" alt="Selezione lista contatti o upload CSV" />
+  </Frame>
+</Step>
+
+<Step title="Configura frequenza e pianificazione">
+  Definisci il numero massimo di chiamate al giorno e pianifica le finestre orarie in cui consentire le chiamate.
+
+  <Frame>
+    <img src="https://loom.com/i/d07cc373ba5242f18c2400f1a3ac751d?workflows_screenshot=true" alt="Frequenza e pianificazione chiamate" />
+  </Frame>
+</Step>
+
+<Step title="Imposta il numero di telefono da chiamare">
+  Indica quale campo contiene il numero da chiamare (Keplero legge automaticamente tutte le colonne del CSV: seleziona quella relativa al numero di telefono).
+
+  <Frame>
+    <img src="https://loom.com/i/4e809953abad48dbae52d8b0dc5b16ba?workflows_screenshot=true" alt="Selezione campo numero di telefono" />
+  </Frame>
+</Step>
+
+<Step title="Definisci il comportamento dell'agente (prompt)">
+  Descrivi cosa deve fare l'agente durante la chiamata: obiettivi, domande chiave, informazioni da raccogliere e come rispondere.
+
+  <Frame>
+    <img src="https://loom.com/i/88ef5b99b6c040e6802575f931b7b056?workflows_screenshot=true" alt="Impostazione prompt agente" />
+  </Frame>
+</Step>
+
+<Step title="Personalizza voce e messaggio di benvenuto">
+  Scegli la voce dell'AI che effettuerà la chiamata ed imposta il messaggio di benvenuto (ovvero il messaggio che verrà riprodotto all'inizio della chiamata).
+
+  <Frame>
+    <img src="https://loom.com/i/743683f034ab4f6896a3b4826482b2a1?workflows_screenshot=true" alt="Voce e welcome message" />
+  </Frame>
+</Step>
+
+<Step title="Configura azioni di fine chiamata ed escalation">
+  Definisci le azioni post-chiamata (condivisione link, estrazione dati, invio trascrizione) e le eventuali regole di trasferimento a operatori.
+
+  <Frame>
+    <img src="https://loom.com/i/a169ba7d24204342b1edc8ff6a69f407?workflows_screenshot=true" alt="Azioni post-chiamata ed escalation" />
+  </Frame>
+</Step>
+
+<Step title="Esegui un test">
+  Utilizza <strong>Test Chiamata</strong> inserendo il tuo numero per verificare configurazione, voce e prompt.
+
+  <Frame>
+    <img src="https://loom.com/i/4aea774de7814836992a447fcd1a77fc?workflows_screenshot=true" alt="Esecuzione test chiamata" />
+  </Frame>
+</Step>
+
+<Step title="Attiva l'automazione">
+  Salva e abilita l'automazione. Per far partire l'automazione, verifica che lo stato sia attivo (icona verde) prima di uscire.
+
+  <Frame>
+    <img src="https://loom.com/i/4953f024f8204fb8a095d3679662133b?workflows_screenshot=true" alt="Attivazione automazione" />
+  </Frame>
+</Step>
+</Steps>
+
+<Warning>
+Prima di attivare, controlla la correttezza dei numeri e delle fasce orarie per evitare chiamate indesiderate.
+</Warning>
+
+<Tip>
+Personalizza il prompt con variabili (es. <strong>nome</strong>) per aumentare il tasso di risposta e la qualità della conversazione.
+</Tip>
+
+
+## Analisi e statistiche sulle chiamate
+
+Cliccando sul blocco **Chiamata in uscita**, spostandoti nella tab **History**, aprirai il pannello dedicato alle statistiche delle chiamate effettuate.
+
+<Frame>
+  <img src="/images/automazioni/outbound-2.png" alt="Statistiche chiamate" />
+</Frame>
+
+In questa sezione avrai il dettaglio su: 
+- Chiamate completate
+- Chiamate in attesa
+- Chiamate in corso
+- Chiamate senza risposta 
+- Chiamate fallite 
+- Chiamate rimosse 
+- Chiamate non effettuate per crediti esauriti
+
+<Note>Potrai filtrare le conversazioni in base alla categoria (*ad esempio "chiamate completate"*) e andare direttamente ad ascoltarti la telefonata cliccando sul link dedicato per ogni conversazione.</Note>
