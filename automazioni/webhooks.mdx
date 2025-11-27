@@ -1,0 +1,160 @@
+---
+title: "Webhook"
+description: "Invia dati a Keplero da applicazioni esterne"
+---
+
+## Cosa sono i Webhook
+
+I webhook sono un modo semplice per **inviare informazioni a Keplero da altre applicazioni o servizi**, in automatico.
+
+Immagina di avere un sito web dove raccogli contatti, o un sistema che gestisce ordini: con i webhook puoi dire a queste applicazioni di "avvisare" Keplero ogni volta che succede qualcosa di importante (ad esempio, un nuovo contatto si iscrive, un ordine viene confermato, ecc.).
+
+<Note>
+Pensa al webhook come a una notifica automatica: quando succede qualcosa nella tua applicazione, questa invia un messaggio a Keplero con tutte le informazioni che servono.
+</Note>
+
+## Come funzionano
+
+Il funzionamento è molto semplice:
+
+<Steps>
+<Step title="Keplero ti fornisce un link" icon="link">
+Quando crei un'automazione con webhook, Keplero ti dà un link unico (chiamato "URL del webhook").
+
+<Frame>
+  <img
+    src="/images/automazioni/webhooks/webhook-url.png"
+    alt="URL del webhook fornito da Keplero"
+    noZoom
+    height="300"
+    className="rounded-lg"
+  />
+</Frame>
+</Step>
+
+<Step title="Configura la tua applicazione" icon="gear">
+Nella tua applicazione esterna (sito web, CRM, e-commerce, ecc.), inserisci questo link e configura quando deve inviare i dati.
+</Step>
+
+<Step title="I dati arrivano automaticamente" icon="paper-plane">
+Ogni volta che l'evento si verifica, la tua applicazione invia i dati a quel link e Keplero li riceve in automatico.
+</Step>
+</Steps>
+
+## Inviare dati a un Webhook
+
+Per inviare dati a Keplero tramite webhook, la tua applicazione deve fare una **richiesta POST** al link fornito.
+
+<Tip>
+Non preoccuparti se questi termini ti sembrano tecnici: se usi piattaforme come Zapier, Make.com, o altri servizi no-code, loro gestiranno tutto automaticamente. Dovrai solo incollare il link del webhook e scegliere quali dati inviare.
+</Tip>
+
+### Cosa puoi inviare
+
+Puoi inviare qualsiasi informazione nel **corpo della richiesta** (body). Ad esempio:
+
+<CodeGroup>
+```json Esempio contatto
+{
+  "nome": "Mario Rossi",
+  "email": "mario.rossi@email.com",
+  "telefono": "+39 333 1234567",
+  "citta": "Milano"
+}
+```
+
+```json Esempio ordine
+{
+  "numero_ordine": "ORD-12345",
+  "cliente": "Laura Bianchi",
+  "prodotto": "Scarpe Running",
+  "importo": "89.90",
+  "stato": "Confermato"
+}
+```
+
+```json Esempio prenotazione
+{
+  "nome_cliente": "Giovanni Verdi",
+  "email": "g.verdi@email.com",
+  "data_prenotazione": "2025-12-15",
+  "servizio": "Consulenza",
+  "note": "Preferenza orario pomeridiano"
+}
+```
+</CodeGroup>
+
+<Warning>
+**Importante**: Invia i dati in modo **semplice e diretto**, senza creare strutture complesse (campi dentro altri campi). Keplero funziona meglio quando i dati sono "piatti".
+</Warning>
+
+### Keplero riconosce i campi automaticamente
+
+Non devi configurare nessuno schema o struttura in anticipo. **Keplero riconosce automaticamente** i campi che invii e li rende disponibili per le tue automazioni.
+
+Ad esempio, se invii:
+
+```json
+{
+  "nome": "Luca",
+  "email": "luca@email.com",
+  "interesse": "Prodotto Premium"
+}
+```
+
+Keplero vedrà automaticamente che hai inviato tre informazioni: `nome`, `email` e `interesse`, e potrai usarle nelle tue automazioni (ad esempio, per personalizzare un messaggio).
+
+<Tabs>
+<Tab title="Prima volta" icon="1">
+La prima volta che invii dati, Keplero impara quali campi stai usando.
+</Tab>
+
+<Tab title="Invii successivi" icon="repeat">
+Negli invii successivi, puoi aggiungere nuovi campi o mandare gli stessi: Keplero li riconoscerà sempre automaticamente.
+</Tab>
+</Tabs>
+
+## Esempio pratico
+
+Immagina di avere un form sul tuo sito web per richiedere informazioni:
+
+<Steps>
+<Step title="Crei l'automazione in Keplero" icon="plus">
+In Keplero, crei un'automazione che inizia con un trigger "Webhook" e ottieni il link.
+</Step>
+
+<Step title="Colleghi il form al webhook" icon="link">
+Nel tuo sito, configuri il form per inviare i dati compilati al link del webhook quando qualcuno clicca "Invia".
+</Step>
+
+<Step title="Keplero riceve i dati e agisce" icon="bolt">
+Quando qualcuno compila il form:
+- I dati (nome, email, messaggio) vengono inviati al webhook
+- Keplero li riceve istantaneamente
+- L'automazione si attiva e fa quello che hai configurato (es. invia un messaggio WhatsApp, salva il contatto, ecc.)
+</Step>
+</Steps>
+
+## Casi d'uso comuni
+
+<CardGroup cols={2}>
+<Card title="Nuovi contatti" icon="user-plus">
+Invia automaticamente un messaggio di benvenuto quando qualcuno si iscrive al tuo sito o compila un form.
+</Card>
+
+<Card title="Ordini e-commerce" icon="cart-shopping">
+Notifica il cliente e il tuo team quando viene effettuato un nuovo ordine.
+</Card>
+
+<Card title="Prenotazioni" icon="calendar-check">
+Conferma automaticamente le prenotazioni e invia i dettagli al cliente.
+</Card>
+
+<Card title="Aggiornamenti stato" icon="rotate">
+Informa i clienti quando cambia lo stato di un ordine, una pratica o una richiesta.
+</Card>
+</CardGroup>
+
+<Info>
+I webhook sono perfetti per collegare Keplero con qualsiasi sistema esterno, anche personalizzato. Se hai uno sviluppatore o usi piattaforme di automazione, puoi integrare praticamente qualsiasi cosa.
+</Info>
