@@ -195,6 +195,7 @@
             "icon": "robot",
             "pages": [
               "automazioni/intro",
+              "automazioni/webhooks",
               {
                 "group": "WhatsApp",
                 "icon": "whatsapp",
