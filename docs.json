@@ -226,7 +226,8 @@
             "group": "Documentazione Tecnica",
             "icon": "book",
             "pages": [
-              "tecnica/widget"
+              "tecnica/widget",
+              "tecnica/installazione_telefono"
             ]
           },
           {

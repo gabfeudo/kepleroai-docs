@@ -1,0 +1,171 @@
+---
+title: 'Installazione di Keplero su numero di telefono o centralino'
+description: 'Scopri come installare Keplero su un numero di telefono o centralino'
+---
+
+Partiamo da una prima divisione: 
+
+<Columns cols={2}>
+  <Card title="Presenza di Centralino" icon="phone">
+    Se il tuo numero di telefono è presidiato da un centralino, puoi installare Keplero su di esso in due modi: puoi far rispondere Keplero a tutte le chiamate oppure far rispondere Keplero solo se nessun'altro operatore risponde.
+  </Card>
+  <Card title="Centralino assente" icon="mobile">
+    Se il tuo telefono non è presidiato da un centralino, puoi sfruttare il numero di Keplero che ti abbiamo fornito oppure trasferire tutte le chiamate che arrivano al tuo numero personale verso Keplero.
+  </Card>
+</Columns>
+
+## Presenza di Centralino
+
+Se il tuo numero di telefono è presidiato da un centralino, puoi installare Keplero su di esso in due principali modalità operative:
+
+### Caso 1: Keplero risponde a tutte le chiamate
+
+In questo caso, Keplero risponde immediatamente a tutte le chiamate, diventando di fatto **la vostra voce aziendale**. Il centralino viene bypassato in ingresso, ma può essere utilizzato per trasferimenti in uscita. 
+
+#### Procedura operativa
+
+<Steps>
+  <Step title="Si deve avere a disposizione un numero pubblico (geografico)">
+    Generalmente collegato a un centralino che gestisce *coda* o *IVR*. 
+    <Warning>
+      Non è possibile installare Keplero su un numero privato.
+    </Warning>
+  </Step>
+  <Step title="Attivazione deviazione a livello di provider">
+    Il provider del numero attiva un trasferimento del numero geografico direttamente verso il numero Keplero che vi è stato assegnato (*es. 0773…*).
+  </Step>
+  <Step title="Il centralino deve avere un numero geografico di appoggio">
+    Serve un secondo numero con:
+    - **IVR attivo**
+    - Tasti configurati (*1, 2, 3…*) che rappresentano gli interni
+  </Step>
+  <Step title="Configurazione escalation su Keplero">
+    Dalla tab **Addestramento** -> **Voice Agent** -> **Operatore Umano** si imposta `<numero_appoggio>` **W** `<tasto_IVR>`.
+    In questo modo, Keplero: 
+    - Chiama il numero di appoggio
+    - Attende l'IVR
+    - Digita automaticamente il tasto corretto
+    - Trasferisce al reparto o all'interno desiderato
+  </Step>
+</Steps>
+
+#### Esempio flusso
+
+1. Il cliente chiama il numero principale
+2. Il provider devia la chiamata a Keplero
+3. Keplero risponde
+4. Gestisce richieste e informazioni
+5. Se serve un operatore → Keplero chiama il numero di appoggio e inoltra la chiamata
+
+### Caso 2: Keplero risponde solo se nessun'altro operatore risponde
+
+In questo caso, il centralino resta la prima linea. Keplero interviene solo se nessun interno risponde.
+
+#### Procedura operativa
+
+<Steps>
+  <Step title="Il centralino gestisce le chiamate in ingresso">
+    Squilla sugli interni tramite codea, gruppi o altre logiche interne.
+  </Step>
+  <Step title="Trasferimento tradizionale verso Keplero in caso di mancata risposta">
+    Si imposta sul centralino.
+    <Tip>
+     “Se nessuno risponde entro X secondi → trasferisci la chiamata a Keplero.”
+    </Tip>
+    <Warning>
+      Trasferimento **tradizionale**, *non del provider*. Con il trasferimento tradizionale, il numero originale del chiamante viene **perso**. Keplero riceve la chiamata senza vedere il numero dell'utente.
+    </Warning>
+  </Step>
+</Steps>
+
+Poiché Keplero non può trasferire agli interni, il comportamento ideale dell'assistente AI da impostare è:
+
+1. **Raccogli le informazioni** (es: motivo della chiamata, numero per essere ricontattati, dettagli aggiuntivi etc.)
+2. **Registra la richiesta** (es: invia mail automatica o registra informazione su Google Sheet)
+3. **Chiudi la chiamata**
+
+#### Esempio flusso
+
+1. Chiamata su numero principale
+2. Il centralino squilla sugli interni
+3. Nessuno risponde
+4. Trasferimento tradizionale verso Keplero
+5. Keplero raccoglie dati e crea ticket / nota su Google Sheet
+6. La chiamata termina
+
+
+## Centralino assente
+
+### Caso 1: Chiamata diretta al numero di Keplero
+
+In questo caso, se non si ha un centralino e si vuole utilizzare direttamente il numero di Keplero che vi è stato assegnato come numero telefonico aziendale.
+
+#### Procedura operativa
+
+<Steps>
+  <Step title="Saremo noi a fornirvi un numero telefonico geografico">
+    Se avete bisogno di un numero con un prefisso in particolare (*es. 06 per provincia di Roma, 02 per provincia di Milano etc.*) potete richiederlo direttamente a noi.
+    <Note>
+      Se richiedete un prefisso diverso da quello di default, sarà necessaria una carta d'identità di una persona residente nella provincia del prefisso scelto.
+    </Note>
+  </Step>
+  <Step title="Gli utenti chiamano -> Keplero risponde direttamente">
+    Nessun intermediario, nessun centralino, nessun IVR estserno, nessuna configurazione aggiuntiva.
+  </Step>
+  <Step title="Eventuale trasferimento verso numeri esterni">
+    Poiché non esiste un centralino, Keplero può comunque chiamare cellulari, linee fisse o numeri esterni dei vari reparti. Se non deve trasferire la chiamata, può registrare ticket, inviare email etc.
+  </Step>
+</Steps>
+
+#### Esempio flusso
+
+1. Viene attivato un numero geografico fornito da Keplero
+2. Gli utenti chiamano questo numero
+3. Keplero risponde
+4. Keplero gestisce la conversazione
+5. Se necessario, Keplero può trasferire la chiamata a numeri esterni o registrare ticket, inviare email etc.
+
+### Caso 2: Inoltro di chiamata da un vostro cellulare verso numero di Keplero
+
+In questo caso, si fa in modo che se un utente chiama il vostro numero di cellulare, la chiamata venga inoltrata automaticamente verso il numero di Keplero.
+
+#### Procedura operativa
+<Steps>
+  <Step title="Prendi il numero di Keplero che ti abbiamo assegnato">
+    Lo trovi in **Impostazioni** -> **Canali** -> **Telefono** (*nell'angolo in alto a destra della pagina*).
+    <Tip>
+      Per facilitare gli esempi che vedrai in seguito, ipotizziamo che il numero che ti abbiamo fornito sia il seguente 👉 +39 0123 456789
+    </Tip>
+  </Step>
+  <Step title="Attiva l'inoltro di chiamata direttamente dal tuo telefono">
+    I seguenti codici devono essere digitati sul **tastierino telefonico** e confermati premendo il **tasto di chiamata**. Dopo aver chiamato, riceverai un messaggio di conferma. Puoi ripetere l'operazione per tutti i seguenti scenari:
+    <Steps>
+      <Step title="Inoltro in caso di nessuna risposta" icon="a">
+        Inoltra dopo 3-5 squilli.
+        ```
+        **61*+390123456789#
+        ```
+      </Step>
+      <Step title="Inoltro in caso di occupato" icon="B">
+         Inoltra subito se l’utente è già in chiamata
+        ```
+        **67*+390123456789#
+        ```
+      </Step>
+      <Step title="Inoltro in caso di non raggiungibile" icon="C">
+         Inoltra quando il telefono è spento o senza rete
+        ```
+        **62*+390123456789#
+        ```
+      </Step>
+    </Steps>
+  </Step>
+</Steps>
+<Note>
+  In caso si vogliano disattivare gli inoltri di chiamata, basterà digitare il seguente codice:
+
+```
+##002#
+```
+Si preme poi il tasto di chiamata. In questo modo si ripristina la configurazione originale.
+</Note>
