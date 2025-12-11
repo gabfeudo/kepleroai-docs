@@ -16,6 +16,7 @@ Quando integri Keplero con il sistema telefonico della tua azienda, puoi sceglie
 
 <CardGroup cols={2}>
   <Card
+    color="#7780D4"
     title="Presenza di Centralino"
     icon="phone"
     href="#presenza-di-centralino"
@@ -25,7 +26,12 @@ Quando integri Keplero con il sistema telefonico della tua azienda, puoi sceglie
     chiamate oppure far rispondere Keplero solo se nessun altro operatore
     risponde.
   </Card>
-  <Card title="Centralino assente" icon="mobile" href="#centralino-assente">
+  <Card
+    color="#7780D4"
+    title="Centralino assente"
+    icon="mobile"
+    href="#centralino-assente"
+  >
     Se il tuo telefono non è presidiato da un centralino, puoi sfruttare il
     numero di Keplero che ti abbiamo fornito oppure trasferire tutte le chiamate
     che arrivano al tuo numero personale verso Keplero.
@@ -120,9 +126,12 @@ Scegli questa modalità quando desideri che il centralino resti la prima linea e
 
 <AccordionGroup>
   <Accordion title="Caratteristiche tecniche">
-    | Caratteristica | Valore | | --- | --- | | Numero chiamante | ❌ Perso | |
-    Trasferimento agli interni | ❌ No | | Centralino richiesto | ✅ Sì | | Tipo
-    di deviazione | Trasferimento tradizionale dal centralino |
+    | Caratteristica | Valore |
+    | --- | --- |
+    | Numero chiamante | ❌ Perso |
+    | Trasferimento agli interni | ❌ No |
+    | Centralino richiesto | ✅ Sì |
+    | Tipo di deviazione | Trasferimento tradizionale dal centralino |
   </Accordion>
 </AccordionGroup>
 
@@ -206,9 +215,12 @@ Scegli questa modalità quando non possiedi un centralino e vuoi attivare un nuo
 
 <AccordionGroup>
   <Accordion title="Caratteristiche tecniche">
-    | Caratteristica | Valore | | --- | --- | | Numero chiamante | ✅ Preservato
-    | | Trasferimento agli interni | ✅ Sì (verso numeri esterni) | | Centralino
-    richiesto | ❌ No | | Setup | Nessuna configurazione aggiuntiva |
+    | Caratteristica | Valore |
+    | --- | --- |
+    | Numero chiamante | ✅ Preservato |
+    | Trasferimento agli interni | ✅ Sì (verso numeri esterni) |
+    | Centralino richiesto | ❌ No |
+    | Setup | Nessuna configurazione aggiuntiva |
   </Accordion>
 </AccordionGroup>
 
@@ -270,10 +282,12 @@ Scegli questa modalità se ricevi chiamate sul cellulare e vuoi che Keplero risp
 
 <AccordionGroup>
   <Accordion title="Caratteristiche tecniche">
-    | Caratteristica | Valore | | --- | --- | | Numero chiamante | ❌ Perso | |
-    Trasferimento agli interni | ✅ Sì (verso numeri esterni) | | Centralino
-    richiesto | ❌ No | | Gestione inoltro | A carico dell'operatore telefonico
-    del cliente |
+    | Caratteristica | Valore |
+    | --- | --- |
+    | Numero chiamante | ❌ Perso |
+    | Trasferimento agli interni | ✅ Sì (verso numeri esterni) |
+    | Centralino richiesto | ❌ No |
+    | Gestione inoltro | A carico dell'operatore telefonico del cliente |
   </Accordion>
 </AccordionGroup>
 
@@ -379,19 +393,19 @@ flowchart LR
 Le quattro modalità permettono di adattare Keplero a qualsiasi configurazione telefonica:
 
 <CardGroup cols={2}>
-  <Card title="Modalità 1" icon="phone-volume">
+  <Card title="Modalità 1" icon="phone-volume" color="#7780D4">
     **Keplero è la voce principale** Risponde a tutte le chiamate e può
     trasferire agli interni del centralino.
   </Card>
-  <Card title="Modalità 2" icon="phone-missed">
+  <Card title="Modalità 2" icon="phone-missed" color="#7780D4">
     **Keplero come fallback** Interviene solo quando gli operatori non
     rispondono, funzionando come segreteria intelligente.
   </Card>
-  <Card title="Modalità 3" icon="phone-plus">
+  <Card title="Modalità 3" icon="phone-plus" color="#7780D4">
     **Keplero è il punto unico** Risponde su un nuovo numero geografico senza
     bisogno di centralino.
   </Card>
-  <Card title="Modalità 4" icon="mobile">
+  <Card title="Modalità 4" icon="mobile" color="#7780D4">
     **Keplero come segreteria** Risponde quando non puoi rispondere al
     cellulare, raccogliendo informazioni per te.
   </Card>
