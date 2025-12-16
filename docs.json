@@ -217,7 +217,9 @@
                 "group": "Ecommerce",
                 "icon": "cart-shopping",
                 "pages": [
-                  "automazioni/ecommerce/automazioni-shopify"
+                  "automazioni/ecommerce/automazioni-shopify",
+                  "automazioni/ecommerce/automazioni-qapla",
+                  "automazioni/ecommerce/automazioni-woocommerce"
                 ]
               }
             ]
