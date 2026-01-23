@@ -5,9 +5,24 @@ description: "Domande e risposte frequenti su WhatsApp e Templates"
 
 <AccordionGroup>
   <Accordion title="Cosa è la politica delle 24 ore di WhatsApp?">
+    Analizziamo due casi in particolare:
+    - **Caso 1**: Siamo noi a scrivere al cliente (ad esempiotramite automazione di invio massivo o tramite template singolo di WhatsApp)
+    - **Caso 2**: è il cliente a contattarci direttamente tramite WhatsApp.
+
+    Per quanto riguarda il **Caso 1**, ovvero quando siamo noi a scrivere al cliente (ad esempio tramite automazione di invio massivo), dobbiamo sapere che:
+
+    <Steps>
+        <Step title="Se il cliente non risponde alla chat, non possiamo inviare ulteriori messaggi manuali">
+        Una volta che il cliente riceve il nostro template, dobbiamo attendere che risponda per poter prendere il controllo manuale della chat e rispondere al cliente manualmente (*vedi <a href="/dashboard/conversazioni/controllo-manuale">Controllo manuale</a>*).
+        <Check>
+            Considerazione utile nei casi in cui si vuole prendere il controllo manuale della chat, ad esempio per inviare allegati o messaggi personalizzati. Se invece lasciamo il controllo della chat a Keplero, non appena il cliente risponde, Keplero continuerà a rispondere automaticamente.
+        </Check>
+        </Step>
+    </Steps>
+    Per quanto riguarda il **Caso 2**, ovvero quando è il cliente a contattarci direttamente tramite WhatsApp, dobbiamo considerare quanto segue:
     <Steps>
         <Step title="Rispondi entro 24 ore">
-        Quando un cliente ti scrive su WhatsApp Business, hai 24 ore di tempo per rispondere gratuitamente. 
+        Quando un cliente ti scrive su WhatsApp Business, hai 24 ore di tempo per rispondere manualmente (*vedi <a href="/dashboard/conversazioni/controllo-manuale">Controllo manuale</a>*) senza usare templates. 
         <Check>
             Se rispondi entro questo intervallo, la conversazione rimane aperta e puoi continuare a comunicare senza costi aggiuntivi.
         </Check>
@@ -15,8 +30,8 @@ description: "Domande e risposte frequenti su WhatsApp e Templates"
         <Step title="Cosa succede dopo 24 ore">
         Se non rispondi entro 24 ore, la finestra gratuita si chiude. Da quel momento:
         <ul>
-            <li>Non puoi più inviare messaggi standard al cliente.</li>
-            <li>Per ricontattarlo, devi usare un <b>template WhatsApp</b> (messaggio a pagamento).</li>
+            <li>Non puoi più inviare messaggi manuali al cliente.</li>
+            <li>Per ricontattarlo, devi usare un <b>nuovotemplate WhatsApp</b> (messaggio a pagamento).</li>
         </ul>
         <Warning>
             I template WhatsApp sono soggetti ad approvazione da parte di Meta e possono comportare costi aggiuntivi.
@@ -25,17 +40,11 @@ description: "Domande e risposte frequenti su WhatsApp e Templates"
         <Step title="Imposta un messaggio automatico">
         Puoi configurare un messaggio automatico che informa il cliente che riceverà risposta entro 24 ore.
         <Tip>
-            Questo aiuta a gestire le aspettative e a rispettare la policy di WhatsApp.
+            Questo, in realtà, con Keplero AI non è necessario, in quanto Keplero stesso risponde automaticamente al cliente non appena riceve il suo messaggio.
         </Tip>
         </Step>
-        <Step title="Gestisci gli orari di risposta">
-        Assicurati di essere disponibile a rispondere durante i tuoi orari di lavoro, così da non perdere la finestra gratuita.
-        <Note>
-            Se ricevi molti messaggi fuori orario, valuta di impostare un messaggio automatico che spieghi quando sarai disponibile.
-        </Note>
-        </Step>
         <Step title="Costi aggiuntivi dopo 24 ore">
-        Se vuoi rispondere dopo la scadenza delle 24 ore, dovrai inviare un template WhatsApp, che è un messaggio a pagamento.
+        Se vuoi rispondere dopo la scadenza delle 24 ore, dovrai inviare un nuovo template WhatsApp (che, come spiegato nella sezione Templates WhatsApp, è un messaggio a pagamento).
         <Info>
             Consulta la sezione <a href="/integrazioni/whatsapp/templates-whatsapp">Templates WhatsApp</a> per sapere come crearli e inviarli.
         </Info>
@@ -43,7 +52,7 @@ description: "Domande e risposte frequenti su WhatsApp e Templates"
     </Steps>
 
     <Check>
-        In sintesi: la politica delle 24 ore di WhatsApp ti impone di rispondere ai clienti entro un giorno. Dopo questo limite, puoi comunicare solo tramite un nuovo template.
+        In sintesi: la politica delle 24 ore di WhatsApp dice che una chat è "aperta" nel momento in cui è il cliente a contattarci direttamente tramite WhatsApp o non appena risponde ad un nostro messaggio. Da quel momento, si apre la finestra temporale di 24 ore in cui possiamo prendere il controllo manuale della chat e rispondere al cliente liberamente. Non appena passano 24 ore dall'ultimo messaggio, si chiude la finestra temporale e Meta considera quella chat come "chiusa". Dopo questo limite, puoi aprire nuovamente quella chat solo tramite un nuovo template.
     </Check>
 
   </Accordion>
