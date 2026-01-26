@@ -37,7 +37,8 @@
                   "dashboard/conversazioni/traduci",
                   "dashboard/conversazioni/promemoria",
                   "dashboard/conversazioni/nuovo-messaggio",
-                  "dashboard/conversazioni/revisiona"
+                  "dashboard/conversazioni/revisiona",
+                  "dashboard/conversazioni/esporta"
                 ]
               },
               {
