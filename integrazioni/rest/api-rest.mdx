@@ -1,0 +1,61 @@
+---
+title: "Creare un'integrazione API REST"
+description: "Guida passo-passo per configurare una nuova integrazione API REST nella piattaforma Keplero AI."
+---
+
+# Creare un'integrazione API REST
+
+Questa guida ti mostra come configurare una nuova integrazione REST API su Keplero AI, permettendo all'AI di invocare endpoint esterni e automatizzare azioni personalizzate.
+
+<Frame caption="Video-guida: come configurare una nuova integrazione REST API con Keplero AI">
+  <iframe
+    className="w-full aspect-video rounded-xl"
+    src="https://www.loom.com/share/5e51ad536ee946d3974bf0b1a3976bd4"
+    title="Video tutorial integrazione REST API con Keplero AI"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    allowFullScreen
+  ></iframe>
+</Frame>
+
+<CardGroup cols={2}>
+    <Card title="Configurazione rapida" icon="rocket" href="#configurazione-rapida">
+        Imposta in pochi minuti una nuova integrazione REST.
+    </Card>
+    <Card title="Debug e test" icon="bug" href="#debug-e-test">
+        Verifica e monitora le chiamate API direttamente dalla dashboard.
+    </Card>
+</CardGroup>
+
+<Steps>
+    <Step title="Crea una nuova integrazione REST">
+        Vai nella sezione <strong>Integrazioni</strong> e seleziona <strong>Nuova integrazione</strong> &rarr; <strong>REST</strong>.
+    </Step>
+    <Step title="Compila i dettagli dell'azione">
+        Inserisci il <strong>nome</strong> dell'azione e una <strong>descrizione</strong> chiara e comprensibile. La descrizione aiuta l'AI a capire quando attivare questa integrazione.
+    </Step>
+    <Step title="Configura i parametri da estrarre">
+        Definisci i parametri che l'AI dovrà estrarre (es. <strong>note ordine</strong>, <strong>codice ordine</strong>). Fornisci descrizioni dettagliate e, se possibile, esempi pratici per ogni parametro.
+    </Step>
+    <Step title="Imposta la richiesta API">
+        Scegli la <strong>tipologia di richiesta</strong> (GET, POST, ecc.), inserisci l'<strong>URL</strong> dell'endpoint, eventuali <strong>query parameter</strong>, <strong>header</strong> per l'autenticazione e il <strong>body</strong> della richiesta.
+
+        <Tip>
+            Nel body e negli altri campi puoi usare le variabili estratte racchiudendole tra parentesi graffe, ad esempio: <code>\{\{codice_ordine\}\}</code>.
+        </Tip>
+    </Step>
+    <Step title="Salva e testa l'integrazione">
+        Salva la configurazione e utilizza la sezione <strong>Esecuzioni</strong> per monitorare le chiamate API e il debug degli argomenti estratti e delle risposte.
+    </Step>
+</Steps>
+
+## Debug e test
+
+Durante i test, puoi vedere:
+- L'icona lampo che indica l'invocazione dell'azione
+- Gli argomenti estratti e inviati all'API
+- La risposta ricevuta dall'endpoint
+- Tutta la configurazione modificabile in tempo reale
+
+<Note>
+    Per assistenza o domande sulle integrazioni REST, contatta <a href="mailto:support@keplero.ai">support@keplero.ai</a>.
+</Note>
