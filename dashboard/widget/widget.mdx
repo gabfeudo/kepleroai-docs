@@ -1,0 +1,105 @@
+---
+title: "Installazione del widget Keplero AI"
+description: "Guida dettagliata per installare il widget chatbot Keplero AI su WordPress, Shopify, PrestaShop e siti HTML generici."
+---
+
+# Installazione del widget Keplero AI
+
+Puoi installare il chatbot di Keplero AI su qualsiasi sito web in pochi minuti. Segui le istruzioni specifiche per la tua piattaforma.
+
+<CardGroup cols={2}>
+    <Card title="WordPress" icon="wordpress" href="#installazione-su-wordpress">
+        Guida passo-passo per aggiungere il widget tramite plugin.
+    </Card>
+    <Card title="Shopify" icon="shopify" href="#installazione-su-shopify">
+        Istruzioni per integrare il widget nel tema Shopify.
+    </Card>
+    <Card title="PrestaShop" icon="shopping-cart" href="#installazione-su-prestashop">
+        Come aggiungere il widget tramite modulo HTMLbox.
+    </Card>
+    <Card title="HTML generico" icon="code" href="#installazione-su-html-generico">
+        Procedura per siti web personalizzati o builder.
+    </Card>
+</CardGroup>
+
+<Steps>
+    <Step title="Recupera il codice widget">
+        Accedi alla <a href="https://console.keplero.ai" target="_blank">Console Keplero</a> e copia il codice del widget dalla sezione <strong>Panoramica</strong>.
+    </Step>
+</Steps>
+
+## Installazione su WordPress
+
+Per installare il widget su WordPress:
+
+<Steps>
+    <Step title="Installa il plugin Custom JS/HTML">
+        Vai su <strong>Plugin</strong> &rarr; <strong>Aggiungi nuovo</strong> e cerca <strong>Simple Custom CSS & JS</strong>. Installa e attiva il plugin.
+
+        <Frame caption="Schermata di installazione del plugin Simple Custom CSS & JS su WordPress">
+            <img src="/images/dashboard/widget/wordpress.png" alt="Installazione plugin Simple Custom CSS & JS su WordPress" />
+        </Frame>
+    </Step>
+    <Step title="Aggiungi codice widget">
+        Apri il plugin dalla sidebar, clicca su <strong>Add custom HTML</strong> e incolla il codice del widget. Dai un nome (es. "Keplero widget").
+    </Step>
+    <Step title="Configura posizione e pubblica">
+        Seleziona <strong>Footer</strong> nelle opzioni a destra e premi <strong>Publish</strong>.
+        <Check>
+            Il widget sarà visibile su tutte le pagine del sito.
+        </Check>
+    </Step>
+</Steps>
+
+## Installazione su PrestaShop
+
+<Steps>
+    <Step title="Scarica modulo HTMLbox">
+        Scarica <a href="http://mypresta.eu/modules/front-office-features/html-box.html" target="_blank">HTMLbox</a>.
+    </Step>
+    <Step title="Installa il modulo">
+        Carica e installa il modulo da <strong>Moduli &gt; Moduli</strong>.
+    </Step>
+    <Step title="Aggiungi codice widget">
+        Configura HTMLbox, incolla il codice del widget dalla Console Keplero e salva.
+    </Step>
+</Steps>
+
+## Installazione su Shopify
+
+<Steps>
+    <Step title="Modifica il tema">
+        Vai su <strong>Themes</strong> &rarr; clicca sui <strong>tre puntini</strong> del tema attivo &rarr; <strong>Edit code</strong>.
+    </Step>
+    <Step title="Incolla il codice widget">
+        Apri il file <strong>theme.liquid</strong>, scorri fino in fondo e incolla il codice del widget appena prima di <code>&lt;/body&gt;</code>.
+    </Step>
+</Steps>
+
+## Installazione su HTML generico
+
+<Steps>
+    <Step title="Aggiungi il codice widget">
+        Incolla il codice del widget prima del tag <code>&lt;/body&gt;</code> in tutte le pagine dove vuoi visualizzare il chatbot.
+    </Step>
+</Steps>
+
+## Attributi avanzati
+
+Puoi personalizzare il comportamento del widget aggiungendo attributi al tag HTML:
+
+<AccordionGroup>
+    <Accordion title="fullSize=true">
+        Il chatbot riempie tutto il contenitore invece di apparire come pulsante flottante.
+    </Accordion>
+    <Accordion title="identifiedOnly=true">
+        Mostra un form di acquisizione lead prima di iniziare la chat.
+    </Accordion>
+    <Accordion title="bottom=10">
+        Regola la distanza dal bordo inferiore della pagina.
+    </Accordion>
+</AccordionGroup>
+
+<Note>
+    Per assistenza o domande, contatta <a href="mailto:support@keplero.ai">support@keplero.ai</a>.
+</Note>
