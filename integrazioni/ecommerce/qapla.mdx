@@ -28,4 +28,18 @@ description: "Collega il tuo store Qapla con Keplero per fornire alla tua AI tut
     <Step title="Una volta sincronizzato, puoi iniziare a utilizzare Keplero AI">
         Una volta sincronizzato, puoi iniziare a utilizzare Keplero AI per gestire i tuoi prodotti e ordini.
     </Step>
+    <Step title="Ultimo step: utilizzi sistemi di sicurezza (Cloudflare, firewall o meccanismi di blocco IP)?">
+        <Warning>
+            Questa configurazione è richiesta per tutti gli ecommerce che utilizzano sistemi di sicurezza come Cloudflare, firewall o meccanismi di blocco degli IP. Anche in assenza di una whitelist esplicita, è importante verificare che non siano presenti blocklist o restrizioni che impediscano l’accesso.
+        </Warning>
+        Per il corretto funzionamento delle integrazioni ecommerce è necessario assicurarsi che due indirizzi IP distinti abbiano accesso all’ecommerce.Keplero utilizza due macchine separate, ognuna dedicata a una specifica funzionalità:
+        - `2a01:4f8:c013:d673::/64`: Utilizzato per la sincronizzazione dei prodotti dell’ecommerce.
+        - `2a01:4f8:c012:f579::/64`: Utilizzato per il recupero degli ordini.
+        <Tip>
+            È fondamentale che entrambi gli IP possano accedere all’ecommerce.
+        </Tip>
+        <Note>
+            Se viene consentito l’accesso solo all’IP utilizzato per la sync dei prodotti, il collegamento iniziale potrebbe risultare corretto, ma il recupero degli ordini non funzionerà.
+        </Note>
+    </Step>
 </Steps>
