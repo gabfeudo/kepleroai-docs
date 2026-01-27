@@ -3,265 +3,281 @@ title: "Q&A"
 description: "Domande e risposte frequenti su WhatsApp e Templates"
 ---
 
+## Integrazione di WhatsApp in Keplero AI
+
 <AccordionGroup>
-  <Accordion title="Cosa è la politica delle 24 ore di WhatsApp?">
-    Analizziamo due casi in particolare:
-    - **Caso 1**: Siamo noi a scrivere al cliente (ad esempio tramite automazione di invio massivo o tramite template singolo di WhatsApp)
-    - **Caso 2**: è il cliente a contattarci direttamente tramite WhatsApp.
+    <Accordion title="Se integro WhatsApp in Keplero, poi posso usare l'App di Whatsapp sul cellulare o WhatsApp Web da pc?">
+        No, non è possibile utilizzare contemporaneamente l’app WhatsApp (mobile o WhatsApp Web) e Keplero con lo stesso numero di telefono.
 
-    Per quanto riguarda il **Caso 1**, ovvero quando siamo noi a scrivere al cliente (ad esempio tramite automazione di invio massivo), dobbiamo sapere che:
+       **WhatsApp, tramite le policy di Meta, consente infatti di associare un numero a un solo servizio alla volta**.
 
-    <Steps>
-        <Step title="Se il cliente non risponde alla chat, non possiamo inviare ulteriori messaggi manuali">
-        Una volta che il cliente riceve il nostro template, dobbiamo attendere che risponda per poter prendere il controllo manuale della chat e rispondere al cliente manualmente (*vedi <a href="/dashboard/conversazioni/controllo-manuale">Controllo manuale</a>*).
-        <Check>
-            Considerazione utile nei casi in cui si vuole prendere il controllo manuale della chat, ad esempio per inviare allegati o messaggi personalizzati. Se invece lasciamo il controllo della chat a Keplero, non appena il cliente risponde, Keplero continuerà a rispondere automaticamente.
-        </Check>
+       Quando un numero viene integrato in Keplero tramite le WhatsApp Business Platform (API), il numero viene scollegato dall’app WhatsApp tradizionale e tutte le conversazioni vengono gestite <u>esclusivamente</u> all’interno di Keplero.
+
+        In pratica:
+        - se il numero è collegato all’app WhatsApp (mobile o web), non può essere usato in Keplero;
+        - se il numero è collegato a Keplero, non può essere usato sull’app WhatsApp o su WhatsApp Web.
+
+        <Note>Questa limitazione è imposta direttamente da Meta e non dipende da Keplero.</Note>
+    </Accordion>
+    <Accordion title="Come scollego WhatsApp da Keplero AI?">
+        <Steps title="Scollega WhatsApp da Keplero AI">
+        <Step title="Disconnetti WhatsApp dalla Console Keplero">
+            Vai su <strong>Console Keplero</strong> &gt; <strong>Impostazioni</strong> &gt; <strong>Canali</strong> &gt; <strong>WhatsApp</strong>. Clicca poi sulle impostazioni del profilo WhatsApp e seleziona <strong>Disconnetti</strong>.
+
         </Step>
-    </Steps>
-    Per quanto riguarda il **Caso 2**, ovvero quando è il cliente a contattarci direttamente tramite WhatsApp, dobbiamo considerare quanto segue:
-    <Steps>
-        <Step title="Rispondi entro 24 ore">
-        Quando un cliente ti scrive su WhatsApp Business, hai 24 ore di tempo per rispondere manualmente (*vedi <a href="/dashboard/conversazioni/controllo-manuale">Controllo manuale</a>*) senza usare templates. 
-        <Check>
-            Se rispondi entro questo intervallo, la conversazione rimane aperta e puoi continuare a comunicare senza costi aggiuntivi.
-        </Check>
+        <Step title="Scollega il numero dalle API WhatsApp di Meta">
+            Per scollegare completamente il numero dalle API di WhatsApp, segui la guida ufficiale Meta: <a href="https://faq.whatsapp.com/209248051996804" target="_blank" rel="noopener">Come rimuovere un numero da WhatsApp Business API</a>.
+
+            <Info>
+            Segui tutti i passaggi indicati nella guida Meta per assicurarti che il numero sia completamente scollegato dal servizio API.
+            </Info>
+
         </Step>
-        <Step title="Cosa succede dopo 24 ore">
-        Se non rispondi entro 24 ore, la finestra gratuita si chiude. Da quel momento:
-        <ul>
-            <li>Non puoi più inviare messaggi manuali al cliente.</li>
-            <li>Per ricontattarlo, devi usare un <b>nuovotemplate WhatsApp</b> (messaggio a pagamento).</li>
-        </ul>
-        <Warning>
-            I template WhatsApp sono soggetti ad approvazione da parte di Meta e possono comportare costi aggiuntivi.
-        </Warning>
-        </Step>
-        <Step title="Imposta un messaggio automatico">
-        Puoi configurare un messaggio automatico che informa il cliente che riceverà risposta entro 24 ore.
-        <Tip>
-            Questo, in realtà, con Keplero AI non è necessario, in quanto Keplero stesso risponde automaticamente al cliente non appena riceve il suo messaggio.
-        </Tip>
-        </Step>
-        <Step title="Costi aggiuntivi dopo 24 ore">
-        Se vuoi rispondere dopo la scadenza delle 24 ore, dovrai inviare un nuovo template WhatsApp (che, come spiegato nella sezione Templates WhatsApp, è un messaggio a pagamento).
-        <Info>
-            Consulta la sezione <a href="/integrazioni/whatsapp/templates-whatsapp">Templates WhatsApp</a> per sapere come crearli e inviarli.
-        </Info>
-        </Step>
-    </Steps>
-
-    <Check>
-        In sintesi: la politica delle 24 ore di WhatsApp dice che una chat è "aperta" nel momento in cui è il cliente a contattarci direttamente tramite WhatsApp o non appena risponde ad un nostro messaggio. Da quel momento, si apre la finestra temporale di 24 ore in cui possiamo prendere il controllo manuale della chat e rispondere al cliente liberamente. Non appena passano 24 ore dall'ultimo messaggio, si chiude la finestra temporale e Meta considera quella chat come "chiusa". Dopo questo limite, puoi aprire nuovamente quella chat solo tramite un nuovo template.
-    </Check>
-
-  </Accordion>
-
-<Accordion title="Come mai il template non viene inviato?">
-  <Steps>
-    <Step title="Verifica che sia collegata una carta di credito">
-      Assicurati che all’account WhatsApp Business sia collegata una carta di
-      credito valida. Le API di WhatsApp prevedono un costo di circa 5 centesimi
-      per ogni template inviato (il costo si applica solo all’invio del
-      template, non alle risposte dell’AI).
-      <ol>
-        <li>
-          Vai su{" "}
-          <a
-            href="https://business.facebook.com/settings/whatsapp-business-accounts/"
-            target="_blank"
-            rel="noopener"
-          >
-            <strong>Meta Business Suite</strong>
-          </a>{" "}
-          e seleziona il tuo Business Manager (scegli quello utilizzato per
-          collegare il numero WhatsApp a Keplero).
-        </li>
-        <li>
-          Clicca su <strong>Account</strong> &gt;{" "}
-          <strong>Account WhatsApp</strong> nel menu a sinistra.
-        </li>
-        <li>
-          Seleziona <strong>il tuo account WhatsApp Business</strong> &gt;{" "}
-          <strong>Impostazioni</strong>.
-        </li>
-        <li>
-          Vai su <strong>Impostazioni di pagamento</strong> &gt;{" "}
-          <strong>Aggiungi una carta di credito</strong>.
-        </li>
-        <li>
-          Clicca sui tre puntini accanto alla carta e seleziona{" "}
-          <strong>Imposta come predefinito</strong>.
-        </li>
-      </ol>
-      <Check>
-        Se la carta è collegata e impostata come predefinita, puoi inviare
-        template WhatsApp senza problemi di pagamento.
-      </Check>
-    </Step>
-    <Step title="Controlla la presenza di pagamenti insoluti">
-      Nella stessa sezione <strong>Pagamenti</strong>, verifica che non ci siano
-      pagamenti insoluti o problemi di fatturazione.
-      <Warning>
-        Se ci sono pagamenti insoluti, i template WhatsApp non verranno inviati
-        finché la situazione non sarà regolarizzata.
-      </Warning>
-    </Step>
-    <Step title="Disconnetti e riconnetti il numero WhatsApp">
-      Se la carta è collegata correttamente e non ci sono insoluti, prova a
-      disconnettere e riconnettere il numero di WhatsApp. Non è necessario
-      ripetere la verifica del numero, quindi la procedura è rapida.
-      <Tip>
-        Questa operazione spesso risolve problemi temporanei di invio dei
-        template.
-      </Tip>
-    </Step>
-    <Step title="Verifica eventuali blocchi su template o account">
-      Se dopo i passaggi precedenti il problema persiste, WhatsApp potrebbe aver
-      bloccato il template che stai cercando di inviare oppure il tuo account
-      WhatsApp.
-      <ol>
-        <li>
-          Accedi al <strong>Business Manager</strong> (vedi step 1).
-        </li>
-        <li>
-          Nel menu, clicca su <strong>WhatsApp Manager</strong>.
-        </li>
-        <li>
-          Controlla le sezioni <strong>Numeri di telefono</strong> e{" "}
-          <strong>Gestione modelli di messaggio</strong> per verificare
-          eventuali blocchi o segnalazioni.
-        </li>
-      </ol>
-      <Info>
-        Se riscontri blocchi o errori, contatta il supporto Meta per ulteriori
-        dettagli e sblocco del servizio.
-      </Info>
-    </Step>
-  </Steps>
-</Accordion>
-
-<Accordion title="Posso inviare un'immagine nel Template WhatsApp?">
-  Devi creare un template aggiungendo un’intestazione e selezionando “Immagine”
-  come tipo di contenuto. Durante la configurazione, ti verrà richiesto di
-  inserire un’immagine di esempio. Una volta che Meta approva il template,
-  potrai inviare il messaggio includendo direttamente l’immagine.
-</Accordion>
-
-<Accordion title="Come collego la carta di credito?">
-  <Steps title="Collega la carta di credito al tuo account WhatsApp">
-    <Step title="Accedi a Meta Business Suite">
-      Vai su <a href="https://business.facebook.com/settings/whatsapp-business-accounts/" target="_blank" rel="noopener"><strong>Meta Business Suite</strong></a> e seleziona il tuo <strong>Business Manager</strong>.<br />
-      <Info>
-        Se hai più di un Business Manager, scegli quello che hai utilizzato per
-        collegare il numero WhatsApp a Keplero.
-      </Info>
-    </Step>
-    <Step title="Vai su Account WhatsApp">
-      Nel menu a sinistra, clicca su <strong>Account</strong> &gt;{" "}
-      <strong>Account WhatsApp</strong>.
-    </Step>
-    <Step title="Seleziona il tuo account WhatsApp Business">
-      Scegli il tuo <strong>account WhatsApp Business</strong> e vai su{" "}
-      <strong>Impostazioni</strong>.
-    </Step>
-    <Step title="Aggiungi la carta di credito">
-      Vai su <strong>Impostazioni di pagamento</strong> e clicca su{" "}
-      <strong>Aggiungi una carta di credito</strong>.
-    </Step>
-    <Step title="Imposta la carta come predefinita">
-      Clicca sui <strong>tre puntini</strong> accanto alla carta appena aggiunta
-      e seleziona <strong>Imposta come predefinito</strong>.
-    </Step>
-    <Step title="Verifica eventuali pagamenti insoluti (se i messaggi non partono)">
-      Se la carta è collegata ma i messaggi non vengono consegnati (rimane
-      l’icona dell’orologio sul messaggio), controlla nella stessa sezione{" "}
-      <strong>Pagamenti</strong> che non ci siano pagamenti insoluti.
-      <Warning>
-        La presenza di pagamenti insoluti blocca l’invio dei messaggi WhatsApp.
-        Regolarizza la situazione per ripristinare il servizio.
-      </Warning>
-    </Step>
-  </Steps>
-  <Note>
-    Per permettere a Keplero di inviare messaggi in uscita (ad esempio campagne
-    promozionali, automazioni di messaggi su WhatsApp o altro), è obbligatorio
-    avere la carta di credito collegata all'account WhatsApp.
-  </Note>
-</Accordion>
-
-  <Accordion title="Perché è necessario inserire la carta di credito?">
-    La carta di credito è richiesta per l'integrazione con WhatsApp, ma viene utilizzata solo per due scopi specifici:
-
-    1) il pagamento di eventuali campagne WhatsApp
-    2) il pagamento dei template.
-
-    Oltre queste dinamiche, non ci sono costi aggiuntivi per il servizio di customer care tramite WhatsApp.
-
-  </Accordion>
-  <Accordion title="Perché il Template non viene approvato e rimane sempre in attesa (PENDING)?">
-  <Steps>
-    <Step title="Crea un nuovo template con nome in minuscolo e contenuto diverso">
-      Prova a creare un nuovo template assicurandoti che il <strong>nome sia tutto in minuscolo</strong> (ad esempio, <code>messaggio_iniziale</code>) e che il <strong>contenuto sia sostanzialmente diverso</strong> rispetto a quello precedentemente inviato.
-      <Tip>
-        Cambiare sia il nome che il testo del template aumenta le probabilità di approvazione da parte di Meta.
-      </Tip>
-    </Step>
-    <Step title="Attendi almeno 24 ore">
-      Dopo aver inviato il nuovo template, attendi almeno <strong>24 ore</strong> per ricevere una risposta da Meta.
-      <Info>
-        I tempi di approvazione possono variare, ma spesso Meta impiega fino a un giorno lavorativo per valutare i nuovi template.
-      </Info>
-    </Step>
-    <Step title="Completa profilo e descrizione dell’account WhatsApp">
-      Assicurati che il tuo <strong>account WhatsApp Business</strong> abbia una <strong>foto profilo</strong> e una <strong>descrizione</strong> compilata.
-      <Warning>
-        Un profilo incompleto può rallentare o bloccare l’approvazione dei template.
-      </Warning>
-    </Step>
-  </Steps>
-  </Accordion>
-  <Accordion title="Come scollego WhatsApp da Keplero AI?">
-<Steps title="Scollega WhatsApp da Keplero AI">
-  <Step title="Disconnetti WhatsApp dalla Console Keplero">
-    Vai su <strong>Console Keplero</strong> &gt; <strong>Impostazioni</strong> &gt; <strong>Canali</strong> &gt; <strong>WhatsApp</strong>. Clicca poi sulle impostazioni del profilo WhatsApp e seleziona <strong>Disconnetti</strong>.
-
-  </Step>
-  <Step title="Scollega il numero dalle API WhatsApp di Meta">
-    Per scollegare completamente il numero dalle API di WhatsApp, segui la guida ufficiale Meta: <a href="https://faq.whatsapp.com/209248051996804" target="_blank" rel="noopener">Come rimuovere un numero da WhatsApp Business API</a>.
-
-    <Info>
-      Segui tutti i passaggi indicati nella guida Meta per assicurarti che il numero sia completamente scollegato dal servizio API.
-    </Info>
-
-  </Step>
-</Steps>
-  </Accordion>
+        </Steps>
+    </Accordion>
     <Accordion title="Come evitare il BAN da WhatsApp?">
-  
-    <Steps>
-      <Step title="Invia messaggi solo a contatti consenzienti">
-          I messaggi devono essere inviati esclusivamente a contatti che conoscono il brand e che hanno fornito un consenso esplicito alla ricezione delle comunicazioni. L’invio a contatti non qualificati aumenta in modo significativo il rischio di segnalazioni come spam.
-      </Step>
-      <Step title="Evita segnalazioni come spam">
-          Un numero elevato di segnalazioni da parte dei destinatari può comportare limitazioni progressive fino al blocco completo dell’account WhatsApp.
-        <Info>
-          Le segnalazioni sono il principale indicatore utilizzato da Meta per valutare comportamenti non conformi.
-        </Info>
-      </Step>
-      <Step title="Attenzione: lo sblocco è concesso una sola volta">
-         In caso di blocco, Meta consente generalmente un solo sblocco tramite richiesta all’assistenza. 
-         <Warning>
-           Se l’account viene bloccato nuovamente per le stesse motivazioni, il ban può diventare definitivo e irreversibile.
-         </Warning>
-      </Step>
-      <Step title="Mantieni messaggi semplici e naturali">
-          I messaggi devono sembrare scritti manualmente: brevi, chiari e pertinenti. Testi troppo lunghi, ripetitivi o con struttura promozionale aumentano la probabilità che il messaggio venga percepito come spam e segnalato.
-      </Step>
-      <Step title="Acquisisci i contatti in modo corretto">
-          È fondamentale che i numeri di telefono siano raccolti tramite canali conformi (moduli, richieste dirette, interazioni volontarie). L’uso di liste acquistate o database di terze parti comporta quasi sempre segnalazioni e un blocco rapido dell’account.
-      </Step>
-    </Steps>
+        <Steps>
+        <Step title="Invia messaggi solo a contatti consenzienti">
+            I messaggi devono essere inviati esclusivamente a contatti che conoscono il brand e che hanno fornito un consenso esplicito alla ricezione delle comunicazioni. L’invio a contatti non qualificati aumenta in modo significativo il rischio di segnalazioni come spam.
+        </Step>
+        <Step title="Evita segnalazioni come spam">
+            Un numero elevato di segnalazioni da parte dei destinatari può comportare limitazioni progressive fino al blocco completo dell’account WhatsApp.
+            <Info>
+            Le segnalazioni sono il principale indicatore utilizzato da Meta per valutare comportamenti non conformi.
+            </Info>
+        </Step>
+        <Step title="Attenzione: lo sblocco è concesso una sola volta">
+            In caso di blocco, Meta consente generalmente un solo sblocco tramite richiesta all’assistenza.
+            <Warning>
+            Se l’account viene bloccato nuovamente per le stesse motivazioni, il ban può diventare definitivo e irreversibile.
+            </Warning>
+        </Step>
+        <Step title="Mantieni messaggi semplici e naturali">
+            I messaggi devono sembrare scritti manualmente: brevi, chiari e pertinenti. Testi troppo lunghi, ripetitivi o con struttura promozionale aumentano la probabilità che il messaggio venga percepito come spam e segnalato.
+        </Step>
+        <Step title="Acquisisci i contatti in modo corretto">
+            È fondamentale che i numeri di telefono siano raccolti tramite canali conformi (moduli, richieste dirette, interazioni volontarie). L’uso di liste acquistate o database di terze parti comporta quasi sempre segnalazioni e un blocco rapido dell’account.
+        </Step>
+        </Steps>
+    </Accordion>
+</AccordionGroup>
 
-  </Accordion>
+## Templates WhatsApp
+
+<AccordionGroup>
+    <Accordion title="Cosa è la politica delle 24 ore di WhatsApp?">
+        Analizziamo due casi in particolare:
+        - **Caso 1**: Siamo noi a scrivere al cliente (ad esempio tramite automazione di invio massivo o tramite template singolo di WhatsApp)
+        - **Caso 2**: è il cliente a contattarci direttamente tramite WhatsApp.
+
+        Per quanto riguarda il **Caso 1**, ovvero quando siamo noi a scrivere al cliente (ad esempio tramite automazione di invio massivo), dobbiamo sapere che:
+
+        <Steps>
+            <Step title="Se il cliente non risponde alla chat, non possiamo inviare ulteriori messaggi manuali">
+            Una volta che il cliente riceve il nostro template, dobbiamo attendere che risponda per poter prendere il controllo manuale della chat e rispondere al cliente manualmente (*vedi <a href="/dashboard/conversazioni/controllo-manuale">Controllo manuale</a>*).
+            <Check>
+                Considerazione utile nei casi in cui si vuole prendere il controllo manuale della chat, ad esempio per inviare allegati o messaggi personalizzati. Se invece lasciamo il controllo della chat a Keplero, non appena il cliente risponde, Keplero continuerà a rispondere automaticamente.
+            </Check>
+            </Step>
+        </Steps>
+        Per quanto riguarda il **Caso 2**, ovvero quando è il cliente a contattarci direttamente tramite WhatsApp, dobbiamo considerare quanto segue:
+        <Steps>
+            <Step title="Rispondi entro 24 ore">
+            Quando un cliente ti scrive su WhatsApp Business, hai 24 ore di tempo per rispondere manualmente (*vedi <a href="/dashboard/conversazioni/controllo-manuale">Controllo manuale</a>*) senza usare templates.
+            <Check>
+                Se rispondi entro questo intervallo, la conversazione rimane aperta e puoi continuare a comunicare senza costi aggiuntivi.
+            </Check>
+            </Step>
+            <Step title="Cosa succede dopo 24 ore">
+            Se non rispondi entro 24 ore, la finestra gratuita si chiude. Da quel momento:
+            <ul>
+                <li>Non puoi più inviare messaggi manuali al cliente.</li>
+                <li>Per ricontattarlo, devi usare un <b>nuovotemplate WhatsApp</b> (messaggio a pagamento).</li>
+            </ul>
+            <Warning>
+                I template WhatsApp sono soggetti ad approvazione da parte di Meta e possono comportare costi aggiuntivi.
+            </Warning>
+            </Step>
+            <Step title="Imposta un messaggio automatico">
+            Puoi configurare un messaggio automatico che informa il cliente che riceverà risposta entro 24 ore.
+            <Tip>
+                Questo, in realtà, con Keplero AI non è necessario, in quanto Keplero stesso risponde automaticamente al cliente non appena riceve il suo messaggio.
+            </Tip>
+            </Step>
+            <Step title="Costi aggiuntivi dopo 24 ore">
+            Se vuoi rispondere dopo la scadenza delle 24 ore, dovrai inviare un nuovo template WhatsApp (che, come spiegato nella sezione Templates WhatsApp, è un messaggio a pagamento).
+            <Info>
+                Consulta la sezione <a href="/integrazioni/whatsapp/templates-whatsapp">Templates WhatsApp</a> per sapere come crearli e inviarli.
+            </Info>
+            </Step>
+        </Steps>
+        <Check>
+            In sintesi: la politica delle 24 ore di WhatsApp dice che una chat è "aperta" nel momento in cui è il cliente a contattarci direttamente tramite WhatsApp o non appena risponde ad un nostro messaggio. Da quel momento, si apre la finestra temporale di 24 ore in cui possiamo prendere il controllo manuale della chat e rispondere al cliente liberamente. Non appena passano 24 ore dall'ultimo messaggio, si chiude la finestra temporale e Meta considera quella chat come "chiusa". Dopo questo limite, puoi aprire nuovamente quella chat solo tramite un nuovo template.
+        </Check>
+    </Accordion>
+    <Accordion title="Come mai il template non viene inviato?">
+        <Steps>
+            <Step title="Verifica che sia collegata una carta di credito">
+            Assicurati che all’account WhatsApp Business sia collegata una carta di
+            credito valida. Le API di WhatsApp prevedono un costo di circa 5 centesimi
+            per ogni template inviato (il costo si applica solo all’invio del
+            template, non alle risposte dell’AI).
+            <ol>
+                <li>
+                Vai su{" "}
+                <a
+                    href="https://business.facebook.com/settings/whatsapp-business-accounts/"
+                    target="_blank"
+                    rel="noopener"
+                >
+                    <strong>Meta Business Suite</strong>
+                </a>{" "}
+                e seleziona il tuo Business Manager (scegli quello utilizzato per
+                collegare il numero WhatsApp a Keplero).
+                </li>
+                <li>
+                Clicca su <strong>Account</strong> &gt;{" "}
+                <strong>Account WhatsApp</strong> nel menu a sinistra.
+                </li>
+                <li>
+                Seleziona <strong>il tuo account WhatsApp Business</strong> &gt;{" "}
+                <strong>Impostazioni</strong>.
+                </li>
+                <li>
+                Vai su <strong>Impostazioni di pagamento</strong> &gt;{" "}
+                <strong>Aggiungi una carta di credito</strong>.
+                </li>
+                <li>
+                Clicca sui tre puntini accanto alla carta e seleziona{" "}
+                <strong>Imposta come predefinito</strong>.
+                </li>
+            </ol>
+            <Check>
+                Se la carta è collegata e impostata come predefinita, puoi inviare
+                template WhatsApp senza problemi di pagamento.
+            </Check>
+            </Step>
+            <Step title="Controlla la presenza di pagamenti insoluti">
+            Nella stessa sezione <strong>Pagamenti</strong>, verifica che non ci siano
+            pagamenti insoluti o problemi di fatturazione.
+            <Warning>
+                Se ci sono pagamenti insoluti, i template WhatsApp non verranno inviati
+                finché la situazione non sarà regolarizzata.
+            </Warning>
+            </Step>
+            <Step title="Disconnetti e riconnetti il numero WhatsApp">
+            Se la carta è collegata correttamente e non ci sono insoluti, prova a
+            disconnettere e riconnettere il numero di WhatsApp. Non è necessario
+            ripetere la verifica del numero, quindi la procedura è rapida.
+            <Tip>
+                Questa operazione spesso risolve problemi temporanei di invio dei
+                template.
+            </Tip>
+            </Step>
+            <Step title="Verifica eventuali blocchi su template o account">
+            Se dopo i passaggi precedenti il problema persiste, WhatsApp potrebbe aver
+            bloccato il template che stai cercando di inviare oppure il tuo account
+            WhatsApp.
+            <ol>
+                <li>
+                Accedi al <strong>Business Manager</strong> (vedi step 1).
+                </li>
+                <li>
+                Nel menu, clicca su <strong>WhatsApp Manager</strong>.
+                </li>
+                <li>
+                Controlla le sezioni <strong>Numeri di telefono</strong> e{" "}
+                <strong>Gestione modelli di messaggio</strong> per verificare
+                eventuali blocchi o segnalazioni.
+                </li>
+            </ol>
+            <Info>
+                Se riscontri blocchi o errori, contatta il supporto Meta per ulteriori
+                dettagli e sblocco del servizio.
+            </Info>
+            </Step>
+        </Steps>
+    </Accordion>
+    <Accordion title="Posso inviare un'immagine nel Template WhatsApp?">
+        Devi creare un template aggiungendo un’intestazione e selezionando “Immagine”
+        come tipo di contenuto. Durante la configurazione, ti verrà richiesto di
+        inserire un’immagine di esempio. Una volta che Meta approva il template,
+        potrai inviare il messaggio includendo direttamente l’immagine.
+    </Accordion>
+    <Accordion title="Perché il Template non viene approvato e rimane sempre in attesa (PENDING)?">
+        <Steps>
+            <Step title="Crea un nuovo template con nome in minuscolo e contenuto diverso">
+            Prova a creare un nuovo template assicurandoti che il <strong>nome sia tutto in minuscolo</strong> (ad esempio, <code>messaggio_iniziale</code>) e che il <strong>contenuto sia sostanzialmente diverso</strong> rispetto a quello precedentemente inviato.
+            <Tip>
+                Cambiare sia il nome che il testo del template aumenta le probabilità di approvazione da parte di Meta.
+            </Tip>
+            </Step>
+            <Step title="Attendi almeno 24 ore">
+            Dopo aver inviato il nuovo template, attendi almeno <strong>24 ore</strong> per ricevere una risposta da Meta.
+            <Info>
+                I tempi di approvazione possono variare, ma spesso Meta impiega fino a un giorno lavorativo per valutare i nuovi template.
+            </Info>
+            </Step>
+            <Step title="Completa profilo e descrizione dell’account WhatsApp">
+            Assicurati che il tuo <strong>account WhatsApp Business</strong> abbia una <strong>foto profilo</strong> e una <strong>descrizione</strong> compilata.
+            <Warning>
+                Un profilo incompleto può rallentare o bloccare l’approvazione dei template.
+            </Warning>
+            </Step>
+        </Steps>
+    </Accordion>
+</AccordionGroup>
+
+## Carta di Credito
+
+<AccordionGroup>
+    <Accordion title="Perché è necessario inserire la carta di credito?">
+        La carta di credito è richiesta per l'integrazione con WhatsApp, ma viene utilizzata solo per due scopi specifici:
+
+        1) il pagamento di eventuali campagne WhatsApp
+        2) il pagamento dei template.
+
+        Oltre queste dinamiche, non ci sono costi aggiuntivi per il servizio di customer care tramite WhatsApp.
+    </Accordion>
+    <Accordion title="Come collego la carta di credito?">
+        <Steps title="Collega la carta di credito al tuo account WhatsApp">
+            <Step title="Accedi a Meta Business Suite">
+            Vai su <a href="https://business.facebook.com/settings/whatsapp-business-accounts/" target="_blank" rel="noopener"><strong>Meta Business Suite</strong></a> e seleziona il tuo <strong>Business Manager</strong>.<br />
+            <Info>
+                Se hai più di un Business Manager, scegli quello che hai utilizzato per
+                collegare il numero WhatsApp a Keplero.
+            </Info>
+            </Step>
+            <Step title="Vai su Account WhatsApp">
+            Nel menu a sinistra, clicca su <strong>Account</strong> &gt;{" "}
+            <strong>Account WhatsApp</strong>.
+            </Step>
+            <Step title="Seleziona il tuo account WhatsApp Business">
+            Scegli il tuo <strong>account WhatsApp Business</strong> e vai su{" "}
+            <strong>Impostazioni</strong>.
+            </Step>
+            <Step title="Aggiungi la carta di credito">
+            Vai su <strong>Impostazioni di pagamento</strong> e clicca su{" "}
+            <strong>Aggiungi una carta di credito</strong>.
+            </Step>
+            <Step title="Imposta la carta come predefinita">
+            Clicca sui <strong>tre puntini</strong> accanto alla carta appena aggiunta
+            e seleziona <strong>Imposta come predefinito</strong>.
+            </Step>
+            <Step title="Verifica eventuali pagamenti insoluti (se i messaggi non partono)">
+            Se la carta è collegata ma i messaggi non vengono consegnati (rimane
+            l’icona dell’orologio sul messaggio), controlla nella stessa sezione{" "}
+            <strong>Pagamenti</strong> che non ci siano pagamenti insoluti.
+            <Warning>
+                La presenza di pagamenti insoluti blocca l’invio dei messaggi WhatsApp.
+                Regolarizza la situazione per ripristinare il servizio.
+            </Warning>
+            </Step>
+        </Steps>
+        <Note>
+            Per permettere a Keplero di inviare messaggi in uscita (ad esempio campagne
+            promozionali, automazioni di messaggi su WhatsApp o altro), è obbligatorio
+            avere la carta di credito collegata all'account WhatsApp.
+        </Note>
+    </Accordion>
 </AccordionGroup>
