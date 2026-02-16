@@ -38,7 +38,8 @@
                   "dashboard/conversazioni/promemoria",
                   "dashboard/conversazioni/nuovo-messaggio",
                   "dashboard/conversazioni/revisiona",
-                  "dashboard/conversazioni/esporta"
+                  "dashboard/conversazioni/esporta",
+                  "dashboard/conversazioni/imposta-chat-come-non-letta"
                 ]
               },
               {
@@ -157,6 +158,13 @@
                 "icon": "tag",
                 "pages": [
                   "integrazioni/auto-labeling"
+                ]
+              },
+              {
+                "group": "Immagini",
+                "icon": "image",
+                "pages": [
+                  "integrazioni/lettura-immagini"
                 ]
               },
               {
