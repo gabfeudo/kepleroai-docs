@@ -1,6 +1,6 @@
 {
   "$schema": "https://mintlify.com/docs.json",
-  "theme": "mint",
+  "theme": "sequoia",
   "name": "Keplero AI",
   "colors": {
     "primary": "#3A44D5",
@@ -10,6 +10,13 @@
   "favicon": "/logo/logo.png",
   "fonts": {
     "family": "DM Sans"
+  },
+  "errors": {
+    "404": {
+      "redirect": false,
+      "title": "Pagina non trovata",
+      "description": "La pagina che stai cercando non è disponibile. Prova a ricercare l'argomento che ti interessa nella barra di ricerca in alto o clicca sul logo di Keplero per tornare alla home."
+    }
   },
   "navigation": {
     "tabs": [
