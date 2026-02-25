@@ -76,14 +76,6 @@
                 ]
               },
               {
-                "group": "Campagne",
-                "icon": "megaphone",
-                "pages": [
-                  "dashboard/campagne/panoramica",
-                  "dashboard/campagne/creare-campagna"
-                ]
-              },
-              {
                 "group": "Prova Chatbot",
                 "icon": "robot",
                 "pages": [
