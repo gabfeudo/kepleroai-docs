@@ -240,6 +240,14 @@
             ]
           },
           {
+            "group": "Meta & Business Manager",
+            "icon": "meta",
+            "pages": [
+              "meta/business-manager",
+              "meta/rimuovi-numero-whatsapp"
+            ]
+          },
+          {
             "group": "Documentazione Tecnica",
             "icon": "book",
             "pages": [
