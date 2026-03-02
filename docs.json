@@ -181,7 +181,9 @@
                   "integrazioni/ecommerce/woocommerce",
                   "integrazioni/ecommerce/magento",
                   "integrazioni/ecommerce/qapla",
-                  "integrazioni/ecommerce/prestashop"
+                  "integrazioni/ecommerce/prestashop",
+                  "integrazioni/ecommerce/shippypro",
+                  "integrazioni/ecommerce/track123"
                 ]
               },
               {

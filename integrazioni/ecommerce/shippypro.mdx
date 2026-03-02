@@ -1,0 +1,45 @@
+---
+title: "ShippyPro"
+description: "Scopri cos'è ShippyPro e come ottenere la chiave API per collegarlo a Keplero AI"
+---
+
+## Cos'è ShippyPro
+
+**ShippyPro** è una piattaforma di gestione delle spedizioni che ti permette di integrare oltre 155 corrieri in un unico posto. Tramite le sue API puoi connettere qualsiasi sistema esterno (OMS, WMS, ERP, POS) con i tuoi corrieri, automatizzare la creazione delle etichette, recuperare tariffe in tempo reale e monitorare lo stato delle spedizioni.
+
+Integrandolo con Keplero AI, il tuo assistente potrà rispondere alle domande dei clienti sullo stato delle spedizioni e il tracking degli ordini direttamente dai dati ShippyPro.
+
+<Warning>
+  Le API di ShippyPro sono disponibili **solo con il piano Enterprise**. Se non hai ancora attivato l'accesso API, contatta ShippyPro scrivendo a sales@shippypro.com.
+</Warning>
+
+## Come ottenere la chiave API
+
+<Steps>
+  <Step title="Accedi al tuo account ShippyPro">
+    Vai su [shippypro.com](https://www.shippypro.com) e accedi con le tue credenziali.
+  </Step>
+  <Step title="Apri la sezione API">
+    Dal menu principale, clicca su **Integrazioni** → **API**.
+  </Step>
+  <Step title="Genera una nuova chiave">
+    Clicca su **Add API** — la chiave viene generata automaticamente.
+
+    Scegli il tipo di chiave in base all'utilizzo:
+
+    | Tipo | Descrizione |
+    |---|---|
+    | **Full Access** | Accesso completo a tutte le funzionalità (spedizioni, tariffe, mappe, ecc.) |
+    | **Maps** | Solo per visualizzare la mappa PUDO Ship&Collect |
+    | **PII Excluded** | Le informazioni personali (nomi, indirizzi, telefoni) vengono oscurate |
+
+    Per l'integrazione con Keplero AI seleziona **Full Access**.
+  </Step>
+  <Step title="Copia la chiave API">
+    Copia la chiave generata e conservala in un posto sicuro: ti servirà per configurare l'integrazione.
+
+    <Info>
+      L'autenticazione API di ShippyPro richiede di impostare la **chiave API come Username** e di lasciare il campo **Password vuoto**.
+    </Info>
+  </Step>
+</Steps>
