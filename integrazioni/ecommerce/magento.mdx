@@ -3,6 +3,10 @@ title: "Magento 2"
 description: "Collega il tuo store Magento con Keplero per fornire alla tua AI tutti i dati necessari su prodotti e ordini"
 ---
 
+<Warning>
+Quando generi le chiavi API per l'integrazione con Keplero, assicurati di assegnare **tutti i permessi di lettura** disponibili. Questo è fondamentale affinché Keplero possa accedere e gestire correttamente tutti i dati relativi a prodotti e ordini dal tuo store. Se concedi un set di permessi limitato, l’integrazione potrebbe non funzionare correttamente.
+</Warning>
+
 <Steps>
     <Step title="Crea una nuova azione">
         1. Accedi alla sezione Addestramento nella dashboard di Keplero AI
@@ -17,7 +21,17 @@ description: "Collega il tuo store Magento con Keplero per fornire alla tua AI t
     <Step title="Seleziona Magento">
         Seleziona Magento dall'elenco delle integrazioni disponibili.
     </Step>
-    <Step title="Inserisci URL, Consumer Key, Consumer Secret, Token di Accesso e Token Segreto in Keplero">
+    <Step title="Inserisci URL, Consumer Key, Consumer Secret, Token di Accesso e Token Segreto in Keplero">  
+    Accertati di inserire singolarmente nelle cinque caselle: 
+    - URL del tuo store Magento
+    - Consumer Key
+    - Consumer Secret
+    - Token di Accesso
+    - Token Segreto
+
+    <Note>
+      Puoi scegliere di importare anche i prodotti <strong>esauriti (out of stock)</strong> selezionando l'apposita opzione durante la configurazione dell'integrazione. In questo modo Keplero potrà visualizzare e gestire anche gli articoli non disponibili a magazzino.
+    </Note>
     <Tip>
       Genera le chiavi API guardando questa guida:
       <iframe

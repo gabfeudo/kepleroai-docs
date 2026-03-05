@@ -2,6 +2,10 @@
 title: "Shopify"
 description: "Collega il tuo store Shopify con Keplero per fornire alla tua AI tutti i dati necessari su prodotti e ordini"
 ---
+<Warning>
+Quando generi le chiavi API per l'integrazione con Keplero, assicurati di assegnare **tutti i permessi di lettura** disponibili. Questo è fondamentale affinché Keplero possa accedere e gestire correttamente tutti i dati relativi a prodotti e ordini dal tuo store. Se concedi un set di permessi limitato, l’integrazione potrebbe non funzionare correttamente.
+</Warning>
+
 
 <Steps>
     <Step title="Crea una nuova azione">
@@ -17,22 +21,25 @@ description: "Collega il tuo store Shopify con Keplero per fornire alla tua AI t
     <Step title="Seleziona Shopify">
         Seleziona Shopify dall'elenco delle integrazioni disponibili.
     </Step>
-    <Step title="Inserisci URL e Admin Key in Keplero">
+    <Step title="Inserisci URL, Client ID e Client Secret in Keplero">
+    Accertati di inserire singolarmente nelle tre caselle: 
+    - URL del tuo store Shopify
+    - Client ID
+    - Client Secret
+
+    <Note>
+      Puoi scegliere di importare anche i prodotti <strong>esauriti (out of stock)</strong> selezionando l'apposita opzione durante la configurazione dell'integrazione. In questo modo Keplero potrà visualizzare e gestire anche gli articoli non disponibili a magazzino.
+    </Note>
     <Tip>
       Genera le chiavi API guardando questa guida:
       <iframe
         className="w-full aspect-video rounded-xl"
         src="https://www.loom.com/embed/5872cc43899647b6b25e97af6bf9e1a8"
         title="Guida video: come generare le chiavi API su Shopify"
-        frameBorder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         allowFullScreen
       ></iframe>
     </Tip>
-    Una volta generata l'Admin Key, inseriscila nel campo **Admin Key** e l'URL nel campo **URL**.
-    <Frame>
-        <img src="/images/integrazioni/ecommerce/shopify/shopify-1.png" alt="Shopify" />
-    </Frame>
     </Step>
     <Step title="Una volta collegato, attendi che Keplero AI si sincronizzi con Shopify">
         Una volta collegato, attendi che Keplero AI si sincronizzi con Shopify per i prodotti e gli ordini.

@@ -3,6 +3,12 @@ title: "Qapla"
 description: "Collega il tuo store Qapla con Keplero per fornire alla tua AI tutti i dati necessari su prodotti e ordini"
 ---
 
+<Warning>
+Quando generi le chiavi API per l'integrazione con Keplero, assicurati di assegnare **tutti i permessi di lettura** disponibili. Questo è fondamentale affinché Keplero possa accedere e gestire correttamente tutti i dati relativi a prodotti e ordini dal tuo store. Se concedi un set di permessi limitato, l’integrazione potrebbe non funzionare correttamente.
+</Warning>
+
+
+
 <Steps>
     <Step title="Crea una nuova azione">
         1. Accedi alla sezione Addestramento nella dashboard di Keplero AI
@@ -17,10 +23,11 @@ description: "Collega il tuo store Qapla con Keplero per fornire alla tua AI tut
     <Step title="Seleziona Qapla">
         Seleziona Qapla dall'elenco delle integrazioni disponibili.
     </Step>
-    <Step title="Inserisci la chiave API in Keplero">
-    <Frame>
-        <img src="/images/integrazioni/ecommerce/qapla/qapla-1.png" alt="Qapla" />
-    </Frame>
+    <Step title="Inserisci API Key ed eventuale prefisso e suffisso dell'ordine in Keplero">
+    Accertati di inserire singolarmente nelle tre caselle: 
+    - API Key
+    - Prefisso dell'ordine (opzionale)
+    - Suffisso dell'ordine (opzionale)
     </Step>
     <Step title="Una volta collegato, attendi che Keplero AI si sincronizzi con Qapla">
         Una volta collegato, attendi che Keplero AI si sincronizzi con Qapla per i prodotti e gli ordini.

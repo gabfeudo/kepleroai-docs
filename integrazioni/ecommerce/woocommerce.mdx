@@ -2,6 +2,10 @@
 title: "WooCommerce"
 description: "Collega il tuo store WooCommerce con Keplero per fornire alla tua AI tutti i dati necessari su prodotti e ordini"
 ---
+<Warning>
+Quando generi le chiavi API per l'integrazione con Keplero, assicurati di assegnare **tutti i permessi di lettura** disponibili. Questo è fondamentale affinché Keplero possa accedere e gestire correttamente tutti i dati relativi a prodotti e ordini dal tuo store. Se concedi un set di permessi limitato, l’integrazione potrebbe non funzionare correttamente.
+</Warning>
+
 
 <Steps>
     <Step title="Crea una nuova azione">
@@ -17,7 +21,13 @@ description: "Collega il tuo store WooCommerce con Keplero per fornire alla tua 
     <Step title="Seleziona WooCommerce">
         Seleziona WooCommerce dall'elenco delle integrazioni disponibili.
     </Step>
-    <Step title="Inserisci URL, Consumer Key e Consumer Secret in Keplero">
+    <Step title="Seleziona tipo di store e inserisci dati in Keplero">
+    Prima di procedere, seleziona il tipo di store che desideri collegare: **store unico** o **multistore**.
+    
+    Successivamente, inserisci singolarmente nelle tre caselle i seguenti dati:
+    - URL del tuo store WooCommerce
+    - Consumer Key
+    - Consumer Secret
     <Tip>
       Genera le chiavi API guardando questa guida:
       <iframe
