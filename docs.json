@@ -246,7 +246,8 @@
             "icon": "meta",
             "pages": [
               "meta/business-manager",
-              "meta/rimuovi-numero-whatsapp"
+              "meta/rimuovi-numero-whatsapp",
+              "meta/passare-a-whatsapp-business"
             ]
           },
           {
