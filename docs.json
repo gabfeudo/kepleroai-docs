@@ -255,7 +255,8 @@
             "pages": [
               "tecnica/widget",
               "dashboard/widget/widget",
-              "tecnica/installazione_telefono"
+              "tecnica/installazione_telefono",
+              "tecnica/clona-voce"
             ]
           },
           {
