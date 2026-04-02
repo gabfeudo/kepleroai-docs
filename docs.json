@@ -259,13 +259,6 @@
               "tecnica/installazione_telefono",
               "tecnica/clona-voce"
             ]
-          },
-          {
-            "group": "Novità",
-            "icon": "stars",
-            "pages": [
-              "news/introduzione"
-            ]
           }
         ]
       }

@@ -1,87 +1,93 @@
 ---
 title: "Google Sheet"
-description: "Integra Keplero AI con Google Sheet per salvare i dati delle conversazioni"
+description: "Integra Keplero AI con Google Sheet"
 ---
 
-<Frame caption="Video-guida: come collegare un Google Sheet a Keplero AI">
-  <iframe
-    className="w-full aspect-video rounded-xl"
-    src="https://www.loom.com/embed/6261a634e9a74205a907f18ef0b49b97"
-    title="Video tutorial integrazione Google Sheet con Keplero AI"
-    frameBorder="0"
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-    allowFullScreen
-  ></iframe>
-</Frame>
+Con Keplero AI puoi integrare facilmente Google Sheet per:
+- *Aggiungere dati* alle tue tabelle con l’azione **Append Row**
+- *Leggere dati* già presenti utilizzando l’azione **Read Row**
 
-## Passaggi chiave per integrare Google Sheet
 
-<Steps>
-  <Step title="Creare una nuova azione">
+<Tabs>
+  <Tab title="Append Row" icon="pencil">
+    ## Creazione dell'azione Append Row
+    Per aggiungere dati ai tuoi Google Sheet con l’azione **Append Row** segui questi passaggi:
+    1. Vai nella sezione **Addestramento**
+    2. Clicca su **Integrazioni**
+    3. Clicca su **+ Nuova integrazione**
+    4. Seleziona **Altro**
+    5. Clicca su **Google Sheet: Append Row**
+
     <Frame>
-      <img src="https://loom.com/i/6e9ffd1642bd4ea48875718513d5bb7a?workflows_screenshot=true" alt="Creazione nuova azione in Keplero" />
+      <img src="/images/integrazioni/google-sheet/gs-1.png" alt="Google Sheet: Append Row" />
     </Frame>
-    - Accedi alla sezione <b>Addestramento</b> nella dashboard di Keplero AI.<br />
-    - Clicca su <b>Azioni</b>.<br />
-    - Seleziona <b>Nuova azione</b>.
-  </Step>
 
-  <Step title="Selezionare Google Sheet">
+    ## Impostazioni dell'azione Append Row
+
+    1. Nel pannello della nuova azione, dovrai inserire il nome dell'azione (ad esempio *"salva_info_lead"*). 
+    2. Successivamente dovrai collegare l'account Google con cui hai accesso al Google Sheet. 
+    3. Una volta collegato, apparirà un pulsante con scritto **"Scegli Google Sheet"**: al click, potrai selezionare il Google Sheet in cui vuoi salvare i dati.
+
+    <Frame caption="Una volta collegato l'account, apparirà il pulsante per scegliere il Google Sheet">
+      <img src="/images/integrazioni/google-sheet/gs-2.png" alt="Google Sheet: Scegli Google Sheet" />
+    </Frame>
+
+    4. Spiega a Keplero quando utilizzare quest'azione (ad esempio *"Usa questa azione quando l'utente chiede qualsiasi cosa sui prodotti o servizi"*).
+    5. Automaticamente, Keplero vedrà le colonne del Google Sheet. Spiega brevemente a Keplero, in ogni casella, cosa è contenuto in quella colonna, impostando il tipo di contenuto (Testo, Numero, Booleano o Data) e scrivendo una breve descrizione. Puoi marcare come **Opzionale** una colonna.
+      <Frame caption="Keplero vedrà le colonne del Google Sheet e ti chiederà di spiegare cosa è contenuto in ogni colonna">
+      <img src="/images/integrazioni/google-sheet/gs-3.png" alt="Google Sheet: Colonne del Google Sheet" />
+    </Frame>
+    6. Salva l'azione con il tasto **Salva**.
+    7. Abilita l'azione con il tasto dedicato in alto a destra. 
+    <Frame caption="Una volta salvata l'azione, abilitala con il tasto dedicato">
+      <img src="/images/integrazioni/google-sheet/gs-4.png" alt="Google Sheet: Abilita azione" />
+    </Frame>
+  </Tab>
+  <Tab title="Read Row" icon="eye">
+     ## Creazione dell'azione Read Row
+    Per aggiungere dati ai tuoi Google Sheet con l’azione **Read Row** segui questi passaggi:
+    1. Vai nella sezione **Addestramento**
+    2. Clicca su **Integrazioni**
+    3. Clicca su **+ Nuova integrazione**
+    4. Seleziona **Altro**
+    5. Clicca su **Google Sheet: Read Row**
+
     <Frame>
-      <img src="https://loom.com/i/bb91e1e2fc554724aac00f53e823ff5b?workflows_screenshot=true" alt="Selezione Google Sheet" />
+      <img src="/images/integrazioni/google-sheet/gs-5.png" alt="Google Sheet: Read Row" />
     </Frame>
-    - Scorri verso il basso fino a trovare l'opzione dedicata a Google Sheet.<br />
-    - Clicca su di essa per aprire la finestra di accesso.
-  </Step>
 
-  <Step title="Accedere al proprio account Google">
+    ## Impostazioni dell'azione Read Row
+
+    1. Nel pannello della nuova azione, dovrai inserire il nome dell'azione (ad esempio *"leggi_stato_spedizione"*). 
+    2. Successivamente dovrai collegare l'account Google con cui hai accesso al Google Sheet. 
+    3. Una volta collegato, apparirà un pulsante con scritto **"Scegli Google Sheet"**: al click, potrai selezionare il Google Sheet in cui vuoi salvare i dati.
+    4. Spiega a Keplero quando utilizzare quest'azione (ad esempio *"Usa questa azione quando un cliente ti chiede informazioni sulle spedizioni"*).
+    5. Imposta le regole di filtro. Scegli quali colonne del foglio può cercare l’assistente. Puoi impostare **AND** o **OR** per le condizioni. 
     <Frame>
-      <img src="https://loom.com/i/0f41d31be7e94230a6ebf0cc55c37999?workflows_screenshot=true" alt="Accesso account Google" />
+      <img src="/images/integrazioni/google-sheet/gs-6.png" alt="Regole di filtro" />
     </Frame>
-    - Clicca sul tasto per accedere al tuo account Google.<br />
-    - Seleziona il Google Sheet desiderato.
+    <Tip>
+    Se selezioni **AND**, ogni filtro che configuri viene applicato insieme: una riga viene restituita solo quando tutti corrispondono contemporaneamente a quella riga. Ideale quando l’assistente deve restringere i risultati con più dettagli insieme — ad esempio, la città e il cognome del cliente devono corrispondere entrambi.<br/>
+     </Tip>
+    <Tip>
+    Se selezioni **OR**, ogni filtro che configuri viene applicato come opzione: una riga viene restituita quando almeno uno di essi corrisponde — a seconda dei valori di ricerca dell’utente. Ideale quando la stessa entità può trovarsi in colonne diverse — ad esempio, l’utente può conoscere un numero di telefono o solo un indirizzo email, e in entrambi i casi la riga deve essere trovata.
+    </Tip>
 
+    6. Automaticamente, Keplero vedrà le colonne del Google Sheet. Spiega brevemente a Keplero, in ogni casella, cosa è contenuto in quella colonna, impostando il tipo di contenuto (Testo, Numero, Booleano o Data) e scrivendo una breve descrizione. 
+    
+    <Tip>
+    Puoi impostare la distinzione **Case Sensitive** o **Case Insensitive** per fare in modo che Keplero distingua tra maiuscole e minuscole nella ricerca o meno.
+    </Tip>
     <Note>
-    Keplero supporta anche account multipli.
+    Puoi aggiungere ulteriori filtri cliccando sul pulsante **+ Aggiungi filtro**.
     </Note>
-  </Step>
-
-  <Step title="Scegliere il Google Sheet">
-    <Frame>
-      <img src="https://loom.com/i/0d1de8231db840e1bb0780549ad0d278?workflows_screenshot=true" alt="Selezione Google Sheet dal Drive" />
+      <Frame caption="Keplero vedrà le colonne del Google Sheet e ti chiederà di spiegare cosa è contenuto in ogni colonna">
+      <img src="/images/integrazioni/google-sheet/gs-7.png" alt="Google Sheet: Colonne del Google Sheet" />
     </Frame>
-    - Seleziona il Google Sheet che hai già creato dal tuo Google Drive personale o aziendale.<br />
-    - Assicurati che il Google Sheet contenga le colonne necessarie.
-    <Frame>
-      <img src="https://loom.com/i/29cde8689b634709b05ce6d46cb3ba1b?workflows_screenshot=true" alt="Controllo colonne Google Sheet" />
+    7. Salva l'azione con il tasto **Salva**.
+    8. Abilita l'azione con il tasto dedicato in alto a destra. 
+    <Frame caption="Una volta salvata l'azione, abilitala con il tasto dedicato">
+      <img src="/images/integrazioni/google-sheet/gs-8.png" alt="Google Sheet: Abilita azione" />
     </Frame>
-  </Step>
-
-  <Step title="Popolare tutti i campi dell'azione">
-    <Frame>
-      <img src="https://loom.com/i/03d4e65030ef4ed48f1aada983007007?workflows_screenshot=true" alt="Compilazione campi azione Google Sheet" />
-    </Frame>
-    - Inserisci un nome dell’azione.<br />
-    - Scrivi una descrizione di quando attivare l'azione (es. "Usa questa azione in ogni conversazione per salvare i dati dei lead").<br />
-    - Compila le caselle di input per spiegare alle AI come popolare il foglio.<br />
-    - Specifica il tipo di campo per ogni colonna (testo, numero, booleano, data).
-  </Step>
-
-  <Step title="Salvare l'azione e abilitarla">
-    - Salva l'azione per abilitarla.<br />
-    - Abilita l’azione con il tasto dedicato.
-  </Step>
-
-  <Step title="Verificare la connessione">
-    <Frame>
-      <img src="https://loom.com/i/c5cda35350514b5f994103a9e941508e?workflows_screenshot=true" alt="Verifica connessione Google Sheet" />
-    </Frame>
-    - Controlla che l'icona verde appaia per confermare l'avvenuta connessione.
-  </Step>
-</Steps>
-
-## Consigli per l'efficienza
-
-- Verifica che il Google Sheet contenga tutte le colonne necessarie prima di collegarlo a Keplero.
-- Utilizza nomi chiari e descrittivi per le azioni per facilitare la comprensione.
-- Testa l'azione con delle chat di test (<i>dalla sezione Prova Chatbot</i>) per assicurarti che tutto funzioni correttamente.
+  </Tab>
+</Tabs>
