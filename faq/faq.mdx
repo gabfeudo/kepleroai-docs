@@ -86,3 +86,52 @@ description: "Risposte alle domande più comuni su Keplero AI, WhatsApp Business
         - [Templates - WhatsApp Business Platform (Meta for Developers)](https://developers.facebook.com/documentation/business-messaging/whatsapp/templates/overview)
     </Accordion>
 </AccordionGroup>
+
+## Instagram
+
+<AccordionGroup>
+    <Accordion title="Non riesco a collegare Instagram: non vedo la mia pagina dopo il collegamento">
+        Se dopo aver collegato Instagram a Keplero non riesci a vedere la tua pagina, il problema è quasi sempre legato alla configurazione del **Meta Business Manager**. Segui questi passaggi per risolverlo.
+
+        <Steps>
+            <Step title="Disconnetti Instagram da Keplero">
+                Vai su **Console Keplero** > **Impostazioni** > **Canali** e clicca su **Disconnetti** o **Annulla** per il canale Instagram. Questo ti riporta alla situazione iniziale, pronta per un nuovo collegamento.
+            </Step>
+            <Step title="Verifica che l'account Instagram sia un account Business">
+                L'account Instagram che vuoi collegare **deve essere un account aziendale**, non un profilo personale (anche se ha un nome aziendale).
+
+                Per verificarlo o convertirlo:
+                1. Apri l'app **Instagram** e vai sul tuo profilo
+                2. Vai su **Impostazioni** > **Account** > **Passa ad account aziendale**
+                3. Segui la procedura guidata per completare la conversione
+
+                <Info>
+                Nella maggior parte dei casi l'account è già di tipo Business, ma è importante verificarlo prima di procedere. Un account personale non può essere collegato tramite le API di Meta.
+                </Info>
+            </Step>
+            <Step title="Collega l'account Instagram al Business Manager">
+                L'account Instagram deve essere **connesso al tuo Meta Business Manager**. Senza questo collegamento, Keplero non può vedere la pagina.
+
+                Per collegarlo:
+                1. Vai su **Meta Business Manager** ([business.facebook.com](https://business.facebook.com))
+                2. Nel menu a sinistra, clicca su **Account** > **Account Instagram**
+                3. Clicca su **Aggiungi** e segui la procedura per collegare il tuo account Instagram
+
+                <Tip>
+                Per la procedura dettagliata, consulta la [guida ufficiale Meta su come collegare un account Instagram al Business Manager](https://www.facebook.com/business/help/620548115562686?id=916550222172854).
+                </Tip>
+
+                <Warning>
+                Assicurati di utilizzare lo stesso Business Manager che hai usato per collegare gli altri canali (es. WhatsApp) a Keplero.
+                </Warning>
+            </Step>
+            <Step title="Ricollega Instagram su Keplero">
+                Torna su **Console Keplero** > **Impostazioni** > **Canali** e ripeti il collegamento di Instagram seguendo la [guida di integrazione Instagram](/integrazioni/social/instagram).
+
+                <Check>
+                Dopo il nuovo collegamento, dovresti vedere la tua pagina Instagram nel menu a tendina di selezione. Selezionala e clicca su **Connetti**.
+                </Check>
+            </Step>
+        </Steps>
+    </Accordion>
+</AccordionGroup>
