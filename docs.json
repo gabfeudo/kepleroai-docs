@@ -259,6 +259,13 @@
               "tecnica/installazione_telefono",
               "tecnica/clona-voce"
             ]
+          },
+          {
+            "group": "FAQ",
+            "icon": "circle-question",
+            "pages": [
+              "faq/faq"
+            ]
           }
         ]
       }
