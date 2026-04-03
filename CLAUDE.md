@@ -397,3 +397,12 @@ description: "Concise description explaining page purpose and value"
 - Use **RequestExample/ResponseExample** specifically for API endpoint documentation
 - Use **ParamField** for API parameters, **ResponseField** for API responses
 - Use **Expandable** for nested object properties or hierarchical information
+
+## Post-task checklist
+
+After every task that modifies documentation files, perform a final check:
+
+1. Verify that any new pages are correctly added to **docs.json** navigation
+2. Verify that all internal links in the new/modified pages point to valid paths
+3. If new sections, groups, or pages have been added to **docs.json**, update this CLAUDE.md file to reflect structural changes (e.g., new FAQ section, new integration groups, etc.)
+4. If new reusable patterns or components have been introduced, add them to the relevant section of this CLAUDE.md as reference
