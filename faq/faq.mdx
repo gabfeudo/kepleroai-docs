@@ -85,6 +85,83 @@ description: "Risposte alle domande più comuni su Keplero AI, WhatsApp Business
         - [Upcoming changes to messaging limits (Meta for Developers)](https://developers.facebook.com/documentation/business-messaging/whatsapp/upcoming-messaging-limits-changes/)
         - [Templates - WhatsApp Business Platform (Meta for Developers)](https://developers.facebook.com/documentation/business-messaging/whatsapp/templates/overview)
     </Accordion>
+    <Accordion title="L'integrazione WhatsApp è scaduta: come la riconnetto senza rifare la procedura?">
+        Se in **Console Keplero** > **Impostazioni** > **Chat** > **WhatsApp** vedi un banner che segnala che l'**integrazione WhatsApp è scaduta**, significa che il collegamento tra Keplero e il tuo **Meta Business Manager** non è più attivo (token scaduto, permessi revocati o altre cause lato Meta).
+
+        La buona notizia è che **non devi rifare tutta la procedura da capo**: puoi semplicemente ripristinare la connessione selezionando l'account WhatsApp Business e il numero di telefono **già esistenti**, senza nuova verifica via OTP.
+
+        <Warning>
+        Durante la riconnessione, **non creare un nuovo account WhatsApp Business** e **non registrare di nuovo il numero**. Devi sempre selezionare quelli esistenti dalla lista, altrimenti rischi di duplicare la configurazione o di far fallire la procedura.
+        </Warning>
+
+        <Steps>
+            <Step title="Apri le impostazioni di WhatsApp in Keplero">
+                Vai su **Console Keplero** > **Impostazioni** > **Chat** > **WhatsApp**. In cima alla pagina troverai un banner che segnala che l'**integrazione è scaduta**.
+
+                <Info>
+                Il banner indica che il collegamento tra Keplero e il tuo Business Manager non è più attivo, ma il tuo account WhatsApp Business e il numero di telefono lato Meta restano intatti.
+                </Info>
+            </Step>
+            <Step title="Disconnetti l'integrazione attuale">
+                Clicca su **Disconnetti** per rimuovere la connessione scaduta da Keplero.
+
+                <Info>
+                Questa operazione **non elimina** il tuo account WhatsApp Business né il numero di telefono lato Meta: rimuove soltanto il collegamento con Keplero, in modo da poterlo ricreare correttamente.
+                </Info>
+            </Step>
+            <Step title="Avvia di nuovo «Accedi con WhatsApp»">
+                Sempre dalla stessa schermata, clicca su **Accedi con WhatsApp** per riavviare il flusso di collegamento embedded di Meta.
+            </Step>
+            <Step title="Seleziona l'account WhatsApp Business già esistente">
+                Nel primo step del flusso Meta ("**Seleziona le risorse business da condividere con Keplero AI**"), apri il menu a tendina **Account WhatsApp Business** e seleziona quello **già esistente** (lo riconoscerai dal nome e dal numero di telefono associato).
+
+                <Frame caption="Seleziona dalla lista l'account WhatsApp Business già esistente, senza crearne uno nuovo">
+                    <img
+                        src="/images/faq/wa-1.png"
+                        alt="Selezione dell'account WhatsApp Business esistente nel flusso di riconnessione Meta"
+                        noZoom
+                    />
+                </Frame>
+
+                <Warning>
+                **Non selezionare** "Crea un account WhatsApp Business" né "Collega l'app WhatsApp Business": creeresti una nuova configurazione invece di ripristinare quella esistente.
+                </Warning>
+            </Step>
+            <Step title="Seleziona il numero di telefono già registrato">
+                Nello step successivo ("**Aggiungi il tuo numero di telefono di WhatsApp**"), seleziona l'opzione **«Usa un numero WhatsApp nuovo o esistente»**.
+
+                <Frame caption="Scegli «Usa un numero WhatsApp nuovo o esistente»">
+                    <img
+                        src="/images/faq/wa-2.png"
+                        alt="Selezione dell'opzione «Usa un numero WhatsApp nuovo o esistente»"
+                        noZoom
+                    />
+                </Frame>
+
+                Apri quindi il menu a tendina **Numero di telefono** e seleziona dalla lista il numero **già registrato** (riconoscibile dall'etichetta **«Registrato»**).
+
+                <Frame caption="Seleziona il numero già registrato dalla lista, invece di «Aggiungi nuovo numero WhatsApp»">
+                    <img
+                        src="/images/faq/wa-3.png"
+                        alt="Selezione del numero di telefono già registrato dalla lista a tendina"
+                        noZoom
+                    />
+                </Frame>
+
+                <Warning>
+                **Non scegliere** "Aggiungi nuovo numero WhatsApp" e **non reinserire manualmente** il numero che hai già collegato a Keplero: deve essere selezionato dalla lista degli esistenti.
+                </Warning>
+
+                <Tip>
+                Dato che il numero risulta già **Registrato**, Meta **non chiederà alcun codice OTP di verifica**: si limiterà a ripristinare la connessione esistente.
+                </Tip>
+            </Step>
+        </Steps>
+
+        <Check>
+        Dopo aver completato gli step rimanenti del flusso Meta cliccando su **Avanti**, il banner di "integrazione scaduta" sparirà e WhatsApp tornerà operativo su Keplero — senza perdere chat, template o configurazioni precedenti.
+        </Check>
+    </Accordion>
 </AccordionGroup>
 
 ## Instagram
