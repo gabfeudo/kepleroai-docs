@@ -162,6 +162,81 @@ description: "Risposte alle domande più comuni su Keplero AI, WhatsApp Business
         Dopo aver completato gli step rimanenti del flusso Meta cliccando su **Avanti**, il banner di "integrazione scaduta" sparirà e WhatsApp tornerà operativo su Keplero — senza perdere chat, template o configurazioni precedenti.
         </Check>
     </Accordion>
+    <Accordion title="Come posso inviare un messaggio libero quando devo usare per forza un template?">
+        Per avviare una conversazione con un cliente su WhatsApp Business — sia che si tratti di un primo contatto, sia che siano passate più di 24 ore dall'ultimo messaggio del cliente — Meta ti obbliga a usare un **template approvato**. Il dettaglio di come funziona la finestra delle 24 ore è spiegato nell'accordion [Cosa è la politica delle 24 ore di WhatsApp?](/integrazioni/whatsapp/q%26a#cosa-e-la-politica-delle-24-ore-di-whatsapp).
+
+        Il limite operativo è che il testo di un template è **fisso** e deve essere stato approvato in precedenza da Meta: non puoi quindi scrivere un messaggio libero e personalizzato direttamente in quel momento.
+
+        Esiste però una tecnica conforme alle policy Meta per inviare comunque un messaggio dal **contenuto libero**: creare un template "contenitore" che usa una **variabile** come spazio in cui scrivere, di volta in volta, il testo effettivo del messaggio.
+
+        <Info>
+        Questa soluzione è pienamente conforme alle linee guida Meta: il template viene approvato come qualsiasi altro modello e ogni invio passa attraverso il normale flusso (e i normali costi) dei template WhatsApp. La variabile è semplicemente il punto in cui inserirai il contenuto dinamico al momento dell'invio.
+        </Info>
+
+        ### Come strutturare il template
+
+        L'idea è costruire un template composto da tre parti:
+
+        1. Un **saluto iniziale** fisso (ad esempio *Salve*)
+        2. Una **variabile** `{{1}}` in cui inserirai il testo libero del messaggio
+        3. Una **firma finale** con il nome dell'azienda e il sito web
+
+        <Steps>
+            <Step title="Crea un nuovo template">
+                Vai su **Console Keplero** > **Impostazioni** > **Canali** > **WhatsApp** e clicca su **+ Nuovo modello**. Per la procedura completa di creazione, consulta la guida [Templates WhatsApp](/integrazioni/whatsapp/templates-whatsapp).
+            </Step>
+            <Step title="Imposta nome, categoria e lingua">
+                Dai al template un nome riconoscibile e tutto in minuscolo (es. `messaggio_personalizzato`), scegli la **categoria** (Marketing o Utility, in base all'uso previsto) e la **lingua** del testo.
+            </Step>
+            <Step title="Scrivi il corpo del template con la variabile">
+                Nel corpo del template, struttura il testo in questo modo:
+
+                ```text
+                Salve,
+
+                {{1}}
+
+                Nome Azienda
+                https://www.tuosito.it
+                ```
+
+                Per inserire la variabile `{{1}}`, clicca su **+ Aggiungi variabile** e fornisci a Meta un **esempio reale** del contenuto che andrai a inviare (è obbligatorio per l'approvazione). Sposta poi le graffe nella posizione corretta del testo.
+
+                <Tip>
+                Usa come esempio una frase realistica e coerente con la tua attività (es. *"Vorremmo informarla che il suo ordine è pronto per la spedizione"*). Esempi generici o di bassa qualità possono ritardare o bloccare l'approvazione del template.
+                </Tip>
+            </Step>
+            <Step title="Invia il template per l'approvazione">
+                Clicca su **Invia** per sottoporre il template a Meta. Quando lo stato passerà da **PENDENTE** a **APPROVATO**, potrai iniziare a usarlo.
+
+                <Info>
+                Se il template rimane in attesa o viene rifiutato, consulta la [Q&A WhatsApp](/integrazioni/whatsapp/q%26a) per le possibili cause e le soluzioni più comuni.
+                </Info>
+            </Step>
+            <Step title="Invia il template valorizzando la variabile">
+                Dalla chat del cliente, seleziona il template appena approvato e, nel campo corrispondente alla variabile `{{1}}`, scrivi il testo libero che vuoi inviare in quel momento.
+
+                Il cliente riceverà un messaggio formattato così:
+
+                ```text
+                Salve,
+
+                [il tuo messaggio personalizzato]
+
+                Nome Azienda
+                https://www.tuosito.it
+                ```
+            </Step>
+        </Steps>
+
+        <Check>
+        Non appena il cliente risponde al template, si **apre la finestra delle 24 ore**: da quel momento potrai prendere il controllo manuale della chat e rispondere liberamente senza ulteriori costi di template, finché la finestra resta attiva.
+        </Check>
+
+        <Warning>
+        Ogni invio del template ha comunque un **costo a carico di Meta** (circa 5 centesimi per uso standard, circa 7 centesimi per Marketing). Usa questa tecnica solo verso contatti che hanno fornito un **consenso esplicito** (opt-in): invii non sollecitati aumentano segnalazioni e blocchi, riducendo il punteggio qualità del tuo numero.
+        </Warning>
+    </Accordion>
 </AccordionGroup>
 
 ## Instagram
