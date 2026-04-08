@@ -237,6 +237,108 @@ description: "Risposte alle domande più comuni su Keplero AI, WhatsApp Business
         Ogni invio del template ha comunque un **costo a carico di Meta** (circa 5 centesimi per uso standard, circa 7 centesimi per Marketing). Usa questa tecnica solo verso contatti che hanno fornito un **consenso esplicito** (opt-in): invii non sollecitati aumentano segnalazioni e blocchi, riducendo il punteggio qualità del tuo numero.
         </Warning>
     </Accordion>
+    <Accordion title="Il mio account WhatsApp Business è stato bannato: come posso sbloccarlo?">
+        Se il tuo account **WhatsApp Business** è stato sospeso o limitato da Meta, nella maggior parte dei casi è successo per una di queste ragioni: invio di messaggi percepiti come **spam**, **punteggio qualità** del numero troppo basso, oppure **automazioni** che hanno generato un volume di template superiore al limite consentito dall'account.
+
+        Prima di procedere, ti consigliamo di leggere la guida [Come evitare il BAN da WhatsApp?](/integrazioni/whatsapp/q%26a) per comprendere quali comportamenti hanno portato al blocco e non ripeterli in futuro.
+
+        <Warning>
+        Meta concede di norma **una sola possibilità di revisione** per account. Se la richiesta di sblocco viene respinta, non è possibile ripresentarla: dovrai ripartire da zero con un nuovo Business Manager e un nuovo numero (vedi la sezione **Se la revisione viene respinta** più in basso).
+        </Warning>
+
+        ### Richiedi la revisione dell'account
+
+        <Steps>
+            <Step title="Apri WhatsApp Manager dal Business Manager">
+                Vai su <a href="https://business.facebook.com/latest/settings/whatsapp_account" target="_blank" rel="noopener">business.facebook.com/latest/settings/whatsapp_account</a> e seleziona l'**account WhatsApp Business** collegato a Keplero (lo riconosci perché ha **Keplero** come partner).
+
+                Nella sezione **Riepilogo**, clicca sul pulsante **WhatsApp Manager** in basso a destra per aprire il pannello di gestione del numero.
+            </Step>
+            <Step title="Trova l'avviso nella sezione Panoramica">
+                All'interno di **WhatsApp Manager**, nella sidebar di sinistra, apri la sezione **Panoramica**. Se l'account è effettivamente limitato, in cima alla pagina comparirà un **avviso rosso** con un piccolo **link blu** che porta al centro assistenza di WhatsApp Business.
+
+                <Info>
+                L'avviso e il link compaiono **solo** se l'account è realmente sotto restrizione. Se non vedi alcun avviso, il problema potrebbe essere legato al numero (qualità bassa, limite giornaliero) e non a un ban dell'account: in quel caso consulta gli altri accordion di questa pagina.
+                </Info>
+            </Step>
+            <Step title="Invia la richiesta di revisione">
+                Clicca sul link blu nell'avviso: si aprirà una **modale** che ti chiede informazioni aggiuntive per richiedere il controllo dell'account.
+
+                Nel campo descrittivo, scrivi un testo specifico e onesto che spieghi quali correttivi hai applicato. Ad esempio:
+
+                > *"Ho risolto le cause del problema: ho interrotto l'invio di messaggi percepiti come spam e disabilitato le automazioni che inviavano un volume eccessivo di template."*
+
+                Conferma quindi l'invio della richiesta di revisione.
+
+                <Tip>
+                Sii il più **specifico** possibile su quali automazioni hai disabilitato e quali correttivi hai applicato (es. *"ho ridotto i follow-up automatici da 3 a 1"*, *"ho aggiornato i template di ricontatto rendendoli più naturali"*). Le richieste generiche vengono respinte molto più spesso.
+                </Tip>
+            </Step>
+            <Step title="Attendi l'esito (24-48 ore)">
+                Meta risponde generalmente entro **24-48 ore** tramite email o notifica nel Business Manager.
+
+                <Check>
+                Se l'account viene riabilitato, vai subito alla sezione **Come prevenire un nuovo ban** in fondo a questo accordion: hai una sola possibilità di revisione e devi assicurarti di non ricadere nello stesso problema.
+                </Check>
+            </Step>
+        </Steps>
+
+        ### Se la revisione viene respinta: ripartire da zero
+
+        Se dopo 24-48 ore Meta non ti riabilita l'account, l'unica strada percorribile è **ricreare l'intera configurazione da capo** con un'identità completamente nuova. Il vecchio Business Manager è ormai marcato come problematico e non potrai più recuperare account WhatsApp da lì.
+
+        <Steps>
+            <Step title="Scollega completamente WhatsApp da Keplero">
+                Disconnetti l'integrazione WhatsApp dalla **Console Keplero**, seguendo la procedura descritta in [Come scollego WhatsApp da Keplero AI?](/integrazioni/whatsapp/q%26a).
+
+                <Warning>
+                Il vecchio **Business Manager** è ormai segnalato da Meta: **non è possibile** recuperare alcun account WhatsApp Business da lì, nemmeno cambiando partner o riconnettendo lo stesso numero. È necessario ripartire con risorse completamente nuove.
+                </Warning>
+            </Step>
+            <Step title="Riavvia «Accedi con WhatsApp» con un account Facebook nuovo">
+                Torna su **Console Keplero** > **Impostazioni** > **Canali** > **WhatsApp** e clicca di nuovo su **Accedi con WhatsApp**.
+
+                Quando si apre la modale Meta, **non usare l'account Facebook precedente**: fai login con un **account Facebook completamente nuovo**, **non collegato in alcun modo** al Business Manager bannato (né come amministratore, né come dipendente, né come partner).
+
+                <Info>
+                Se il nuovo account Facebook non possiede ancora un Business Manager, **non è un problema**: nel primo step della procedura embedded, Meta ti guiderà nella creazione di un nuovo Business Manager in modo molto rapido.
+                </Info>
+            </Step>
+            <Step title="Usa un nome business e un numero di telefono diversi">
+                Durante la creazione del nuovo Business Manager, scegli un **nome diverso** da quello bannato (evita anche varianti minori del nome precedente). Allo step di registrazione del numero WhatsApp, usa un **numero di telefono nuovo**, **mai utilizzato** nella configurazione bannata.
+
+                <Warning>
+                Riutilizzare il **nome business** o il **numero di telefono** della vecchia configurazione rischia di far ereditare il ban anche al nuovo setup, vanificando l'intera procedura. Tutto deve essere effettivamente nuovo: account Facebook, Business Manager, nome, numero.
+                </Warning>
+
+                <Check>
+                Da qui in poi la procedura è identica a un primo collegamento: segui la [guida di integrazione WhatsApp](/integrazioni/whatsapp/whatsapp) per completare il setup.
+                </Check>
+            </Step>
+        </Steps>
+
+        ### Come prevenire un nuovo ban
+
+        Una volta sbloccato (o ricreato) l'account, è fondamentale capire cosa ha causato il ban e mettere in atto correttivi concreti. I due aspetti più importanti da controllare sono il **volume di template** generato dalle automazioni e la **qualità percepita** dei messaggi inviati.
+
+        #### Controlla le automazioni di follow-up
+
+        Verifica con attenzione che le automazioni Keplero attive **non generino più template** del tuo limite giornaliero. Le automazioni di **follow-up per non risposta** sono particolarmente insidiose, perché raddoppiano (o triplicano) il numero di template consumati.
+
+        Esempio concreto: se attivi un follow-up automatico per **ogni cliente** che non risponde e contatti **200 clienti** senza ricevere alcuna risposta, hai consumato **400 template** (200 iniziali + 200 follow-up). Se il tuo **Daily Template Limit** è 250, hai superato il limite di **150 messaggi** in un solo giorno — un campanello d'allarme immediato per Meta.
+
+        <Warning>
+        Prima di attivare un'automazione di follow-up massivo, calcola sempre il **caso peggiore** (zero risposte) e confrontalo con il tuo Daily Template Limit. Se il limite del tuo numero è 0, leggi prima [Il mio Daily template limit è 0: come faccio ad aumentarlo?](#il-mio-daily-template-limit-è-0-come-faccio-ad-aumentarlo) in questa stessa pagina, e consulta la guida [Follow-up WhatsApp](/automazioni/whatsapp/followup-wa) per configurare correttamente i trigger.
+        </Warning>
+
+        #### Rendi i template di ricontatto più naturali
+
+        I template usati per ricontattare i lead devono sembrare il **più naturali e umani possibile**. Testi promozionali, ripetitivi o troppo "venduti" aumentano in modo significativo le probabilità di essere segnalati come spam dai destinatari (vedi anche le linee guida nella [Q&A WhatsApp](/integrazioni/whatsapp/q%26a)).
+
+        <Tip>
+        Una **tecnica anti-spam molto efficace** è aggiungere un pulsante di tipo **quick reply** al template, con etichetta **"Non sono interessato"** (o simile). In questo modo, anche se il destinatario non è interessato alla tua offerta, anziché segnalarti come spam cliccherà quel pulsante. Per Meta è un **segnale positivo di interazione** (l'utente ha comunque risposto al messaggio) e contribuisce a mantenere alto il quality score del tuo numero. Per la procedura di creazione dei template con pulsanti, consulta la guida [Templates WhatsApp](/integrazioni/whatsapp/templates-whatsapp).
+        </Tip>
+    </Accordion>
 </AccordionGroup>
 
 ## Instagram
