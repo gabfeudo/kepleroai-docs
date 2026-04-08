@@ -21,6 +21,73 @@ Clicca poi sul pulsante dedicato per eseguire l'accesso su Instagram.
 
 <Warning>Per collegare la tua AI alla tua pagina Instagram è necessario essere amministratori della pagina Instagram.</Warning>
 
+## Prerequisiti
+
+Prima di avviare l'integrazione su Keplero, l'account Instagram **deve essere collegato a una pagina Facebook all'interno del tuo Meta Business Manager** (oggi chiamato anche **Business Portfolio**). Senza questo collegamento, Keplero non riuscirà a vedere il tuo profilo Instagram durante il flusso di integrazione.
+
+<Info>
+Questa è una configurazione **lato Meta**, non lato Keplero: si esegue una sola volta e resta valida per tutte le integrazioni che useranno quell'account Instagram.
+</Info>
+
+Per procedere assicurati di avere:
+
+- Un **account Instagram di tipo Business** (non un profilo personale)
+- Una **pagina Facebook** già presente nel tuo Business Manager
+- Il ruolo di **amministratore** sia sulla pagina Facebook sia sul Business Portfolio
+- Le **credenziali di accesso** dell'account Instagram (username e password)
+
+<Warning>
+Se l'account Instagram è ancora di tipo personale, convertilo prima in account aziendale dall'app Instagram: **Impostazioni** > **Account** > **Passa ad account aziendale**. Un profilo personale non può essere collegato tramite le API di Meta.
+</Warning>
+
+### Collegare Instagram alla pagina Facebook nel Business Manager
+
+<Steps>
+  <Step title="Apri le impostazioni del Business Manager">
+    Vai su [business.facebook.com](https://business.facebook.com) ed effettua l'accesso con l'account che amministra il tuo Business Portfolio.
+
+    In basso a sinistra clicca sull'icona dell'ingranaggio per aprire **Impostazioni dell'azienda** (oppure raggiungi direttamente [business.facebook.com/settings](https://business.facebook.com/settings)).
+  </Step>
+  <Step title="Apri la sezione «Account Instagram»">
+    Nel menu laterale, espandi la voce **Account** e clicca su **Account Instagram**.
+
+    <Info>
+    Se non vedi questa voce, verifica di avere i permessi di amministratore sul Business Portfolio: solo gli admin possono aggiungere o gestire account Instagram.
+    </Info>
+  </Step>
+  <Step title="Aggiungi il tuo account Instagram">
+    Clicca su **Aggiungi** e poi su **Collega il tuo account Instagram**. Si aprirà una finestra di login di Instagram: inserisci **username** e **password** dell'account che vuoi collegare e conferma.
+
+    <Warning>
+    Usa le credenziali dell'account Instagram **Business** che intendi integrare con Keplero, non un account secondario o personale.
+    </Warning>
+  </Step>
+  <Step title="Associa l'account a una pagina Facebook">
+    Dopo il login, Meta ti chiederà a quale **pagina Facebook** del tuo Business Manager vuoi collegare l'account Instagram. Seleziona la pagina corretta dalla lista e conferma.
+
+    <Tip>
+    Assicurati di scegliere la pagina Facebook che fa parte dello **stesso Business Manager** che userai per l'integrazione Keplero (e per le altre integrazioni Meta come WhatsApp). Avere risorse sparse su Business Manager diversi è la causa più frequente di errori di collegamento.
+    </Tip>
+  </Step>
+  <Step title="Assegna le persone con accesso (opzionale)">
+    Meta ti permette di indicare quali utenti del Business Portfolio potranno gestire l'account Instagram appena collegato. Aggiungi te stesso (e gli altri amministratori) con il livello di accesso necessario, quindi conferma.
+
+    <Info>
+    Se sei l'unico amministratore puoi saltare questo passaggio: l'accesso ti verrà comunque assegnato in automatico.
+    </Info>
+  </Step>
+</Steps>
+
+<Check>
+L'account Instagram ora compare nella sezione **Account Instagram** del tuo Business Manager ed è associato alla pagina Facebook scelta. Puoi proseguire con il collegamento a Keplero seguendo gli step qui sotto.
+</Check>
+
+<Info>
+Per maggiori dettagli puoi consultare la [guida ufficiale di Meta sull'aggiunta di un account Instagram al portfolio business](https://www.facebook.com/business/help/620548115562686?id=916550222172854).
+</Info>
+
+## Procedura di collegamento a Keplero
+
 <Steps>
   <Step title="Abilitazione dell'account alle automazioni">
     Per collegare la tua pagina Instagram, devi prima abilitare la funzionalità delle automazioni nelle impostazioni della pagina. Segui questi passaggi:
