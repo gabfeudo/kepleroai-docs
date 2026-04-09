@@ -434,6 +434,7 @@ kepleroai-docs/
 │   │   ├── cartelle.mdx — Cartelle: organizzare le conversazioni in cartelle
 │   │   ├── etichette.mdx — Etichette: identificare le conversazioni con label
 │   │   ├── controllo-manuale.mdx — Controllo manuale: gestione manuale delle chat con template
+│   │   ├── bulk-action.mdx — Bulk action: applicare azioni in blocco a più conversazioni (chiudi, sposta cartella, elimina, esporta)
 │   │   ├── salva-contatto.mdx — Salva il contatto: salvare un contatto da una conversazione
 │   │   ├── elimina-chat.mdx — Eliminare le chat: rimuovere conversazioni
 │   │   ├── riassumi.mdx — Riassumi una chat: usare l'AI per riassumere una conversazione

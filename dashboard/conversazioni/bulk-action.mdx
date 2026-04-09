@@ -1,0 +1,93 @@
+---
+title: "Bulk action"
+description: "Applica azioni in blocco a più conversazioni contemporaneamente: chiudi, sposta in cartella, elimina o esporta."
+---
+
+Le **bulk action** ti permettono di applicare la stessa azione a tante conversazioni contemporaneamente, senza doverle gestire una per una. Sono utili quando devi, ad esempio, chiudere centinaia di chat di un cliente, spostare in massa un gruppo di conversazioni in una cartella, eliminare vecchie conversazioni di test o esportare un blocco di chat per archiviazione.
+
+Il flusso è sempre lo stesso: **filtra** le conversazioni che ti interessano, **selezionale tutte** e **applica l'azione**.
+
+## Come funziona
+
+<Steps>
+  <Step title="Filtra le conversazioni">
+    Restringi l'elenco alle sole conversazioni su cui vuoi agire usando i filtri disponibili: canale, etichetta, stato, cliente (nome, email, numero di telefono), data o operatore.
+
+    Per i dettagli su come usare i filtri, vedi [Filtri e Ricerca](/dashboard/conversazioni/filtri).
+
+    <Tip>Combina più filtri insieme per restringere il più possibile l'elenco prima di selezionare. Più mirato è il filtro, più sicura sarà l'azione in blocco.</Tip>
+  </Step>
+
+  <Step title="Seleziona tutte le conversazioni filtrate">
+    Clicca sul pulsante **"Seleziona tutto"** per selezionare in un colpo solo tutte le conversazioni presenti nell'elenco filtrato.
+
+    Dopo aver cliccato su **"Seleziona tutto"**, **scrolla verso il basso** nella lista delle conversazioni per essere certo di caricare e includere anche le chat non ancora visualizzate a schermo.
+
+    <Warning>Se non scrolli fino in fondo, alcune conversazioni potrebbero non essere caricate nella lista e quindi non essere incluse nell'azione in blocco. Assicurati sempre che tutte le chat siano state caricate prima di procedere.</Warning>
+  </Step>
+
+  <Step title="Applica l'azione in blocco">
+    Una volta selezionate le conversazioni, clicca sull'icona dell'azione che vuoi eseguire:
+
+    - **Spunta** per chiudere le conversazioni
+    - **Cestino** per eliminarle
+    - **Icona di esportazione** per scaricarle in `.zip`
+    - **Icona cartella** per spostarle in una cartella
+
+    L'azione verrà applicata immediatamente a tutte le conversazioni selezionate.
+  </Step>
+</Steps>
+
+## Azioni disponibili in blocco
+
+### Chiudere le conversazioni
+
+Per chiudere in blocco un gruppo di conversazioni:
+
+1. Filtra le conversazioni (ad esempio per email del cliente, per data, per canale).
+2. Clicca su **"Seleziona tutto"** e scrolla in basso per caricare tutte le chat.
+3. Clicca sull'**icona con la spunta** per impostare lo stato di tutte le conversazioni selezionate su **"Chiuso"**.
+
+<Warning>Se al momento dell'azione stai filtrando per **"Aperti"** (lo stato di default), le conversazioni appena chiuse spariranno dalla lista corrente. Le ritroverai cambiando il filtro di stato su **"Chiuso"**, come descritto in [Filtri e Ricerca → Filtrare per stato](/dashboard/conversazioni/filtri#filtrare-per-stato).</Warning>
+
+### Spostare le conversazioni in un'altra cartella
+
+Per spostare in blocco un gruppo di conversazioni in una cartella:
+
+1. Filtra le conversazioni che vuoi spostare.
+2. Clicca su **"Seleziona tutto"** e scrolla in basso per caricare tutte le chat.
+3. Clicca sull'**icona della cartella** e scegli la cartella di destinazione.
+
+<Note>Se la cartella di destinazione non esiste ancora, puoi crearla al volo digitando il nome e cliccando su **"Crea cartella"**. Per la gestione completa delle cartelle, vedi [Cartelle](/dashboard/conversazioni/cartelle).</Note>
+
+### Eliminare le conversazioni
+
+L'eliminazione in blocco segue lo stesso flusso (filtra → **"Seleziona tutto"** → icona del cestino).
+
+Per i dettagli completi, inclusi gli screenshot dell'icona di selezione e del pulsante di eliminazione, vedi [Eliminare le chat](/dashboard/conversazioni/elimina-chat).
+
+<Danger>Attenzione: l'eliminazione è **irreversibile**. Quando elimini delle conversazioni in blocco, non potrai più recuperarle. Verifica sempre i filtri prima di confermare.</Danger>
+
+### Esportare le conversazioni
+
+L'esportazione in blocco segue lo stesso flusso (filtra → **"Seleziona tutto"** → icona di esportazione). Al click partirà il download di una cartella `.zip` contenente tutte le conversazioni selezionate in file `.csv`.
+
+Per i dettagli completi, vedi [Esporta una o più conversazioni](/dashboard/conversazioni/esporta).
+
+## Esempio pratico
+
+**Scenario:** vuoi chiudere tutte le conversazioni di un cliente specifico, identificato dalla sua email.
+
+<Steps>
+  <Step title="Filtra per cliente">
+    Clicca sulla **barra di ricerca** e scrivi l'email del cliente. La lista mostrerà solo le conversazioni associate a quell'indirizzo.
+  </Step>
+  <Step title="Seleziona tutto">
+    Clicca sul pulsante **"Seleziona tutto"** e scrolla in basso fino a quando tutte le conversazioni del cliente sono state caricate nella lista.
+  </Step>
+  <Step title="Chiudi in blocco">
+    Clicca sull'**icona con la spunta** per impostare tutte le conversazioni selezionate su **"Chiuso"**.
+
+    <Check>Le conversazioni del cliente sono ora tutte chiuse. Per ritrovarle, cambia il filtro di stato su **"Chiuso"**.</Check>
+  </Step>
+</Steps>

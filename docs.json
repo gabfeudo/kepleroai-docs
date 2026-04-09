@@ -38,6 +38,7 @@
                   "dashboard/conversazioni/cartelle",
                   "dashboard/conversazioni/etichette",
                   "dashboard/conversazioni/controllo-manuale",
+                  "dashboard/conversazioni/bulk-action",
                   "dashboard/conversazioni/salva-contatto",
                   "dashboard/conversazioni/elimina-chat",
                   "dashboard/conversazioni/riassumi",
