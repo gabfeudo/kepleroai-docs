@@ -427,9 +427,9 @@ kepleroai-docs/
 │
 ├── dashboard/                                    # Console — funzionalità della dashboard di Keplero AI
 │   ├── introduzione/
-│   │   └── introduzione.mdx — La console di Keplero AI: panoramica delle sezioni e setup iniziale
+│   │   └── panoramica-console.mdx — La console di Keplero AI: panoramica delle sezioni e setup iniziale
 │   ├── conversazioni/                            # Gestione chat con clienti
-│   │   ├── overview.mdx — Gestione: panoramica della sezione conversazioni
+│   │   ├── panoramica-conversazioni.mdx — Gestione: panoramica della sezione conversazioni
 │   │   ├── filtri.mdx — Filtri e Ricerca: filtri avanzati per trovare conversazioni
 │   │   ├── cartelle.mdx — Cartelle: organizzare le conversazioni in cartelle
 │   │   ├── etichette.mdx — Etichette: identificare le conversazioni con label
@@ -440,30 +440,30 @@ kepleroai-docs/
 │   │   ├── riassumi.mdx — Riassumi una chat: usare l'AI per riassumere una conversazione
 │   │   ├── traduci.mdx — Tradurre i messaggi: traduzione automatica AI
 │   │   ├── promemoria.mdx — Promemoria: impostare promemoria su una chat
-│   │   ├── nuovo-messaggio.mdx — Inizia una conversazione WhatsApp: avviare un outbound WA
+│   │   ├── iniziare-conversazione-whatsapp.mdx — Inizia una conversazione WhatsApp: avviare un outbound WA
 │   │   ├── revisiona.mdx — Revisiona risposta: revisione e miglioramento risposte AI
 │   │   ├── esporta.mdx — Esporta conversazioni: export in CSV
 │   │   └── imposta-chat-come-non-letta.mdx — Contrassegna come non letta
 │   ├── addestramento/                            # Training del chatbot AI
 │   │   ├── base-conoscenza.mdx — Base di Conoscenza: addestrare l'AI con FAQ, siti e file
-│   │   ├── prompt.mdx — Prompt: definire personalità e comportamento dell'AI
-│   │   └── integrazioni.mdx — Integrazioni: collegare canali e strumenti al chatbot
+│   │   ├── configurare-prompt.mdx — Prompt: definire personalità e comportamento dell'AI
+│   │   └── gestire-integrazioni.mdx — Integrazioni: collegare canali e strumenti al chatbot
 │   ├── automazioni/
-│   │   └── automazioni.mdx — Trigger e Azioni: workflow automatizzati nella dashboard
+│   │   └── trigger-e-azioni.mdx — Trigger e Azioni: workflow automatizzati nella dashboard
 │   ├── campagne/                                 # (orphan) sezione campagne — non in docs.json
 │   │   ├── panoramica.mdx — Panoramica: introduzione alla sezione Campagne (richiede WhatsApp + Templates) (orphan)
 │   │   └── creare-campagna.mdx — Nuova Campagna: come creare una nuova campagna (orphan)
 │   ├── contatti/                                 # Gestione contatti
-│   │   ├── sezione-contatti.mdx — Panoramica: introduzione alla gestione contatti
+│   │   ├── panoramica-contatti.mdx — Panoramica: introduzione alla gestione contatti
 │   │   ├── liste.mdx — Liste: creare e gestire liste contatti
-│   │   ├── contatti.mdx — Contatti: aggiungere, modificare ed eliminare contatti
+│   │   ├── gestire-contatti.mdx — Contatti: aggiungere, modificare ed eliminare contatti
 │   │   └── kanban.mdx — Kanban: organizzare i contatti in board kanban
 │   ├── prova-chatbot/                            # Test e installazione del widget
-│   │   ├── test.mdx — Test Chatbot: testare l'AI prima del go-live
-│   │   ├── installa.mdx — Installa il widget: installare il widget sul sito
-│   │   └── condividi.mdx — Condividi il widget: link di test del widget
+│   │   ├── testare-chatbot.mdx — Test Chatbot: testare l'AI prima del go-live
+│   │   ├── installare-widget-sito.mdx — Installa il widget: installare il widget sul sito
+│   │   └── condividere-widget.mdx — Condividi il widget: link di test del widget
 │   ├── analisi/
-│   │   └── metriche.mdx — Metriche e Analytics: analizzare le performance del chatbot
+│   │   └── metriche-analytics.mdx — Metriche e Analytics: analizzare le performance del chatbot
 │   ├── impostazioni/                             # Settings della dashboard
 │   │   ├── chatbot.mdx — Chatbot: aspetto e comportamento del chatbot
 │   │   ├── conversazioni.mdx — Conversazioni: export, modelli, cartelle ed etichette
@@ -473,50 +473,50 @@ kepleroai-docs/
 │   │   ├── lingua-e-privacy.mdx — Lingua e Privacy: luogo, orario, privacy del chatbot
 │   │   └── canali.mdx — Canali: configurazione dei canali di comunicazione
 │   ├── profilo/
-│   │   └── profilo.mdx — I tuoi dati: account, billing e sicurezza
+│   │   └── gestire-profilo.mdx — I tuoi dati: account, billing e sicurezza
 │   └── widget/
-│       └── widget.mdx — Installazione del widget: guida per WordPress, Shopify, PrestaShop, HTML
+│       └── installare-widget.mdx — Installazione del widget: guida per WordPress, Shopify, PrestaShop, HTML
 │
 ├── integrazioni/                                 # Integrazioni esterne (canali, e-commerce, hotel, ecc.)
-│   ├── intro.mdx — Le Integrazioni in Keplero AI: panoramica di tutte le integrazioni disponibili
-│   ├── auto-labeling.mdx — Auto-Labeling: etichettatura automatica delle conversazioni
-│   ├── crea-contatto.mdx — Crea Contatto: creazione automatica di contatti
-│   ├── lettura-immagini.mdx — Lettura immagini: abilitare la lettura immagini nelle chat
+│   ├── panoramica-integrazioni.mdx — Le Integrazioni in Keplero AI: panoramica di tutte le integrazioni disponibili
+│   ├── configurare-auto-labeling.mdx — Auto-Labeling: etichettatura automatica delle conversazioni
+│   ├── creazione-automatica-contatti.mdx — Crea Contatto: creazione automatica di contatti
+│   ├── abilitare-lettura-immagini.mdx — Lettura immagini: abilitare la lettura immagini nelle chat
 │   ├── whatsapp/
-│   │   ├── whatsapp.mdx — Integrare WhatsApp: collegare WhatsApp Business a Keplero
+│   │   ├── collegare-whatsapp.mdx — Integrare WhatsApp: collegare WhatsApp Business a Keplero
 │   │   ├── templates-whatsapp.mdx — Templates WhatsApp: creazione e gestione template
-│   │   └── q&a.mdx — Q&A: FAQ sull'integrazione WhatsApp
+│   │   └── faq-whatsapp.mdx — FAQ WhatsApp: domande frequenti su WhatsApp, template e carte di credito
 │   ├── social/
-│   │   ├── instagram.mdx — Instagram: collegare Instagram per automazione DM
-│   │   ├── messenger.mdx — Messenger: collegare Facebook Messenger
-│   │   └── q&a.mdx — Q&A: FAQ sulle integrazioni social
+│   │   ├── collegare-instagram.mdx — Instagram: collegare Instagram per automazione DM
+│   │   ├── collegare-messenger.mdx — Messenger: collegare Facebook Messenger
+│   │   └── faq-social.mdx — FAQ Social: domande frequenti su Instagram e Messenger
 │   ├── email/
-│   │   ├── account-email.mdx — Collega account email: Gmail, Outlook o IMAP
-│   │   └── invio-email.mdx — Mail automatiche: invio email con AI
+│   │   ├── collegare-email.mdx — Collega account email: Gmail, Outlook o IMAP
+│   │   └── invio-email-automatiche.mdx — Mail automatiche: invio email con AI
 │   ├── google/
-│   │   ├── google-sheet.mdx — Google Sheet: leggere e scrivere su Google Sheets
-│   │   └── google-calendar.mdx — Google Calendar: creare e gestire appuntamenti
+│   │   ├── collegare-google-sheet.mdx — Google Sheet: leggere e scrivere su Google Sheets
+│   │   └── collegare-google-calendar.mdx — Google Calendar: creare e gestire appuntamenti
 │   ├── rest/
-│   │   └── api-rest.mdx — Integrazione API REST: integrazioni custom via REST
+│   │   └── creare-integrazione-api-rest.mdx — Integrazione API REST: integrazioni custom via REST
 │   ├── ecommerce/                                # 7 piattaforme e-commerce
-│   │   ├── shopify.mdx — Shopify: collegare uno store Shopify
-│   │   ├── woocommerce.mdx — WooCommerce: collegare uno store WooCommerce
-│   │   ├── magento.mdx — Magento: collegare uno store Magento
-│   │   ├── qapla.mdx — Qapla: collegare uno store Qapla per dati prodotti e ordini
-│   │   ├── prestashop.mdx — PrestaShop: collegare uno store PrestaShop
-│   │   ├── shippypro.mdx — ShippyPro: chiave API e collegamento a Keplero
-│   │   └── track123.mdx — Track123: chiave API e collegamento a Keplero
+│   │   ├── collegare-shopify.mdx — Shopify: collegare uno store Shopify
+│   │   ├── collegare-woocommerce.mdx — WooCommerce: collegare uno store WooCommerce
+│   │   ├── collegare-magento.mdx — Magento: collegare uno store Magento
+│   │   ├── collegare-qapla.mdx — Qapla: collegare uno store Qapla per dati prodotti e ordini
+│   │   ├── collegare-prestashop.mdx — PrestaShop: collegare uno store PrestaShop
+│   │   ├── collegare-shippypro.mdx — ShippyPro: chiave API e collegamento a Keplero
+│   │   └── collegare-track123.mdx — Track123: chiave API e collegamento a Keplero
 │   └── hotel/                                    # 6 booking engine alberghieri
-│       ├── booking-expert.mdx — Booking Expert: integrazione PMS Booking Expert
-│       ├── blastness.mdx — Blastness: integrazione Blastness
-│       ├── cloud-village.mdx — Cloud Village: integrazione Cloud Village
-│       ├── simple-booking.mdx — Simple Booking: integrazione Simple Booking
-│       ├── slope.mdx — Slope: integrazione Slope
-│       └── vertical-booking.mdx — Vertical Booking: integrazione Vertical Booking
+│       ├── collegare-booking-expert.mdx — Booking Expert: integrazione PMS Booking Expert
+│       ├── collegare-blastness.mdx — Blastness: integrazione Blastness
+│       ├── collegare-cloud-village.mdx — Cloud Village: integrazione Cloud Village
+│       ├── collegare-simple-booking.mdx — Simple Booking: integrazione Simple Booking
+│       ├── collegare-slope.mdx — Slope: integrazione Slope
+│       └── collegare-vertical-booking.mdx — Vertical Booking: integrazione Vertical Booking
 │
 ├── automazioni/                                  # Workflow automatici (trigger esterni a Keplero)
-│   ├── intro.mdx — Le Automazioni in Keplero AI: panoramica delle automazioni
-│   ├── webhooks.mdx — Webhook: inviare dati a Keplero da app esterne
+│   ├── panoramica-automazioni.mdx — Le Automazioni in Keplero AI: panoramica delle automazioni
+│   ├── configurare-webhook.mdx — Webhook: inviare dati a Keplero da app esterne
 │   ├── whatsapp/
 │   │   ├── invio-massivo.mdx — Invio massivo WhatsApp: bulk messaging
 │   │   ├── ricontatto-lead.mdx — Ricontatto Lead: follow-up automatico ai lead via WA
@@ -530,20 +530,17 @@ kepleroai-docs/
 │       └── automazioni-woocommerce.mdx — Automazioni WooCommerce: workflow automatici WooCommerce
 │
 ├── meta/                                         # Setup Meta Business Manager / WhatsApp
-│   ├── business-manager.mdx — Business Manager: setup di Meta Business Manager
+│   ├── configurare-business-manager.mdx — Business Manager: setup di Meta Business Manager
 │   ├── rimuovi-numero-whatsapp.mdx — Rimuovi numero: rimuovere un numero WhatsApp da BM
 │   └── passare-a-whatsapp-business.mdx — Passare a WhatsApp Business: migrazione account
 │
 ├── tecnica/                                      # Documentazione tecnica trasversale
-│   ├── widget.mdx — Widget: dettagli tecnici di implementazione del widget
-│   ├── installazione_telefono.mdx — Installazione Telefono: setup canale telefono
+│   ├── eventi-widget.mdx — Eventi del Widget: dettagli tecnici degli eventi JavaScript del widget
+│   ├── installazione-telefono.mdx — Installazione Telefono: setup canale telefono
 │   └── clona-voce.mdx — Clona Voce: feature di voice cloning
 │
 ├── faq/
-│   └── faq.mdx — Domande Frequenti: troubleshooting e FAQ generali
-│
-├── canali/
-│   └── canali.mdx — Metriche e Analytics (variante) (orphan)
+│   └── domande-frequenti.mdx — Domande Frequenti: pagina hub che rimanda alle FAQ specifiche per area
 │
 ├── funzionalita/
 │   └── chatbot-ai.mdx — Chatbot AI: panoramica delle funzionalità del chatbot (orphan)

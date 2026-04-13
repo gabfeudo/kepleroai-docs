@@ -28,12 +28,12 @@
             "group": "Dashboard",
             "icon": "sidebar",
             "pages": [
-              "dashboard/introduzione/introduzione",
+              "dashboard/introduzione/panoramica-console",
               {
                 "group": "Conversazioni",
                 "icon": "messages",
                 "pages": [
-                  "dashboard/conversazioni/overview",
+                  "dashboard/conversazioni/panoramica-conversazioni",
                   "dashboard/conversazioni/filtri",
                   "dashboard/conversazioni/cartelle",
                   "dashboard/conversazioni/etichette",
@@ -44,7 +44,7 @@
                   "dashboard/conversazioni/riassumi",
                   "dashboard/conversazioni/traduci",
                   "dashboard/conversazioni/promemoria",
-                  "dashboard/conversazioni/nuovo-messaggio",
+                  "dashboard/conversazioni/iniziare-conversazione-whatsapp",
                   "dashboard/conversazioni/revisiona",
                   "dashboard/conversazioni/esporta",
                   "dashboard/conversazioni/imposta-chat-come-non-letta"
@@ -55,24 +55,24 @@
                 "icon": "head-side-brain",
                 "pages": [
                   "dashboard/addestramento/base-conoscenza",
-                  "dashboard/addestramento/prompt",
-                  "dashboard/addestramento/integrazioni"
+                  "dashboard/addestramento/configurare-prompt",
+                  "dashboard/addestramento/gestire-integrazioni"
                 ]
               },
               {
                 "group": "Automazioni",
                 "icon": "bolt",
                 "pages": [
-                  "dashboard/automazioni/automazioni"
+                  "dashboard/automazioni/trigger-e-azioni"
                 ]
               },
               {
                 "group": "Contatti",
                 "icon": "id-card",
                 "pages": [
-                  "dashboard/contatti/sezione-contatti",
+                  "dashboard/contatti/panoramica-contatti",
                   "dashboard/contatti/liste",
-                  "dashboard/contatti/contatti",
+                  "dashboard/contatti/gestire-contatti",
                   "dashboard/contatti/kanban"
                 ]
               },
@@ -80,16 +80,16 @@
                 "group": "Prova Chatbot",
                 "icon": "robot",
                 "pages": [
-                  "dashboard/prova-chatbot/test",
-                  "dashboard/prova-chatbot/installa",
-                  "dashboard/prova-chatbot/condividi"
+                  "dashboard/prova-chatbot/testare-chatbot",
+                  "dashboard/prova-chatbot/installare-widget-sito",
+                  "dashboard/prova-chatbot/condividere-widget"
                 ]
               },
               {
                 "group": "Analisi",
                 "icon": "chart-simple",
                 "pages": [
-                  "dashboard/analisi/metriche"
+                  "dashboard/analisi/metriche-analytics"
                 ]
               },
               {
@@ -109,7 +109,7 @@
                 "group": "Profilo",
                 "icon": "user",
                 "pages": [
-                  "dashboard/profilo/profilo"
+                  "dashboard/profilo/gestire-profilo"
                 ]
               }
             ]
@@ -118,92 +118,92 @@
             "group": "Integrazioni",
             "icon": "bolt",
             "pages": [
-              "integrazioni/intro",
+              "integrazioni/panoramica-integrazioni",
               {
                 "group": "WhatsApp",
                 "icon": "whatsapp",
                 "pages": [
-                  "integrazioni/whatsapp/whatsapp",
+                  "integrazioni/whatsapp/collegare-whatsapp",
                   "integrazioni/whatsapp/templates-whatsapp",
-                  "integrazioni/whatsapp/q&a"
+                  "integrazioni/whatsapp/faq-whatsapp"
                 ]
               },
               {
                 "group": "Social",
                 "icon": "thumbs-up",
                 "pages": [
-                  "integrazioni/social/instagram",
-                  "integrazioni/social/messenger",
-                  "integrazioni/social/q&a"
+                  "integrazioni/social/collegare-instagram",
+                  "integrazioni/social/collegare-messenger",
+                  "integrazioni/social/faq-social"
                 ]
               },
               {
                 "group": "Google",
                 "icon": "google",
                 "pages": [
-                  "integrazioni/google/google-sheet",
-                  "integrazioni/google/google-calendar"
+                  "integrazioni/google/collegare-google-sheet",
+                  "integrazioni/google/collegare-google-calendar"
                 ]
               },
               {
                 "group": "Email",
                 "icon": "envelope",
                 "pages": [
-                  "integrazioni/email/account-email",
-                  "integrazioni/email/invio-email"
+                  "integrazioni/email/collegare-email",
+                  "integrazioni/email/invio-email-automatiche"
                 ]
               },
               {
                 "group": "Etichette",
                 "icon": "tag",
                 "pages": [
-                  "integrazioni/auto-labeling"
+                  "integrazioni/configurare-auto-labeling"
                 ]
               },
               {
                 "group": "Immagini",
                 "icon": "image",
                 "pages": [
-                  "integrazioni/lettura-immagini"
+                  "integrazioni/abilitare-lettura-immagini"
                 ]
               },
               {
                 "group": "Contatti",
                 "icon": "user",
                 "pages": [
-                  "integrazioni/crea-contatto"
+                  "integrazioni/creazione-automatica-contatti"
                 ]
               },
               {
                 "group": "Ecommerce",
                 "icon": "cart-shopping",
                 "pages": [
-                  "integrazioni/ecommerce/shopify",
-                  "integrazioni/ecommerce/woocommerce",
-                  "integrazioni/ecommerce/magento",
-                  "integrazioni/ecommerce/qapla",
-                  "integrazioni/ecommerce/prestashop",
-                  "integrazioni/ecommerce/shippypro",
-                  "integrazioni/ecommerce/track123"
+                  "integrazioni/ecommerce/collegare-shopify",
+                  "integrazioni/ecommerce/collegare-woocommerce",
+                  "integrazioni/ecommerce/collegare-magento",
+                  "integrazioni/ecommerce/collegare-qapla",
+                  "integrazioni/ecommerce/collegare-prestashop",
+                  "integrazioni/ecommerce/collegare-shippypro",
+                  "integrazioni/ecommerce/collegare-track123"
                 ]
               },
               {
                 "group": "Hotel",
                 "icon": "hotel",
                 "pages": [
-                  "integrazioni/hotel/booking-expert",
-                  "integrazioni/hotel/blastness",
-                  "integrazioni/hotel/cloud-village",
-                  "integrazioni/hotel/simple-booking",
-                  "integrazioni/hotel/slope",
-                  "integrazioni/hotel/vertical-booking"
+                  "integrazioni/hotel/collegare-booking-expert",
+                  "integrazioni/hotel/collegare-blastness",
+                  "integrazioni/hotel/collegare-cloud-village",
+                  "integrazioni/hotel/collegare-simple-booking",
+                  "integrazioni/hotel/collegare-slope",
+                  "integrazioni/hotel/collegare-vertical-booking"
                 ]
               },
               {
                 "group": "Rest",
                 "icon": "bolt",
                 "pages": [
-                  "integrazioni/rest/api-rest"
+                  "integrazioni/rest/creare-integrazione-api-rest"
                 ]
               }
             ]
@@ -212,8 +212,8 @@
             "group": "Automazioni",
             "icon": "robot",
             "pages": [
-              "automazioni/intro",
-              "automazioni/webhooks",
+              "automazioni/panoramica-automazioni",
+              "automazioni/configurare-webhook",
               {
                 "group": "WhatsApp",
                 "icon": "whatsapp",
@@ -246,7 +246,7 @@
             "group": "Meta & Business Manager",
             "icon": "meta",
             "pages": [
-              "meta/business-manager",
+              "meta/configurare-business-manager",
               "meta/rimuovi-numero-whatsapp",
               "meta/passare-a-whatsapp-business"
             ]
@@ -255,9 +255,9 @@
             "group": "Documentazione Tecnica",
             "icon": "book",
             "pages": [
-              "tecnica/widget",
-              "dashboard/widget/widget",
-              "tecnica/installazione_telefono",
+              "tecnica/eventi-widget",
+              "dashboard/widget/installare-widget",
+              "tecnica/installazione-telefono",
               "tecnica/clona-voce"
             ]
           },
@@ -265,7 +265,7 @@
             "group": "FAQ",
             "icon": "circle-question",
             "pages": [
-              "faq/faq"
+              "faq/domande-frequenti"
             ]
           }
         ]
@@ -315,6 +315,55 @@
       "vscode"
     ]
   },
+  "redirects": [
+    { "source": "/dashboard/introduzione/introduzione", "destination": "/dashboard/introduzione/panoramica-console" },
+    { "source": "/dashboard/conversazioni/overview", "destination": "/dashboard/conversazioni/panoramica-conversazioni" },
+    { "source": "/dashboard/conversazioni/nuovo-messaggio", "destination": "/dashboard/conversazioni/iniziare-conversazione-whatsapp" },
+    { "source": "/dashboard/addestramento/prompt", "destination": "/dashboard/addestramento/configurare-prompt" },
+    { "source": "/dashboard/addestramento/integrazioni", "destination": "/dashboard/addestramento/gestire-integrazioni" },
+    { "source": "/dashboard/automazioni/automazioni", "destination": "/dashboard/automazioni/trigger-e-azioni" },
+    { "source": "/dashboard/contatti/sezione-contatti", "destination": "/dashboard/contatti/panoramica-contatti" },
+    { "source": "/dashboard/contatti/contatti", "destination": "/dashboard/contatti/gestire-contatti" },
+    { "source": "/dashboard/prova-chatbot/test", "destination": "/dashboard/prova-chatbot/testare-chatbot" },
+    { "source": "/dashboard/prova-chatbot/installa", "destination": "/dashboard/prova-chatbot/installare-widget-sito" },
+    { "source": "/dashboard/prova-chatbot/condividi", "destination": "/dashboard/prova-chatbot/condividere-widget" },
+    { "source": "/dashboard/analisi/metriche", "destination": "/dashboard/analisi/metriche-analytics" },
+    { "source": "/dashboard/profilo/profilo", "destination": "/dashboard/profilo/gestire-profilo" },
+    { "source": "/dashboard/widget/widget", "destination": "/dashboard/widget/installare-widget" },
+    { "source": "/integrazioni/intro", "destination": "/integrazioni/panoramica-integrazioni" },
+    { "source": "/integrazioni/whatsapp/whatsapp", "destination": "/integrazioni/whatsapp/collegare-whatsapp" },
+    { "source": "/integrazioni/whatsapp/q&a", "destination": "/integrazioni/whatsapp/faq-whatsapp" },
+    { "source": "/integrazioni/social/instagram", "destination": "/integrazioni/social/collegare-instagram" },
+    { "source": "/integrazioni/social/messenger", "destination": "/integrazioni/social/collegare-messenger" },
+    { "source": "/integrazioni/social/q&a", "destination": "/integrazioni/social/faq-social" },
+    { "source": "/integrazioni/google/google-sheet", "destination": "/integrazioni/google/collegare-google-sheet" },
+    { "source": "/integrazioni/google/google-calendar", "destination": "/integrazioni/google/collegare-google-calendar" },
+    { "source": "/integrazioni/email/account-email", "destination": "/integrazioni/email/collegare-email" },
+    { "source": "/integrazioni/email/invio-email", "destination": "/integrazioni/email/invio-email-automatiche" },
+    { "source": "/integrazioni/auto-labeling", "destination": "/integrazioni/configurare-auto-labeling" },
+    { "source": "/integrazioni/lettura-immagini", "destination": "/integrazioni/abilitare-lettura-immagini" },
+    { "source": "/integrazioni/crea-contatto", "destination": "/integrazioni/creazione-automatica-contatti" },
+    { "source": "/integrazioni/ecommerce/shopify", "destination": "/integrazioni/ecommerce/collegare-shopify" },
+    { "source": "/integrazioni/ecommerce/woocommerce", "destination": "/integrazioni/ecommerce/collegare-woocommerce" },
+    { "source": "/integrazioni/ecommerce/magento", "destination": "/integrazioni/ecommerce/collegare-magento" },
+    { "source": "/integrazioni/ecommerce/qapla", "destination": "/integrazioni/ecommerce/collegare-qapla" },
+    { "source": "/integrazioni/ecommerce/prestashop", "destination": "/integrazioni/ecommerce/collegare-prestashop" },
+    { "source": "/integrazioni/ecommerce/shippypro", "destination": "/integrazioni/ecommerce/collegare-shippypro" },
+    { "source": "/integrazioni/ecommerce/track123", "destination": "/integrazioni/ecommerce/collegare-track123" },
+    { "source": "/integrazioni/hotel/booking-expert", "destination": "/integrazioni/hotel/collegare-booking-expert" },
+    { "source": "/integrazioni/hotel/blastness", "destination": "/integrazioni/hotel/collegare-blastness" },
+    { "source": "/integrazioni/hotel/cloud-village", "destination": "/integrazioni/hotel/collegare-cloud-village" },
+    { "source": "/integrazioni/hotel/simple-booking", "destination": "/integrazioni/hotel/collegare-simple-booking" },
+    { "source": "/integrazioni/hotel/slope", "destination": "/integrazioni/hotel/collegare-slope" },
+    { "source": "/integrazioni/hotel/vertical-booking", "destination": "/integrazioni/hotel/collegare-vertical-booking" },
+    { "source": "/integrazioni/rest/api-rest", "destination": "/integrazioni/rest/creare-integrazione-api-rest" },
+    { "source": "/automazioni/intro", "destination": "/automazioni/panoramica-automazioni" },
+    { "source": "/automazioni/webhooks", "destination": "/automazioni/configurare-webhook" },
+    { "source": "/meta/business-manager", "destination": "/meta/configurare-business-manager" },
+    { "source": "/tecnica/widget", "destination": "/tecnica/eventi-widget" },
+    { "source": "/tecnica/installazione_telefono", "destination": "/tecnica/installazione-telefono" },
+    { "source": "/faq/faq", "destination": "/faq/domande-frequenti" }
+  ],
   "footer": {
     "socials": {
       "linkedin": "https://it.linkedin.com/company/keplero-ai",
