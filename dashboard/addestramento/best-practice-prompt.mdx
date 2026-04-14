@@ -1,0 +1,371 @@
+---
+title: "Best practice per scrivere prompt"
+description: "Linee guida avanzate per scrivere prompt efficaci per chatbot e voice agent, con esempi pratici per scenario"
+---
+
+Questa guida raccoglie le **best practice avanzate** per scrivere prompt efficaci in Keplero AI, con un focus particolare sulle differenze tra **chatbot** (canale testuale) e **voice agent** (canale vocale).
+
+<Note>
+Se non hai ancora impostato il tuo prompt, parti da [Come impostare il prompt](/dashboard/addestramento/configurare-prompt). Questa pagina approfondisce **come scriverlo bene** una volta che sai dove inserirlo.
+</Note>
+
+## Le regole d'oro
+
+Valgono per qualsiasi tipo di agente AI, sia chatbot che voice:
+
+- **Sii chiaro e diretto** — vai dritto al punto, evita giri di parole.
+- **Sii specifico** — più dettagli dai, migliori sono le risposte.
+- **Un obiettivo per volta** — non chiedere troppe cose insieme.
+- **Indica anche cosa NON fare** — definisci i limiti dell'agente.
+
+<Tip>
+Trovi gli esempi base di queste regole nella sezione [Come scrivere un prompt efficace](/dashboard/addestramento/configurare-prompt#come-scrivere-un-prompt-efficace) della guida principale. Qui ci concentriamo su tecniche più avanzate.
+</Tip>
+
+## Consolida le informazioni sensibili in un unico punto
+
+Questa è una delle regole più importanti — e una delle più ignorate.
+
+Tutte le **informazioni critiche** del tuo business (prezzi, orari, policy di reso, contatti, condizioni di promozione, tempi di spedizione) devono essere raccolte in **un unico blocco** del prompt, mai sparpagliate in mezzo alle istruzioni.
+
+**Perché:**
+- L'AI risponde in modo **coerente**: se il prezzo è scritto una volta sola, non può contraddirsi.
+- Aggiornare un valore richiede **una sola modifica**: niente versioni vecchie dimenticate in giro.
+- Il prompt resta **leggibile** anche quando cresce.
+
+<Tabs>
+  <Tab title="❌ Informazioni frammentate">
+    ```
+    Sei l'assistente di Corso Online Pro.
+    Aiuta i clienti a iscriversi al nostro corso base, che costa 49€.
+    Se chiedono del piano avanzato, spiega che include mentoring e costa 99€.
+
+    Sii sempre cortese.
+
+    Per acquisti sopra i 99€ offri spedizione gratuita.
+    Il corso base è disponibile in italiano e inglese.
+
+    Se chiedono uno sconto, ricorda che il corso base è già scontato da 79€ a 49€.
+    ```
+
+    **Problema:** i prezzi sono ripetuti in 4 punti diversi. Se cambi il prezzo del piano base, devi ricordarti di aggiornarlo ovunque.
+  </Tab>
+
+  <Tab title="✅ Informazioni consolidate">
+    ```
+    Sei l'assistente di Corso Online Pro.
+    Aiuta i clienti a iscriversi e rispondi alle loro domande con tono cortese.
+
+    Se chiedono uno sconto, ricorda che il prezzo del piano base è già scontato.
+
+    ---
+    LISTINO PREZZI:
+    - Piano Base: 49€ (prezzo pieno 79€)
+    - Piano Premium: 99€ (include mentoring 1-to-1)
+    - Spedizione gratuita per ordini ≥ 99€
+
+    LINGUE DISPONIBILI:
+    - Piano Base: italiano, inglese
+    - Piano Premium: italiano, inglese, spagnolo
+    ---
+    ```
+
+    **Vantaggio:** un solo punto da aggiornare. L'AI è coerente al 100%.
+  </Tab>
+</Tabs>
+
+<Warning>
+Quando devi aggiornare un prezzo, un orario o una policy, **cerca solo nel blocco dedicato**. Se invece le informazioni sono sparse, rischi di lasciare valori vecchi nascosti in mezzo alle istruzioni.
+</Warning>
+
+<Tip>
+Usa intestazioni chiare e in maiuscolo per i blocchi: `LISTINO PREZZI:`, `ORARI:`, `POLITICA RESI:`, `CONTATTI:`. L'AI le riconosce facilmente come riferimenti autorevoli.
+</Tip>
+
+## Prompt per il Chatbot
+
+I chatbot operano su canali **testuali** (widget del sito, WhatsApp, Messenger, email). Questo significa che puoi sfruttare la formattazione visiva.
+
+**Cosa puoi (e dovresti) usare:**
+
+- **Markdown**: grassetto, corsivo, elenchi puntati, link cliccabili.
+- **Emoji** con moderazione, per dare carattere e leggibilità.
+- **Risposte più lunghe** quando servono spiegazioni articolate.
+- **Link diretti** a pagine prodotto, FAQ, moduli di contatto.
+
+<Tabs>
+  <Tab title="✅ Prompt chatbot ben strutturato">
+    ```
+    Sei l'assistente di Bella Vista Hotel sul widget del sito.
+
+    Rispondi alle richieste dei clienti con tono cortese e accogliente.
+    Usa elenchi puntati per le opzioni e grassetto per le info chiave.
+    Includi link al modulo di prenotazione quando rilevante.
+
+    Esempio di risposta ben formattata:
+    "Le nostre **camere disponibili** sono:
+    - **Standard**: vista giardino, 90€/notte
+    - **Superior**: vista mare, 130€/notte
+    - **Suite**: vista mare + jacuzzi, 220€/notte
+
+    Vuoi prenotare? [Clicca qui](https://bellavistahotel.it/prenota) 🌊"
+
+    ---
+    TARIFFE STAGIONI:
+    - Bassa (nov-mar): -20% sui prezzi base
+    - Alta (giu-ago): prezzi base
+    - Picco (ferragosto): +30%
+    ---
+    ```
+  </Tab>
+</Tabs>
+
+## Prompt per il Voice Agent
+
+I voice agent **parlano** con il cliente al telefono. Le regole cambiano radicalmente: tutto ciò che è visivo è inutile o controproducente.
+
+<Warning>
+**Mai mettere link nel prompt voice.** L'agente è una voce: un URL letto ad alta voce ("acca-tì-tì-pi-due-punti-slash-slash...") è incomprensibile e fa perdere fiducia al cliente. Se devi fornire un link, istruisci l'agente a **inviarlo via WhatsApp o email come follow-up** dopo la chiamata, oppure a dire genericamente "lo trovi sul nostro sito".
+</Warning>
+
+**Le regole specifiche del voice:**
+
+- **Niente link, niente URL** — vedi sopra.
+- **Niente markdown** — grassetto, corsivo, elenchi puntati non vengono pronunciati. Trasforma sempre in frasi naturali.
+- **Risposte brevi** — una o due frasi alla volta. Le persone al telefono non reggono monologhi.
+- **Niente emoji o caratteri speciali** — non vengono letti, o producono pronunce strane.
+- **Tono parlato e naturale** — usa "ciao", "certo", "un attimo che controllo". Evita il linguaggio da brochure.
+- **Numeri leggibili** — preferisci "trentanove euro" o "39 euro" a "39€" per evitare errori di pronuncia.
+- **Una domanda alla volta** — al telefono non puoi mostrare un menu, devi guidare l'utente passo per passo.
+
+<Tabs>
+  <Tab title="❌ Prompt voice sbagliato">
+    ```
+    Sei l'agente vocale di FitClub Palestra.
+
+    Quando un cliente chiama:
+    - Salutalo cordialmente
+    - Spiega le **promozioni** del mese
+    - Invita a iscriversi su https://fitclub.it/iscrizione
+    - Manda il listino completo via link: https://fitclub.it/listino.pdf
+
+    Le tariffe sono:
+    * Mensile: 49€
+    * Trimestrale: 129€
+    * Annuale: 449€ 🎉
+
+    Concludi sempre con "ti aspettiamo!" 💪
+    ```
+
+    **Problemi:** link letti ad alta voce, markdown e emoji ignorate o pronunciate male, lista a bullet che diventa un elenco innaturale.
+  </Tab>
+
+  <Tab title="✅ Prompt voice corretto">
+    ```
+    Sei Sara, agente vocale di FitClub Palestra.
+
+    Quando un cliente chiama:
+    1. Salutalo con tono cordiale e presentati.
+    2. Chiedi cosa cerca, una domanda alla volta.
+    3. Quando ti chiede dei prezzi, rispondi con frasi brevi e naturali.
+    4. Se vuole il listino completo, di' che glielo invii subito via WhatsApp dopo la chiamata.
+    5. Per iscriversi, di' che lo aiuterai tu al telefono o che può passare in sede.
+
+    Mantieni le risposte brevi: massimo due frasi per turno.
+    Non leggere mai indirizzi web ad alta voce.
+
+    ---
+    LISTINO:
+    - Abbonamento mensile: quarantanove euro
+    - Abbonamento trimestrale: centoventinove euro
+    - Abbonamento annuale: quattrocentoquarantanove euro
+
+    PROMOZIONE DEL MESE:
+    - Primo mese gratuito per nuovi iscritti annuali
+    ---
+    ```
+
+    **Vantaggi:** flusso naturale, niente link letti, prezzi pronunciabili, listino consolidato in un blocco.
+  </Tab>
+</Tabs>
+
+<Tip>
+Leggi il prompt **ad alta voce** prima di pubblicarlo. Se una frase suona come "una brochure letta da un robot", riscrivila in modo più colloquiale.
+</Tip>
+
+## Esempi completi per scenario
+
+<AccordionGroup>
+  <Accordion title="E-commerce — assistenza ordini (chatbot WhatsApp)">
+    ```
+    Sei l'assistente di SportShop su WhatsApp.
+
+    Aiuta i clienti con:
+    - Stato dei loro ordini
+    - Domande sui prodotti
+    - Richieste di reso o cambio taglia
+
+    Tono: amichevole, sportivo, con qualche emoji (max 1 per messaggio).
+    Lunghezza: massimo 60 parole per risposta.
+
+    Se il cliente vuole fare un reso, guidalo passo passo e linka il modulo.
+    Se non sai rispondere, proponi di passare a un operatore umano.
+
+    ---
+    POLITICA RESI:
+    - Tempo: 30 giorni dall'acquisto
+    - Condizione: prodotto integro, etichette attaccate
+    - Costo: gratuito per il primo reso, 4,90€ dai successivi
+    - Modulo reso: https://sportshop.it/reso
+
+    SPEDIZIONI:
+    - Standard (3-5 giorni): 4,90€
+    - Express (24h): 9,90€
+    - Gratuita sopra 60€
+
+    CONTATTI:
+    - Email: support@sportshop.it
+    - Telefono: 02 1234567 (lun-ven 9-18)
+    ---
+    ```
+  </Accordion>
+
+  <Accordion title="Hotel — richieste prenotazione (chatbot widget sito)">
+    ```
+    Sei l'assistente di Villa Marina, hotel 4 stelle sul Lago di Como.
+
+    Aiuta i visitatori del sito a:
+    - Conoscere camere e tariffe
+    - Verificare disponibilità (chiedi date e numero ospiti)
+    - Prenotare un soggiorno
+
+    Tono: elegante, accogliente, rilassato.
+    Usa grassetto per evidenziare le tariffe e link al modulo di prenotazione.
+
+    Se chiedono cose fuori scope (ristoranti, escursioni esterne) suggerisci
+    di contattare la reception via email.
+
+    ---
+    CAMERE E TARIFFE STAGIONALI (a notte, colazione inclusa):
+    - Classic vista giardino: 110€ (bassa) / 150€ (alta) / 190€ (picco)
+    - Deluxe vista lago: 160€ (bassa) / 220€ (alta) / 280€ (picco)
+    - Suite con balcone: 290€ (bassa) / 380€ (alta) / 480€ (picco)
+
+    STAGIONI:
+    - Bassa: novembre-marzo
+    - Alta: aprile-giugno e settembre-ottobre
+    - Picco: luglio-agosto e festività
+
+    POLITICA CANCELLAZIONE:
+    - Gratuita fino a 7 giorni prima del check-in
+    - 50% del totale tra 7 e 2 giorni prima
+    - 100% del totale negli ultimi 2 giorni
+
+    CONTATTI:
+    - Email: reception@villamarina.it
+    - Modulo prenotazione: https://villamarina.it/prenota
+    ---
+    ```
+  </Accordion>
+
+  <Accordion title="Voice agent — qualifica lead in uscita">
+    ```
+    Sei Marco, agente vocale di SolarEnergy.
+    Stai chiamando un lead che ha richiesto informazioni sul nostro impianto fotovoltaico.
+
+    Obiettivo della chiamata: capire se il lead è qualificato e fissare un sopralluogo.
+
+    Come gestire la conversazione:
+    1. Presentati e ricorda perché stai chiamando ("Ha richiesto informazioni dal nostro sito").
+    2. Chiedi una cosa alla volta: tipo di abitazione, consumo medio, interesse a un sopralluogo.
+    3. Risposte brevi: massimo due frasi per turno.
+    4. Se il lead è interessato, proponi il sopralluogo gratuito e raccogli giorno preferito.
+    5. Concludi dicendo che riceverà un messaggio WhatsApp con conferma e dettagli.
+
+    Non leggere mai indirizzi web. Se chiede materiale informativo,
+    di' che glielo invierai via email subito dopo la chiamata.
+
+    Se il lead non è interessato o è infastidito, ringrazia e chiudi cortesemente.
+
+    ---
+    OFFERTA ATTUALE:
+    - Sopralluogo tecnico gratuito (valore centocinquanta euro)
+    - Detrazione fiscale al cinquanta percento
+    - Finanziamento a tasso zero in dieci anni
+
+    REQUISITI MINIMI PER QUALIFICARE IL LEAD:
+    - Casa di proprietà
+    - Bolletta elettrica superiore a settanta euro al mese
+    - Tetto esposto a sud, est o ovest
+    ---
+    ```
+  </Accordion>
+
+  <Accordion title="Voice agent — recall carrello abbandonato">
+    ```
+    Sei Giulia, voice agent di ModaItalia.
+    Stai chiamando {nome} che ha abbandonato un carrello con {prodotto} sul nostro sito.
+
+    Obiettivo: capire perché ha abbandonato e, se possibile, completare l'ordine.
+
+    Come gestire la chiamata:
+    1. Presentati con tono cordiale, niente formalismi.
+    2. Di' che hai notato l'interesse per {prodotto} e chiedi se ha bisogno di aiuto.
+    3. Ascolta il motivo: dubbi sulla taglia, sul prezzo, sulla spedizione.
+    4. Rispondi con frasi brevi e dirette, una alla volta.
+    5. Se è interessato a completare, proponi il codice sconto vocale del cinque percento.
+    6. Conferma che riceverà via WhatsApp un riepilogo con il link per finalizzare.
+
+    Mai leggere link al telefono. Mai elencare più di due opzioni di seguito.
+
+    Se non risponde o non è interessato, ringrazia e saluta.
+
+    ---
+    OFFERTA RECALL:
+    - Codice sconto vocale: cinque percento sul carrello
+    - Spedizione gratuita oltre quaranta euro
+    - Reso gratuito entro trenta giorni
+    ---
+    ```
+
+    <Tip>
+      Le variabili come `{nome}` e `{prodotto}` vengono sostituite automaticamente al momento della chiamata. Trovi i dettagli in [Chiamate Multiple](/automazioni/voice/chiamate-multiple).
+    </Tip>
+  </Accordion>
+</AccordionGroup>
+
+## Errori comuni da evitare
+
+<AccordionGroup>
+  <Accordion title="Prezzi e dati sparsi in più punti del prompt">
+    Quando un'informazione importante (prezzo, orario, policy) compare in più punti, prima o poi dimenticherai di aggiornarne uno e l'AI darà risposte contraddittorie. **Soluzione:** raccogli sempre tutto in un unico blocco con intestazione chiara.
+  </Accordion>
+
+  <Accordion title="Link nel prompt del voice agent">
+    Un voice agent non può "mostrare" un link: lo legge ad alta voce, e questo è inutile per l'utente e dannoso per la qualità percepita. **Soluzione:** istruisci l'agente a inviare i link via WhatsApp o email come follow-up post-chiamata.
+  </Accordion>
+
+  <Accordion title="Markdown e emoji nei prompt voice">
+    Asterischi, trattini di elenco, emoji non vengono pronunciati o producono output strani. Un prompt voice deve essere scritto come si parla, con frasi naturali e senza formattazione visiva.
+  </Accordion>
+
+  <Accordion title="Troppe regole, alcune in conflitto">
+    Se il prompt diventa lunghissimo e contiene istruzioni che si contraddicono ("rispondi sempre in modo formale" + "usa un tono amichevole con emoji"), l'AI sceglie a caso. **Soluzione:** rileggi il prompt e elimina le ridondanze; se serve davvero distinguere casi, scrivi regole condizionali chiare ("se il cliente saluta in modo formale, rispondi formale; altrimenti amichevole").
+  </Accordion>
+
+  <Accordion title="Prompt mai testato su casi limite">
+    Tutto sembra funzionare con domande standard, poi arriva il primo cliente arrabbiato o una richiesta fuori scope e l'AI risponde male. **Soluzione:** prima di pubblicare, testa con almeno 5 casi difficili: cliente arrabbiato, richiesta fuori tema, messaggio molto lungo, messaggio in altra lingua, richiesta di sconto fuori policy.
+  </Accordion>
+</AccordionGroup>
+
+## Prossimi passi
+
+<CardGroup cols={2}>
+  <Card title="Imposta il prompt" icon="gear" href="/dashboard/addestramento/configurare-prompt">
+    Scopri dove e come configurare il prompt per chatbot e voice nella dashboard.
+  </Card>
+
+  <Card title="Base di conoscenza" icon="book" href="/dashboard/addestramento/base-conoscenza">
+    Affianca al prompt le FAQ e i documenti per dare all'AI tutto il contesto che serve.
+  </Card>
+</CardGroup>

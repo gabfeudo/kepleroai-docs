@@ -447,6 +447,7 @@ kepleroai-docs/
 │   ├── addestramento/                            # Training del chatbot AI
 │   │   ├── base-conoscenza.mdx — Base di Conoscenza: addestrare l'AI con FAQ, siti e file
 │   │   ├── configurare-prompt.mdx — Prompt: definire personalità e comportamento dell'AI
+│   │   ├── best-practice-prompt.mdx — Best practice prompt: linee guida avanzate, differenze chatbot/voice (no link nel voice), consolidamento info sensibili, esempi
 │   │   └── gestire-integrazioni.mdx — Integrazioni: collegare canali e strumenti al chatbot
 │   ├── automazioni/
 │   │   └── trigger-e-azioni.mdx — Trigger e Azioni: workflow automatizzati nella dashboard
