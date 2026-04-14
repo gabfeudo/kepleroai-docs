@@ -451,9 +451,11 @@ kepleroai-docs/
 │   │   └── gestire-integrazioni.mdx — Integrazioni: collegare canali e strumenti al chatbot
 │   ├── automazioni/
 │   │   └── trigger-e-azioni.mdx — Trigger e Azioni: workflow automatizzati nella dashboard
-│   ├── campagne/                                 # (orphan) sezione campagne — non in docs.json
+│   ├── campagne/                                 # Campagne di messaggistica — WhatsApp e Vocale
 │   │   ├── panoramica.mdx — Panoramica: introduzione alla sezione Campagne (richiede WhatsApp + Templates) (orphan)
-│   │   └── creare-campagna.mdx — Nuova Campagna: come creare una nuova campagna (orphan)
+│   │   ├── creare-campagna.mdx — Nuova Campagna: come creare una nuova campagna (orphan)
+│   │   ├── campagna-whatsapp.mdx — Campagna WhatsApp: creare e gestire campagne di messaggistica WhatsApp
+│   │   └── campagna-vocale.mdx — Campagna Vocale: creare e gestire campagne di chiamate vocali automatizzate
 │   ├── contatti/                                 # Gestione contatti
 │   │   ├── panoramica-contatti.mdx — Panoramica: introduzione alla gestione contatti
 │   │   ├── liste.mdx — Liste: creare e gestire liste contatti

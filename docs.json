@@ -78,6 +78,14 @@
                 ]
               },
               {
+                "group": "Campagne",
+                "icon": "bullhorn",
+                "pages": [
+                  "dashboard/campagne/campagna-whatsapp",
+                  "dashboard/campagne/campagna-vocale"
+                ]
+              },
+              {
                 "group": "Prova Chatbot",
                 "icon": "robot",
                 "pages": [

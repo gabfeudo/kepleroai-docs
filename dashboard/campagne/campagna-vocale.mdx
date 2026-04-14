@@ -1,0 +1,235 @@
+---
+title: "Campagna Vocale"
+description: "Crea e gestisci campagne di chiamate vocali automatizzate per raggiungere i tuoi contatti."
+---
+
+<Frame caption="La nostra video-guida per creare una campagna vocale">
+  <iframe
+    className="w-full aspect-video rounded-xl"
+    src="https://www.youtube.com/embed/N_fuQqsW8xU"
+    title="Crea CAMPAGNE TELEFONICHE con KEPLERO AI"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    referrerPolicy="strict-origin-when-cross-origin"
+    allowFullScreen
+  ></iframe>
+</Frame>
+
+<Steps>
+  <Step title="Visita la sezione Campagne">
+    Dal menu laterale di sinistra, clicca su **Campagne in uscita**.
+  </Step>
+  <Step title="Seleziona la modalità Campagna Vocale">
+    Keplero ti permette di scegliere tra due modalità:
+    <Frame>
+      <img
+        src="/images/dashboard/campagne/campagne-0.png"
+        alt="Scelta della modalità Campagna Vocale"
+        noZoom
+        height="300"
+        className="rounded-lg"
+      />
+    </Frame>
+
+    - **Campagne WhatsApp**: per inviare un modello WhatsApp ai tuoi contatti e pianificare i follow-up successivi.
+    - **Campagne Vocali**: per effettuare chiamate con un agente vocale Keplero AI, raccogliere dati e informazioni.
+
+    Clicca sul pulsante **"Crea campagna vocale"** per procedere.
+  </Step>
+  <Step title="Inizia il processo guidato">
+    <Frame>
+      <img
+        src="/images/dashboard/campagne/campagne-voice-0.png"
+        alt="Inizio del processo guidato"
+        noZoom
+        height="300"
+        className="rounded-lg"
+      />
+    </Frame>
+
+    Clicca sul pulsante **"Iniziamo"** per procedere.
+  </Step>
+  <Step title="Scegli come vuoi importare i contatti dei destinatari">
+    Keplero ti permette di importare i contatti dei destinatari in quattro modi diversi:
+    <Frame>
+      <img
+        src="/images/dashboard/campagne/campagne-voice-1.png"
+        alt="Selezione del tipo di campagna"
+        noZoom
+        height="300"
+        className="rounded-lg"
+      />
+    </Frame>
+
+    1. **Elenco contatti**: Seleziona una lista già caricata nella sezione Contatti di Keplero AI o carica da un file csv/tsv.
+    2. **Webhook**: Collega e configura un webhook.
+    3. **Lead di Facebook**: Collegati a Facebook e ricevi contatti tramite API.
+    4. **Google Sheets**: Connetti a Google Sheet e importa sia i contatti già presenti sia quelli che aggiungerai in futuro.
+
+    Seleziona il metodo di importazione che preferisci per procedere.
+  </Step>
+  <Step title="Dai il nome alla tua campagna">
+    Assegna un nome alla tua campagna e completa i campi obbligatori.
+    <Frame>
+      <img
+        src="/images/dashboard/campagne/campagne-voice-2.png"
+        alt="Configurazione della campagna"
+        noZoom
+        height="300"
+        className="rounded-lg"
+      />
+    </Frame>
+
+    <Note>
+      A seconda della modalità di importazione dei contatti, potrebbero essere richiesti anche altri campi. Ad esempio, se importi i contatti da Google Sheets, Keplero ti chiederà di selezionare l'account Google, specificare il foglio e indicare il campo relativo al numero di telefono.
+    </Note>
+  </Step>
+  <Step title="Imposta i giorni, gli orari e la frequenza massima di contatto">
+    In questa schermata puoi impostare **i giorni e gli orari** in cui permettere a Keplero di effettuare le chiamate.
+
+    Puoi impostare la **fascia oraria** per ciascun giorno ed eventualmente escludere alcuni giorni (ad esempio i giorni festivi).
+
+    Seleziona poi la **frequenza oraria massima di contatto**, ovvero il numero massimo di chiamate che Keplero può effettuare in un'ora.
+    <Frame>
+      <img
+        src="/images/dashboard/campagne/campagne-voice-3.png"
+        alt="Impostazione giorni, orari e frequenza di contatto"
+        noZoom
+        height="300"
+        className="rounded-lg"
+      />
+    </Frame>
+  </Step>
+  <Step title="Seleziona le informazioni disponibili per l'agente vocale">
+    Keplero ti mostrerà la lista delle informazioni che potrà avere a disposizione durante la chiamata.
+
+    Seleziona quelle che vuoi che l'agente vocale possa utilizzare e inserisci una breve descrizione, così da far capire a Keplero come utilizzarle.
+    <Frame>
+      <img
+        src="/images/dashboard/campagne/campagne-voice-4.png"
+        alt="Selezione delle informazioni disponibili per l'agente vocale"
+        noZoom
+        height="300"
+        className="rounded-lg"
+      />
+    </Frame>
+
+    <Tip>
+      Se selezioni il campo "nome" come variabile, puoi inserire come descrizione "Il nome del contatto".
+    </Tip>
+    <Note>
+      Se non vuoi che l'agente vocale utilizzi una determinata informazione, non selezionarla.
+    </Note>
+
+    Clicca sul pulsante **"Successivo"** per procedere.
+  </Step>
+  <Step title="Inserisci lo script di chiamata">
+    In questa sezione dovrai spiegare a Keplero come si deve comportare durante la chiamata. Scrivi o incolla qui lo script che l'agente deve seguire.
+    <Frame>
+      <img
+        src="/images/dashboard/campagne/campagne-voice-5.png"
+        alt="Script di chiamata"
+        noZoom
+        height="300"
+        className="rounded-lg"
+      />
+    </Frame>
+
+    <Tip>
+      Un esempio di script: "Il tuo nome è Priscilla, chiedi conferma di interesse alla persona contattata e, se affermativo, raccogli la sua disponibilità per fissare un appuntamento".
+    </Tip>
+    <Note>
+      Non preoccuparti troppo della forma del tuo script: Keplero lo rielaborerà automaticamente.
+    </Note>
+  </Step>
+  <Step title="Configura il messaggio di benvenuto, la durata massima e le estensioni">
+    In questa sezione puoi impostare il messaggio di benvenuto, la durata massima della chiamata, collegare le estensioni e rivedere le istruzioni per l'agente vocale.
+    <Frame>
+      <img
+        src="/images/dashboard/campagne/campagne-voice-6.png"
+        alt="Configurazione del messaggio di benvenuto"
+        noZoom
+        height="300"
+        className="rounded-lg"
+      />
+    </Frame>
+
+    **Messaggio di benvenuto**: Inserisci il messaggio che verrà riprodotto all'inizio della chiamata. Puoi aggiungere variabili cliccando sul tasto **+**.
+    <Tip>
+      Un esempio di messaggio di benvenuto efficace: "Ciao, parlo con `{nome}`?". Con un'intro personalizzata, le persone difficilmente riattaccheranno subito.
+    </Tip>
+
+    **Durata massima**: Imposta la durata massima della chiamata in minuti. Se la chiamata supera questo limite, Keplero la interromperà.
+
+    **Estensioni**: Collega le estensioni che vuoi utilizzare per la chiamata:
+    - **Calendario**: L'agente potrà controllare la disponibilità sul calendario e prendere appuntamenti.
+    - **Google Sheet**: L'agente potrà salvare dati su un Google Sheet.
+    - **Riepilogo ed estrazione dati**: Riepiloga e/o estrai dati dalla conversazione.
+    - **Azioni avanzate**: Puoi abilitare le azioni precedentemente configurate nella sezione Addestramento di Keplero AI.
+
+    **Istruzioni per l'agente vocale**: Puoi verificare il prompt che Keplero utilizzerà per la chiamata. Per apportare modifiche, scrivi cosa vorresti cambiare nel campo di testo in alto e clicca su **"Applica miglioramento"**.
+    <Note>
+      Scrivi in modo semplice cosa vorresti cambiare rispetto al prompt attuale: sarà Keplero ad applicare le modifiche automaticamente.
+    </Note>
+  </Step>
+  <Step title="Seleziona la voce che preferisci o creane una personalizzata">
+    In questa schermata puoi ascoltare e selezionare la voce che preferisci, oppure creare una voce personalizzata.
+    <Frame>
+      <img
+        src="/images/dashboard/campagne/campagne-voice-7.png"
+        alt="Selezione della voce dell'agente vocale"
+        noZoom
+        height="300"
+        className="rounded-lg"
+      />
+    </Frame>
+
+    Clicca su **"+ Crea voce personalizzata"** per registrare la tua voce: ti verrà chiesto di darle un nome e di leggere il testo mostrato a schermo.
+    <Frame>
+      <img
+        src="/images/dashboard/campagne/campagne-voice-8.png"
+        alt="Creazione di una voce personalizzata"
+        noZoom
+        height="300"
+        className="rounded-lg"
+      />
+    </Frame>
+
+    <Tip>
+      Per ottenere una voce realistica, effettua la registrazione in un ambiente silenzioso e privo di rumore di fondo.
+    </Tip>
+
+    Clicca sul pulsante **"Successivo"** per procedere.
+  </Step>
+  <Step title="Visualizza il riepilogo e imposta le azioni post-chiamata">
+    In questa schermata puoi visualizzare il riepilogo della campagna e impostare le azioni da eseguire in caso di chiamata persa o a termine chiamata.
+    <Frame>
+      <img
+        src="/images/dashboard/campagne/campagne-voice-10.png"
+        alt="Riepilogo della campagna"
+        noZoom
+        height="300"
+        className="rounded-lg"
+      />
+    </Frame>
+
+    Clicca sul blocco **Azioni chiamata persa** per impostare cosa deve fare Keplero se l'utente non risponde. Si aprirà un pannello laterale: clicca su **Aggiungi azione** per selezionare una o più azioni, come ulteriori chiamate o invio di messaggi WhatsApp.
+
+    La stessa logica si applica al blocco **Termine chiamata**: cliccandoci, puoi impostare l'azione che Keplero deve eseguire al termine della conversazione.
+  </Step>
+  <Step title="Effettua una chiamata di prova e attiva la campagna">
+    Clicca sul pulsante **Campagna di prova** per effettuare una chiamata di test verso il tuo numero di telefono.
+
+    Inserisci i tuoi dati e clicca su **Esegui test**.
+    <Frame>
+      <img
+        src="/images/dashboard/campagne/campagne-voice-11.png"
+        alt="Attivazione della campagna"
+        noZoom
+        height="300"
+        className="rounded-lg"
+      />
+    </Frame>
+
+    Una volta completato il test, clicca su **Avvia campagna** per attivare la campagna.
+  </Step>
+</Steps>
