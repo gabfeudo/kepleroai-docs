@@ -82,6 +82,78 @@ Quando devi aggiornare un prezzo, un orario o una policy, **cerca solo nel blocc
 Usa intestazioni chiare e in maiuscolo per i blocchi: `LISTINO PREZZI:`, `ORARI:`, `POLITICA RESI:`, `CONTATTI:`. L'AI le riconosce facilmente come riferimenti autorevoli.
 </Tip>
 
+## Evita le tabelle markdown
+
+Le tabelle markdown (`| colonna | colonna |` con la riga di separazione `---`) sono una formattazione visiva pensata per chi legge, **non per l'AI**. Copiare un listino o una griglia da Excel, da un gestionale o da una pagina web nel prompt come tabella markdown è una pratica comune — e quasi sempre controproducente.
+
+**Perché evitarle:**
+
+- **Rumore di caratteri:** pipe, trattini e spazi di allineamento sono token "di arredamento" che fanno crescere il prompt senza aggiungere informazione utile.
+- **Manutenzione difficile:** modificare una cella spesso rompe l'allineamento visivo e ti costringe a risistemare gli spazi di tutte le altre righe.
+- **Nessun vantaggio per il modello:** l'AI interpreta molto meglio una lista `- chiave: valore` dentro un blocco intestato che una tabella ASCII.
+
+La regola: trasforma ogni tabella in una **lista semplice** dentro un blocco consolidato con intestazione in maiuscolo, come visto nella sezione precedente.
+
+<Tabs>
+  <Tab title="❌ Tabella markdown">
+    ```
+    CAMERE DISPONIBILI:
+
+    | Tipo      | Prezzo | Vista    | Disponibile |
+    |-----------|--------|----------|-------------|
+    | Standard  | 90€    | Giardino | Sì          |
+    | Superior  | 130€   | Mare     | No          |
+    | Suite     | 220€   | Mare     | Sì          |
+    ```
+
+    **Problema:** pipe, trattini e spazi di allineamento occupano spazio senza aggiungere significato. Aggiornare il prezzo della Suite ti costringe a ricontare gli spazi per non rompere l'allineamento visivo della colonna.
+  </Tab>
+
+  <Tab title="✅ Lista semplificata">
+    ```
+    CAMERE DISPONIBILI:
+    - Standard: 90€, vista giardino, disponibile
+    - Superior: 130€, vista mare, non disponibile
+    - Suite: 220€, vista mare, disponibile
+    ```
+
+    **Vantaggio:** meno caratteri, più facile da leggere e aggiornare. L'AI interpreta correttamente ogni voce come un record a sé.
+  </Tab>
+</Tabs>
+
+Il problema peggiora nel **voice agent**, dove la tabella non ha alcun senso: l'agente legge ad alta voce e rischia di pronunciare i separatori o produrre pause innaturali.
+
+<Tabs>
+  <Tab title="❌ Tabella nel prompt voice">
+    ```
+    LISTINO ABBONAMENTI:
+
+    | Piano        | Prezzo | Durata     |
+    |--------------|--------|------------|
+    | Mensile      | 49€    | 1 mese     |
+    | Trimestrale  | 129€   | 3 mesi     |
+    | Annuale      | 449€   | 12 mesi    |
+    ```
+
+    **Problema:** un voice agent che "legge" questo blocco può inciampare sui separatori, pronunciare male i prezzi scritti come `49€` e generare pause artificiali a ogni pipe.
+  </Tab>
+
+  <Tab title="✅ Lista naturale per il voice">
+    ```
+    LISTINO ABBONAMENTI:
+    - Abbonamento mensile: quarantanove euro, durata un mese
+    - Abbonamento trimestrale: centoventinove euro, durata tre mesi
+    - Abbonamento annuale: quattrocentoquarantanove euro, durata dodici mesi
+    ```
+
+    **Vantaggio:** ogni voce è una frase pronunciabile così com'è, senza caratteri che confondono la sintesi vocale.
+  </Tab>
+</Tabs>
+
+<Tip>
+Regola pratica: se stai per incollare nel prompt qualcosa che contiene `|` o `---`, fermati e convertilo in lista. Vale sia per il chatbot sia per il voice agent.
+</Tip>
+
 ## Prompt per il Chatbot
 
 I chatbot operano su canali **testuali** (widget del sito, WhatsApp, Messenger, email). Questo significa che puoi sfruttare la formattazione visiva.
@@ -347,6 +419,10 @@ Leggi il prompt **ad alta voce** prima di pubblicarlo. Se una frase suona come "
 
   <Accordion title="Markdown e emoji nei prompt voice">
     Asterischi, trattini di elenco, emoji non vengono pronunciati o producono output strani. Un prompt voice deve essere scritto come si parla, con frasi naturali e senza formattazione visiva.
+  </Accordion>
+
+  <Accordion title="Tabelle markdown copiate da Excel o dal gestionale">
+    Incollare un listino o una griglia come tabella markdown (`| col | col |` con la riga `---`) riempie il prompt di caratteri inutili, rende faticoso aggiornare i valori e non dà nessun vantaggio all'AI. **Soluzione:** converti la tabella in una lista `- chiave: valore` sotto un blocco intestato tipo `LISTINO:` o `PREZZI:`. Vedi la sezione [Evita le tabelle markdown](#evita-le-tabelle-markdown).
   </Accordion>
 
   <Accordion title="Troppe regole, alcune in conflitto">

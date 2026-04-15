@@ -367,6 +367,37 @@ Oltre a dire cosa fare, indica anche cosa **non** deve fare l'AI.
   </Tab>
 </Tabs>
 
+### Semplifica la formattazione
+
+Evita i caratteri decorativi che non aggiungono significato. In particolare, **non usare tabelle markdown** (`| col | col |` con la riga `---`): sporcano il prompt con pipe, trattini e spazi di allineamento che non aiutano l'AI e rendono più difficile aggiornare i valori. Preferisci sempre una lista `- chiave: valore` dentro un blocco con intestazione chiara.
+
+<Tabs>
+  <Tab title="❌ Non fare così">
+    ```
+    LISTINO:
+
+    | Piano     | Prezzo |
+    |-----------|--------|
+    | Base      | 49€    |
+    | Premium   | 99€    |
+    | Business  | 199€   |
+    ```
+  </Tab>
+
+  <Tab title="✅ Fai così">
+    ```
+    LISTINO:
+    - Base: 49€
+    - Premium: 99€
+    - Business: 199€
+    ```
+  </Tab>
+</Tabs>
+
+<Tip>
+Per approfondire la regola e vedere come cambia fra chatbot e voice agent, leggi [Evita le tabelle markdown](/dashboard/addestramento/best-practice-prompt#evita-le-tabelle-markdown).
+</Tip>
+
 ### Esempio completo
 
 Vediamo la differenza tra un prompt vago e uno ben strutturato:
