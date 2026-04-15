@@ -540,7 +540,8 @@ kepleroai-docs/
 ├── tecnica/                                      # Documentazione tecnica trasversale
 │   ├── eventi-widget.mdx — Eventi del Widget: dettagli tecnici degli eventi JavaScript del widget
 │   ├── installazione-telefono.mdx — Installazione Telefono: setup canale telefono
-│   └── clona-voce.mdx — Clona Voce: feature di voice cloning
+│   ├── differenze-voice-pro-e-voice-lite.mdx — Differenze Voice Pro vs Voice Lite: confronto modelli agente vocale (latenza, naturalezza, clonazione)
+│   └── clona-voce.mdx — Clona Voce: feature di voice cloning (solo Voice Lite)
 │
 ├── faq/
 │   └── domande-frequenti.mdx — Domande Frequenti: pagina hub che rimanda alle FAQ specifiche per area
