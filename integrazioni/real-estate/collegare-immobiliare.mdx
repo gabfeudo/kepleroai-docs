@@ -1,0 +1,78 @@
+---
+title: "Immobiliare.it"
+description: "Collega la tua agenzia di immobiliare.it a Keplero per sincronizzare automaticamente gli immobili nella base di conoscenza e assegnare un agente di riferimento a ogni annuncio"
+---
+
+<Info>
+L'integrazione con immobiliare.it importa tutti gli immobili gestiti dalla tua agenzia nella base di conoscenza del chatbot e li mantiene aggiornati tramite sincronizzazioni periodiche. A ogni immobile puoi assegnare un **agente di riferimento**: quando un cliente chiederà informazioni su quell'annuncio, il chatbot citerà direttamente l'agente dedicato.
+</Info>
+
+<Steps>
+    <Step title="Crea una nuova integrazione">
+        1. Accedi alla sezione **Addestramento** nella dashboard di Keplero AI
+        2. Clicca su **Integrazioni**
+        3. Clicca su **+ Nuova integrazione**
+        4. Seleziona **Real Estate** dal menu laterale
+        5. Scegli **Immobiliare.it** dall'elenco delle integrazioni disponibili
+    </Step>
+
+    <Step title="Inserisci l'URL dell'agenzia immobiliare.it">
+        Nella scheda **Configurazione**, incolla l'URL pubblico della pagina della tua agenzia su immobiliare.it nel campo dedicato e conferma.
+
+        <Frame>
+            <img src="/images/integrazioni/real-estate/1.png" alt="Inserimento URL agenzia immobiliare.it nella configurazione dell'integrazione" />
+        </Frame>
+
+        <Note>
+        L'URL deve essere quello pubblico della pagina agenzia su immobiliare.it, da cui vengono letti gli annunci pubblicati. Keplero utilizza questo link per scoprire e importare automaticamente tutti gli immobili in vendita o in affitto.
+        </Note>
+    </Step>
+
+    <Step title="Attendi la prima sincronizzazione">
+        Dopo aver salvato l'URL, la sincronizzazione parte in automatico. In questa fase lo stato dell'integrazione è **In elaborazione**: gli immobili vengono scaricati e indicizzati nella base di conoscenza.
+
+        <Frame>
+            <img src="/images/integrazioni/real-estate/2.png" alt="Configurazione dell'integrazione con URL inserito e sincronizzazione in elaborazione" />
+        </Frame>
+
+        <Tip>
+        La prima sincronizzazione può richiedere alcuni minuti in base al numero di immobili pubblicati dall'agenzia. Le sync successive sono incrementali e molto più rapide.
+        </Tip>
+    </Step>
+
+    <Step title="Crea gli agenti immobiliari nella scheda Agenti">
+        Apri la scheda **Agenti** per aggiungere le referenze degli agenti immobiliari che lavorano per la tua agenzia. Per ciascun agente puoi inserire nome, contatti e altre informazioni utili che il chatbot potrà comunicare ai clienti.
+
+        <Frame>
+            <img src="/images/integrazioni/real-estate/3.png" alt="Scheda Agenti con creazione delle referenze degli agenti immobiliari" />
+        </Frame>
+
+        <Note>
+        Gli agenti creati qui sono riutilizzabili su tutti gli immobili importati. Crea prima l'elenco completo degli agenti, poi assegna il riferimento a ciascun annuncio dalla sezione **Listings**.
+        </Note>
+    </Step>
+
+    <Step title="Assegna un agente di riferimento a ogni immobile">
+        Nella scheda **Listings** trovi l'elenco completo degli immobili gestiti dall'agenzia, sincronizzati da immobiliare.it. Per ogni annuncio puoi selezionare l'agente di riferimento tra quelli creati al passo precedente.
+
+        <Frame>
+            <img src="/images/integrazioni/real-estate/4.png" alt="Scheda Listings con elenco immobili e assegnazione dell'agente di riferimento" />
+        </Frame>
+
+        <Tip>
+        Quando un cliente chiederà informazioni su uno specifico immobile, il chatbot fornirà anche i riferimenti dell'agente assegnato a quell'annuncio, rendendo il passaggio di consegna alla persona giusta immediato.
+        </Tip>
+    </Step>
+
+    <Step title="Consulta lo storico delle sincronizzazioni">
+        Nella scheda **Sync History** trovi il log completo di tutte le sincronizzazioni eseguite: data, stato dell'operazione e dettagli sugli immobili aggiornati, aggiunti o rimossi.
+
+        <Frame>
+            <img src="/images/integrazioni/real-estate/5.png" alt="Scheda Sync History con lo storico delle sincronizzazioni e relativi dettagli" />
+        </Frame>
+
+        <Check>
+        Lo storico è utile per verificare che le sincronizzazioni vadano a buon fine e per diagnosticare eventuali annunci non importati.
+        </Check>
+    </Step>
+</Steps>

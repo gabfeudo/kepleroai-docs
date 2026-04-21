@@ -209,6 +209,13 @@
                 ]
               },
               {
+                "group": "Real Estate",
+                "icon": "building",
+                "pages": [
+                  "integrazioni/real-estate/collegare-immobiliare"
+                ]
+              },
+              {
                 "group": "Rest",
                 "icon": "bolt",
                 "pages": [
@@ -367,6 +374,7 @@
     { "source": "/integrazioni/hotel/slope", "destination": "/integrazioni/hotel/collegare-slope" },
     { "source": "/integrazioni/hotel/vertical-booking", "destination": "/integrazioni/hotel/collegare-vertical-booking" },
     { "source": "/integrazioni/rest/api-rest", "destination": "/integrazioni/rest/creare-integrazione-api-rest" },
+    { "source": "/integrazioni/real-estate/immobiliare", "destination": "/integrazioni/real-estate/collegare-immobiliare" },
     { "source": "/automazioni/intro", "destination": "/automazioni/panoramica-automazioni" },
     { "source": "/automazioni/webhooks", "destination": "/automazioni/configurare-webhook" },
     { "source": "/meta/business-manager", "destination": "/meta/configurare-business-manager" },

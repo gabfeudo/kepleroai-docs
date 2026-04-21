@@ -509,13 +509,15 @@ kepleroai-docs/
 │   │   ├── collegare-prestashop.mdx — PrestaShop: collegare uno store PrestaShop
 │   │   ├── collegare-shippypro.mdx — ShippyPro: chiave API e collegamento a Keplero
 │   │   └── collegare-track123.mdx — Track123: chiave API e collegamento a Keplero
-│   └── hotel/                                    # 6 booking engine alberghieri
-│       ├── collegare-booking-expert.mdx — Booking Expert: integrazione PMS Booking Expert
-│       ├── collegare-blastness.mdx — Blastness: integrazione Blastness
-│       ├── collegare-cloud-village.mdx — Cloud Village: integrazione Cloud Village
-│       ├── collegare-simple-booking.mdx — Simple Booking: integrazione Simple Booking
-│       ├── collegare-slope.mdx — Slope: integrazione Slope
-│       └── collegare-vertical-booking.mdx — Vertical Booking: integrazione Vertical Booking
+│   ├── hotel/                                    # 6 booking engine alberghieri
+│   │   ├── collegare-booking-expert.mdx — Booking Expert: integrazione PMS Booking Expert
+│   │   ├── collegare-blastness.mdx — Blastness: integrazione Blastness
+│   │   ├── collegare-cloud-village.mdx — Cloud Village: integrazione Cloud Village
+│   │   ├── collegare-simple-booking.mdx — Simple Booking: integrazione Simple Booking
+│   │   ├── collegare-slope.mdx — Slope: integrazione Slope
+│   │   └── collegare-vertical-booking.mdx — Vertical Booking: integrazione Vertical Booking
+│   └── real-estate/                              # Portali immobiliari
+│       └── collegare-immobiliare.mdx — Immobiliare.it: sync immobili dall'agenzia, agenti di riferimento, listings e sync history
 │
 ├── automazioni/                                  # Workflow automatici (trigger esterni a Keplero)
 │   ├── panoramica-automazioni.mdx — Le Automazioni in Keplero AI: panoramica delle automazioni
