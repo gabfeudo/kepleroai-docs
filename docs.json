@@ -221,6 +221,13 @@
                 "pages": [
                   "integrazioni/rest/creare-integrazione-api-rest"
                 ]
+              },
+              {
+                "group": "Web Search",
+                "icon": "magnifying-glass",
+                "pages": [
+                  "integrazioni/web-search/configurare-web-search"
+                ]
               }
             ]
           },

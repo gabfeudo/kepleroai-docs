@@ -1,0 +1,55 @@
+---
+title: "Web Search"
+description: "Configura un'azione di ricerca web in tempo reale sui domini che indichi a Keplero"
+---
+
+L'azione **Web Search** permette al tuo chatbot di eseguire **ricerche in tempo reale** su uno o più domini web che definisci tu. A differenza della Base di Conoscenza, che va aggiornata manualmente, Web Search è **dinamica**: se le pagine del sito cambiano, la ricerca resta sempre allineata all'ultima versione pubblicata.
+
+<Frame caption="Schermata di configurazione dell'azione Web Search">
+  <img src="/images/integrazioni/web-search/1.png" alt="Form di configurazione dell'azione Web Search con nome, condizione di attivazione e domini di ricerca" />
+</Frame>
+
+## Come configurare l'azione
+
+<Steps>
+  <Step title="Definisci il nome dell'azione">
+    Nel campo <b>Action name</b> inserisci un nome parlante per l'azione, ad esempio <code>search_for_products</code>.
+
+    <Tip>Il nome viene usato dall'AI per riconoscere a cosa serve l'azione: usa un identificativo chiaro e descrittivo, senza spazi.</Tip>
+  </Step>
+
+  <Step title="Specifica la condizione di attivazione">
+    Nel campo <b>When to activate this Action</b> descrivi, in linguaggio naturale, i casi in cui il chatbot deve utilizzare l'azione.
+
+    Esempio di condizione:
+
+    > *Usa questa azione quando il cliente chiede informazioni su uno specifico prodotto venduto sul sito.*
+
+    <Note>Puoi scrivere la condizione in italiano: Keplero la interpreta per decidere quando attivare la ricerca web.</Note>
+  </Step>
+
+  <Step title="Imposta i domini di ricerca">
+    Nella sezione <b>Search Domains</b> inserisci il dominio (o i domini) su cui Keplero potrà effettuare la ricerca. È richiesto <b>almeno un dominio</b>.
+
+    - Clicca su <b>+ Aggiungi dominio</b> per inserire più di un sito.
+    - Clicca su <b>Save Action</b> per salvare la configurazione.
+  </Step>
+</Steps>
+
+## Esempio pratico
+
+Immagina un cliente con un e-commerce che vende prodotti online. Nella configurazione dell'azione può impostare:
+
+- **Action name**: `search_for_products`
+- **When to activate this Action**: *Usa questa azione quando il cliente richiede dettagli, prezzi o disponibilità sui prodotti del nostro catalogo.*
+- **Search Domains**: `https://ilsuosito.com`
+
+Quando un utente chiederà al chatbot informazioni su un prodotto, Keplero eseguirà una ricerca **puntuale e in tempo reale** sul sito indicato e risponderà con i dati aggiornati recuperati dalle pagine del catalogo.
+
+<Tip>
+Se il sito cambia (nuovi prodotti pubblicati, prezzi aggiornati, pagine rimosse), la ricerca resta automaticamente allineata: non serve ri-addestrare il chatbot né aggiornare manualmente la Base di Conoscenza.
+</Tip>
+
+<Warning>
+Definisci la condizione di attivazione in modo chiaro e specifico. Una condizione troppo generica potrebbe far partire la ricerca web anche quando non serve, aumentando i tempi di risposta e riducendo la coerenza delle risposte.
+</Warning>

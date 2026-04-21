@@ -516,8 +516,10 @@ kepleroai-docs/
 │   │   ├── collegare-simple-booking.mdx — Simple Booking: integrazione Simple Booking
 │   │   ├── collegare-slope.mdx — Slope: integrazione Slope
 │   │   └── collegare-vertical-booking.mdx — Vertical Booking: integrazione Vertical Booking
-│   └── real-estate/                              # Portali immobiliari
-│       └── collegare-immobiliare.mdx — Immobiliare.it: sync immobili dall'agenzia, agenti di riferimento, listings e sync history
+│   ├── real-estate/                              # Portali immobiliari
+│   │   └── collegare-immobiliare.mdx — Immobiliare.it: sync immobili dall'agenzia, agenti di riferimento, listings e sync history
+│   └── web-search/                               # Ricerca web in tempo reale
+│       └── configurare-web-search.mdx — Web Search: azione di ricerca web dinamica su uno o più domini, con condizione di attivazione
 │
 ├── automazioni/                                  # Workflow automatici (trigger esterni a Keplero)
 │   ├── panoramica-automazioni.mdx — Le Automazioni in Keplero AI: panoramica delle automazioni
