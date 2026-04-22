@@ -289,7 +289,8 @@
             "group": "FAQ",
             "icon": "circle-question",
             "pages": [
-              "faq/domande-frequenti"
+              "faq/domande-frequenti",
+              "faq/faq-voice"
             ]
           }
         ]

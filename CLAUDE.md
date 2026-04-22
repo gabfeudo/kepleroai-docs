@@ -548,7 +548,8 @@ kepleroai-docs/
 │   └── clona-voce.mdx — Clona Voce: feature di voice cloning (solo Voice Lite)
 │
 ├── faq/
-│   └── domande-frequenti.mdx — Domande Frequenti: pagina hub che rimanda alle FAQ specifiche per area
+│   ├── domande-frequenti.mdx — Domande Frequenti: pagina hub che rimanda alle FAQ specifiche per area
+│   └── faq-voice.mdx — FAQ Voice: domande frequenti sull'agente vocale (chiamate in entrata/uscita, motivo conclusione chiamata)
 │
 ├── funzionalita/
 │   └── chatbot-ai.mdx — Chatbot AI: panoramica delle funzionalità del chatbot (orphan)
