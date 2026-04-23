@@ -258,7 +258,7 @@
                 "group": "Email",
                 "icon": "envelope",
                 "pages": [
-                  "automazioni/email/trigger-email-ricevuta"
+                  "automazioni/email/configurare-trigger-email-ricevuta"
                 ]
               },
               {

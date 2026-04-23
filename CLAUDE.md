@@ -357,6 +357,14 @@ description: "Concise description explaining page purpose and value"
 ---
 ```
 
+### Automation trigger page naming
+
+Pages that document how to configure a specific automation trigger must use the title format:
+
+> **Configurare Trigger [Nome Trigger]**
+
+Example: `"Configurare Trigger Email Ricevuta"`, `"Configurare Trigger Webhook"`. This pattern makes the page action-oriented and improves discoverability via MCP tool lookups.
+
 ## Content quality standards
 
 ### Code examples requirements
@@ -529,7 +537,7 @@ kepleroai-docs/
 │   │   ├── ricontatto-lead.mdx — Ricontatto Lead: follow-up automatico ai lead via WA
 │   │   └── followup-wa.mdx — Follow-up WhatsApp: follow-up automatico ai non rispondenti
 │   ├── email/
-│   │   └── trigger-email-ricevuta.mdx — Trigger Email Ricevuta: avvia automazione su email in arrivo, con filtro domini, condizione AI, estrazione dati e azioni
+│   │   └── configurare-trigger-email-ricevuta.mdx — Configurare Trigger Email Ricevuta: avvia automazione su email in arrivo, con filtro domini, condizione AI, estrazione dati e azioni
 │   ├── voice/
 │   │   ├── chiamata-outbound.mdx — Chiamata Outbound: chiamata vocale singola in uscita
 │   │   └── chiamate-multiple.mdx — Chiamate Multiple: chiamate vocali bulk in uscita
