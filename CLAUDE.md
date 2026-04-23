@@ -528,6 +528,8 @@ kepleroai-docs/
 │   │   ├── invio-massivo.mdx — Invio massivo WhatsApp: bulk messaging
 │   │   ├── ricontatto-lead.mdx — Ricontatto Lead: follow-up automatico ai lead via WA
 │   │   └── followup-wa.mdx — Follow-up WhatsApp: follow-up automatico ai non rispondenti
+│   ├── email/
+│   │   └── trigger-email-ricevuta.mdx — Trigger Email Ricevuta: avvia automazione su email in arrivo, con filtro domini, condizione AI, estrazione dati e azioni
 │   ├── voice/
 │   │   ├── chiamata-outbound.mdx — Chiamata Outbound: chiamata vocale singola in uscita
 │   │   └── chiamate-multiple.mdx — Chiamate Multiple: chiamate vocali bulk in uscita

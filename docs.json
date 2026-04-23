@@ -255,6 +255,13 @@
                 ]
               },
               {
+                "group": "Email",
+                "icon": "envelope",
+                "pages": [
+                  "automazioni/email/trigger-email-ricevuta"
+                ]
+              },
+              {
                 "group": "Ecommerce",
                 "icon": "cart-shopping",
                 "pages": [

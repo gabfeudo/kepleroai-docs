@@ -1,0 +1,131 @@
+---
+title: "Trigger Email Ricevuta"
+description: "Avvia un'automazione ogni volta che arriva un'email su un account collegato a Keplero AI"
+---
+
+Con il trigger **Email ricevuta** puoi far partire un'automazione non appena Keplero AI riceve un messaggio email su un account configurato. Il contenuto dell'email viene analizzato dall'AI, che estrae i dati che hai definito e li rende disponibili come variabili per i blocchi azione successivi.
+
+## Prerequisiti
+
+Prima di configurare il trigger devi collegare almeno un account email a Keplero AI.
+
+<Tip>
+Segui la guida [Collega il tuo account email](/integrazioni/email/collegare-email) per connettere Gmail, Outlook o un account IMAP dalla sezione **Impostazioni → Canali → Email**.
+</Tip>
+
+## Configurare il trigger
+
+<Steps>
+
+<Step title="Crea o apri un'automazione">
+  Vai alla pagina **Automazioni** dalla barra laterale e crea una nuova automazione oppure apri quella esistente in cui vuoi aggiungere il trigger email.
+</Step>
+
+<Step title="Seleziona il trigger Email">
+  Nel blocco **1. Message received** clicca per configurarlo, poi imposta:
+
+  | Campo | Valore |
+  |---|---|
+  | **App** | Email |
+  | **Trigger event** | Email received |
+
+  <Frame>
+    <img src="/images/automazioni/email/trigger-email-ricevuta-1.png" alt="Configurazione trigger Email received" />
+  </Frame>
+</Step>
+
+<Step title="Seleziona l'account email">
+  Nel campo **Email account** scegli l'account che hai collegato al passaggio precedente. Solo le email ricevute su quell'account attiveranno l'automazione.
+</Step>
+
+<Step title="Filtra i domini mittente (opzionale)">
+  In **Domain filters** puoi limitare l'automazione a email provenienti da domini specifici.
+
+  - Inserisci un dominio nel campo (es. `*.azienda.com`) e clicca **+ Add**
+  - Puoi aggiungere più domini
+  - Lascia vuoto per accettare email da qualsiasi mittente
+  - Supporta wildcard: `*.esempio.com` cattura tutti i sottodomini
+
+  <Info>
+  Filtro utile se vuoi rispondere solo a fornitori, partner o clienti B2B con dominio noto.
+  </Info>
+</Step>
+
+<Step title="Definisci la condizione">
+  Nel campo **Condition** descrivi in linguaggio naturale quando l'email deve attivare l'automazione. Se lasci vuoto, tutte le email che superano il filtro domini passano.
+
+  **Esempio pratico:** un'agenzia immobiliare vuole rispondere solo alle email di richiesta informazioni su immobili:
+
+  > L'email contiene una richiesta di informazioni su un immobile in vendita o in affitto, come dettagli su prezzo, disponibilità o sopralluogo.
+
+  <Tip>
+  Sii specifico nella condizione: più è precisa, meno falsi positivi attiverà l'automazione.
+  </Tip>
+</Step>
+
+<Step title="Estrai dati dall'email">
+  Clicca **Edit data to extract** per definire quali informazioni l'AI deve estrarre dal corpo dell'email.
+
+  <Frame>
+    <img src="/images/automazioni/email/trigger-email-ricevuta-2.png" alt="Modal Edit data to extract" />
+  </Frame>
+
+  Per ogni dato da estrarre:
+
+  1. Clicca **+ Add data to extract**
+  2. Compila i campi:
+     - **Name** — nome della variabile (es. `nome`)
+     - **Type** — tipo di dato (`String`, `Number`, ecc.)
+     - **Description** — descrizione del dato per guidare l'AI (es. `Nome del cliente`)
+  3. Usa **Additional instructions** per fornire contesto aggiuntivo all'AI (opzionale)
+  4. Clicca **Save**
+
+  **Esempio di campi da estrarre per una richiesta immobiliare:**
+
+  | Name | Type | Description |
+  |---|---|---|
+  | `nome` | String | Nome del cliente |
+  | `cognome` | String | Cognome del cliente |
+  | `telefono` | String | Numero di telefono del cliente |
+  | `immobile_interesse` | String | Descrizione dell'immobile richiesto |
+
+  <Info>
+  I valori estratti diventano variabili disponibili nei blocchi successivi dell'automazione.
+  </Info>
+</Step>
+
+<Step title="Salva il trigger">
+  Clicca **Save** nel pannello del trigger per confermare la configurazione. Il blocco mostra lo stato **Valid** quando tutto è correttamente impostato.
+</Step>
+
+</Steps>
+
+## Configurare le azioni
+
+Dopo il trigger puoi aggiungere uno o più blocchi **Action** che usano le variabili estratte dall'email. Le azioni disponibili sono le stesse di qualsiasi altra automazione Keplero AI.
+
+**Esempi di flusso:**
+
+<AccordionGroup>
+
+<Accordion title="Invia un messaggio WhatsApp al cliente">
+  Dopo aver estratto `nome` e `telefono` dall'email, usa un'azione **Invia messaggio WhatsApp** e componi il testo usando le variabili:
+
+  > Ciao `{{nome}}`, abbiamo ricevuto la tua richiesta e ti ricontatteremo a breve!
+
+  Per usare questa azione il cliente deve avere un numero WhatsApp e devi avere i [Templates WhatsApp](/integrazioni/whatsapp/templates-whatsapp) configurati.
+</Accordion>
+
+<Accordion title="Avvia una chiamata vocale outbound">
+  Con `telefono` estratto dall'email puoi far partire una [Chiamata Outbound](/automazioni/voice/chiamata-outbound) automatica per contattare il cliente nel minor tempo possibile.
+</Accordion>
+
+<Accordion title="Crea o aggiorna un contatto">
+  Usa i dati estratti (nome, cognome, email mittente) per creare automaticamente un nuovo contatto nella rubrica di Keplero AI o aggiornare uno esistente.
+</Accordion>
+
+</AccordionGroup>
+
+<Warning>
+Verifica che il numero di telefono estratto sia in formato internazionale (es. `+39 333 1234567`) prima di usarlo in azioni WhatsApp o Voice. Aggiungi istruzioni di formattazione nel campo **Additional instructions** del trigger se necessario.
+</Warning>
