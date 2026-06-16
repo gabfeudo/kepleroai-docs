@@ -85,7 +85,7 @@ Sezione interamente dedicata a **Keplero AI Voice**.
         </Step>
       </Steps>
   </Tab>
-  <Tab title="Fine della chiamata" icon="bolt">
+  <Tab title="Fine chiamata" icon="bolt">
       
       ### Info e Link via WhatsApp
       Condividi con il cliente link e informazioni in una chat whatsapp (es. link a prenotazioni, prodotti, recensioni ecc.)
@@ -115,6 +115,20 @@ Sezione interamente dedicata a **Keplero AI Voice**.
     </Frame>
 
   </Tab>
+  <Tab title="Regole" icon="list">
+  Da questa sezione puoi impostare: 
+  - **Regole per l'instradamento delle chiamate**: Configura una o più regole per controllare l'instradamento delle chiamate in base alle liste di contatti.
+  - **Lista nera**: Aggiungi numeri di telefono per impedire che chiamino il tuo agente vocale.
+  <Frame>
+        <img
+            src="/images/dashboard/impostazioni/canali/canali-15.png"
+            alt="Fine chiamata"
+            noZoom
+            height="300"
+            className="rounded-lg"
+        />
+    </Frame>
+  </Tab>
   <Tab title="Crediti" icon="credit-card">
       Questa schermata tiene traccia dei crediti utilizzati per le chiamate.
         <Frame>
@@ -133,6 +147,59 @@ Sezione interamente dedicata a **Keplero AI Voice**.
 
     <Tip>Abilita la **Ricarica automatica dei crediti** per evitare di lasciare i tuoi clienti senza risposta in caso di esaurimento dei crediti.</Tip>
 
+  </Tab>
+  <Tab title="Centralino/SIP" icon="phone">
+   <Frame>
+      <img
+            src="/images/dashboard/impostazioni/canali/canali-12.png"
+            alt="Configurazione centralino/SIP"
+            noZoom
+            height="300"
+            className="rounded-lg"
+        />
+    </Frame>
+    <Steps>
+      <Step title="Autenticazione">
+        Come primo step, dovrai inserire **Auth username**, **Password**
+      </Step>
+      <Step title="SIP Registration">
+        Inserisci poi il **Dominio SIP** (*SIP realm*). Puoi lasciare gli altri campi vuoti. 
+      </Step>
+      <Step title="SIP gateways">
+        Inserisci il **Dominio SIP** (*SIP realm*) anche in questo campo, lasciando come porta predefinita **5060** UDP.
+      </Step>
+      <Step title="Riferimento">
+      Inserisci l'**interno** a cui Keplero dovrà trasferire la telefonata (ad esempio: *12*) e l'*etichetta* (ad esempio: *Centralino*).
+      </Step>
+      <Step title="Salva">
+      Scorri in basso e clicca sul pulsante **Salva**. 
+      </Step>
+      <Step title="Risultato della configurazione">
+        Keplero ora ti mostrerà una schermata in cui vedrai se la connessione è avvenuta correttamente o se è andata in errore. In caso di errore, contatta il nostro Team Support per ricevere assistenza.
+        <Frame>
+          <img
+                src="/images/dashboard/impostazioni/canali/canali-13.png"
+                alt="Configurazione centralino/SIP"
+                noZoom
+                height="300"
+                className="rounded-lg"
+            />
+        </Frame>
+      </Step>
+      <Step title="Imposta Keplero come destinatario dell'escalation vocale">
+      Una volta configurato il centralino/SIP, potrai impostare Keplero come destinatario dell'escalation vocale.
+      Da **Addestramento** → **Agente Vocale** → Tab **Operatore Umano** → cliccando su **Nuovo**, nella finestra che si apre potrai impostare come **Tipo**: **Interno del centralino**
+      <Frame>
+          <img
+                src="/images/dashboard/impostazioni/canali/canali-14.png"
+                alt="Configurazione centralino/SIP"
+                noZoom
+                height="300"
+                className="rounded-lg"
+            />
+        </Frame>
+      </Step>
+    </Steps>
   </Tab>
 </Tabs>
 
