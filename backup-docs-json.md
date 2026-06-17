@@ -238,6 +238,23 @@
               "automazioni/panoramica-automazioni",
               "automazioni/configurare-webhook",
               {
+                "group": "WhatsApp",
+                "icon": "whatsapp",
+                "pages": [
+                  "automazioni/whatsapp/invio-massivo",
+                  "automazioni/whatsapp/ricontatto-lead",
+                  "automazioni/whatsapp/followup-wa"
+                ]
+              },
+              {
+                "group": "Voice",
+                "icon": "phone",
+                "pages": [
+                  "automazioni/voice/chiamata-outbound",
+                  "automazioni/voice/chiamate-multiple"
+                ]
+              },
+              {
                 "group": "Email",
                 "icon": "envelope",
                 "pages": [
