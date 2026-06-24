@@ -1,9 +1,9 @@
 ---
 title: "Installazione di Keplero su numero di telefono o centralino"
-description: "Scopri come installare Keplero su un numero di telefono o centralino: le 4 modalità operative disponibili"
+description: "Scopri come installare Keplero su un numero di telefono o centralino: le 5 modalità operative disponibili"
 ---
 
-Quando integri Keplero con il sistema telefonico della tua azienda, puoi scegliere tra **4 modalità operative**. La scelta dipende da come vuoi che Keplero gestisca le chiamate in ingresso.
+Quando integri Keplero con il sistema telefonico della tua azienda, puoi scegliere tra **5 modalità operative**. La scelta dipende da come vuoi che Keplero gestisca le chiamate in ingresso.
 
 ## Panoramica delle modalità operative
 
@@ -13,6 +13,7 @@ Quando integri Keplero con il sistema telefonico della tua azienda, puoi sceglie
 | **2. Keplero risponde solo se nessuno risponde** | Centralino             | In caso di mancata risposta                               | ❌ Perso         | ❌ No                        | ✅ Sì                | Come fallback / segreteria intelligente di un centralino    |
 | **3. Chiamata diretta al numero di Keplero**     | Keplero                | Sempre                                                    | ✅ Preservato    | ✅ Sì (verso numeri esterni) | ❌ No                | Per attivare un nuovo numero (anche con prefisso custom)    |
 | **4. Inoltro da cellulare verso Keplero**        | Keplero                | In caso di occupato, nessuna risposta o non raggiungibile | ❌ Perso         | ✅ Sì (verso numeri esterni) | ❌ No                | Come segreteria intelligente di uno o più cellulari         |
+| **5. Integrazione SIP nativa con il centralino** | Dipende dal centralino (configurabile) | Come interno (configurabile dal centralino) | ✅ Preservato | ✅ Sì (nativo via SIP) | ✅ Sì (con supporto SIP) | Integrazione nativa con un PBX SIP-based                     |
 
 <CardGroup cols={2}>
   <Card
@@ -35,6 +36,16 @@ Quando integri Keplero con il sistema telefonico della tua azienda, puoi sceglie
     Se il tuo telefono non è presidiato da un centralino, puoi sfruttare il
     numero di Keplero che ti abbiamo fornito oppure trasferire tutte le chiamate
     che arrivano al tuo numero personale verso Keplero.
+  </Card>
+  <Card
+    color="#7780D4"
+    title="Integrazione SIP nativa"
+    icon="network-wired"
+    href="#integrazione-sip-nativa"
+  >
+    Se il tuo centralino supporta il protocollo SIP, puoi integrare Keplero come
+    endpoint nativo del PBX: Keplero si registra come interno e può trasferire
+    le chiamate agli altri interni senza deviazioni telefoniche.
   </Card>
 </CardGroup>
 
@@ -356,9 +367,80 @@ flowchart LR
 
 ---
 
+## Integrazione SIP nativa
+
+Se il tuo centralino supporta il protocollo SIP, puoi integrare Keplero come **endpoint nativo** del PBX. Keplero si registra direttamente al centralino come se fosse un interno, senza bisogno di deviazioni telefoniche o numeri di appoggio.
+
+### Modalità 5: Integrazione SIP nativa con il centralino
+
+In questa modalità Keplero si registra al centralino tramite protocollo SIP, diventando a tutti gli effetti un **interno del PBX**. Il centralino può instradare le chiamate a Keplero secondo le proprie regole (risposta diretta, escalation, orari, ecc.) e Keplero può trasferire nativamente le chiamate agli altri interni.
+
+<Info>
+**Quando scegliere questa modalità**
+
+Scegli questa modalità quando il tuo centralino supporta il protocollo SIP e vuoi un'integrazione nativa, senza deviazioni telefoniche o numeri di appoggio. È la soluzione più integrata: Keplero diventa un interno del PBX, il Caller ID del chiamante viene preservato e i trasferimenti agli interni avvengono in modo nativo.
+
+</Info>
+
+#### Procedura operativa
+
+<Steps>
+  <Step title="Recupera le credenziali SIP dal tuo centralino">
+    Ti serviranno: **Auth username**, **Password** e **Dominio SIP** (*SIP realm*).
+  </Step>
+  <Step title="Apri la configurazione Centralino/SIP">
+    In **Impostazioni** → **Canali** → **Telefono**, seleziona il tab **Centralino/SIP**.
+  </Step>
+  <Step title="Autenticazione">
+    Inserisci **Auth username** e **Password**.
+  </Step>
+  <Step title="SIP Registration">
+    Inserisci il **Dominio SIP** (*SIP realm*). Puoi lasciare gli altri campi vuoti.
+  </Step>
+  <Step title="SIP gateways">
+    Inserisci il **Dominio SIP** (*SIP realm*), lasciando come porta predefinita **5060** UDP.
+  </Step>
+  <Step title="Riferimento">
+    Inserisci l'**interno** a cui Keplero dovrà trasferire la telefonata (*ad esempio: 12*) e l'**etichetta** (*ad esempio: Centralino*).
+  </Step>
+  <Step title="Salva e verifica">
+    Scorri in basso e clicca su **Salva**. Keplero mostrerà se la connessione è avvenuta correttamente o se è andata in errore.
+    <Warning>
+      In caso di errore di connessione, contatta il nostro Team Support per ricevere assistenza.
+    </Warning>
+  </Step>
+  <Step title="Imposta l'escalation vocale">
+    Da **Addestramento** → **Agente Vocale** → tab **Operatore Umano** → cliccando su **Nuovo**, imposta Keplero come destinatario dell'escalation.
+    <Warning>
+      In questa modalità gli interni devono essere impostati come **numeri** e non come interni classici del centralino: inserisci quindi il valore dell'interno nel campo **Numero**.
+    </Warning>
+  </Step>
+</Steps>
+
+#### Esempio flusso
+
+```mermaid
+flowchart LR
+    A[Cliente chiama il numero principale] --> B[Centralino instrada la chiamata]
+    B --> C{Configurazione centralino}
+    C -->|Operatore| D[Gestione umana]
+    C -->|Keplero / escalation| E[Keplero risponde via SIP]
+    E --> F{Serve operatore?}
+    F -->|No| G[Keplero gestisce la richiesta]
+    F -->|Sì| H[Keplero trasferisce all'interno via SIP]
+```
+
+1. Il cliente chiama il numero principale
+2. Il centralino instrada la chiamata in base alle proprie regole
+3. Keplero risponde via SIP
+4. Gestisce richieste e informazioni
+5. Se serve un operatore → Keplero trasferisce nativamente la chiamata all'interno via SIP
+
+---
+
 ## Riepilogo
 
-Le quattro modalità permettono di adattare Keplero a qualsiasi configurazione telefonica:
+Le cinque modalità permettono di adattare Keplero a qualsiasi configurazione telefonica:
 
 <CardGroup cols={2}>
   <Card title="Modalità 1" icon="phone-volume" color="#7780D4">
@@ -376,5 +458,9 @@ Le quattro modalità permettono di adattare Keplero a qualsiasi configurazione t
   <Card title="Modalità 4" icon="mobile" color="#7780D4">
     **Keplero come segreteria** Risponde quando non puoi rispondere al
     cellulare, raccogliendo informazioni per te.
+  </Card>
+  <Card title="Modalità 5" icon="network-wired" color="#7780D4">
+    **Integrazione SIP nativa** Keplero si registra come interno del centralino,
+    con trasferimenti nativi agli interni e Caller ID preservato.
   </Card>
 </CardGroup>
