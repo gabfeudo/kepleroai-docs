@@ -86,6 +86,13 @@
                 ]
               },
               {
+                "group": "Calendario",
+                "icon": "calendar",
+                "pages": [
+                  "dashboard/calendar/calendario"
+                ]
+              },
+              {
                 "group": "Prova Chatbot",
                 "icon": "robot",
                 "pages": [

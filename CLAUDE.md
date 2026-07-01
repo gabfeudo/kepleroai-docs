@@ -464,6 +464,8 @@ kepleroai-docs/
 │   │   ├── creare-campagna.mdx — Nuova Campagna: come creare una nuova campagna (orphan)
 │   │   ├── campagna-whatsapp.mdx — Campagna WhatsApp: creare e gestire campagne di messaggistica WhatsApp
 │   │   └── campagna-vocale.mdx — Campagna Vocale: creare e gestire campagne di chiamate vocali automatizzate
+│   ├── calendar/
+│   │   └── calendario.mdx — Calendario: gestione prenotazioni, disponibilità e appuntamenti con l'AI (gruppi, calendari, tipi di appuntamento, sync Google Calendar)
 │   ├── contatti/                                 # Gestione contatti
 │   │   ├── panoramica-contatti.mdx — Panoramica: introduzione alla gestione contatti
 │   │   ├── liste.mdx — Liste: creare e gestire liste contatti

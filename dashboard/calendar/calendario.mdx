@@ -1,0 +1,386 @@
+---
+title: "Calendario"
+description: "Scopri come configurare il Calendario Keplero per gestire prenotazioni, appuntamenti e disponibilità: l'AI prende, modifica e cancella appuntamenti in automatico via chat o voce."
+---
+
+Il Calendario Keplero è lo strumento integrato per gestire prenotazioni, appuntamenti e disponibilità direttamente dalla piattaforma. La parte più comoda? Se ne occupa l'AI: prende, modifica e cancella appuntamenti via chat o voce senza che tu debba muovere un dito.
+
+<Note>
+Il Calendario Keplero si attiva dalla sezione **Integrazioni** del tuo account: contatta il tuo referente Keplero per abilitarlo. Trovi tutti i dettagli sulla configurazione guidata nella sezione [Attivazione](#attivazione) più sotto.
+</Note>
+
+## Come accedere
+
+Dalla sidebar sinistra del tuo account Keplero, clicca sull'icona del **Calendario**: da lì trovi tutte le sezioni descritte in questa guida.
+
+<Frame>
+  <img
+    src="/images/dashboard/calendar/calendario-1.png"
+    alt="Pagina di benvenuto del Calendario Keplero"
+    noZoom
+    className="rounded-lg"
+  />
+</Frame>
+
+## Struttura del calendario
+
+Il calendario è organizzato su tre livelli: **Gruppi → Calendari → Tipi di appuntamento**.
+
+<Frame>
+  <img
+    src="/images/dashboard/calendar/calendario-15.png"
+    alt="Impostazioni calendario con gruppi e calendari"
+    noZoom
+    className="rounded-lg"
+  />
+</Frame>
+
+### Gruppi
+
+I gruppi servono a organizzare i tuoi calendari, e puoi usarli come ti torna più comodo: per dipartimento, per sede, per team.
+
+- Un'azienda con più sedi → gruppo "Sede Torino", gruppo "Sede Milano"
+- Uno studio medico → gruppo "Medici", gruppo "Fisioterapisti"
+- Un'azienda commerciale → gruppo "Commerciali Nord", gruppo "Commerciali Sud"
+
+<Tip>
+I gruppi saranno anche la base per il **Round Robin** (in arrivo), che distribuisce automaticamente le prenotazioni tra i membri di un gruppo.
+</Tip>
+
+<Frame>
+  <img
+    src="/images/dashboard/calendar/calendario-3.png"
+    alt="Creazione di un nuovo gruppo"
+    noZoom
+    className="rounded-lg"
+  />
+</Frame>
+
+Una volta creato, il gruppo ti mostra subito la lista dei calendari associati e le opzioni di gestione.
+
+<Frame>
+  <img
+    src="/images/dashboard/calendar/calendario-5.png"
+    alt="Impostazioni del gruppo con sezione Calendari"
+    noZoom
+    className="rounded-lg"
+  />
+</Frame>
+
+### Calendari
+
+All'interno di ogni gruppo puoi creare uno o più calendari. Pensa a un calendario come a una risorsa — una persona, una sala, un dispositivo — su cui vengono presi gli appuntamenti.
+
+- Calendario "Dott. Rossi"
+- Calendario "Sala Operatoria 1"
+- Calendario "Sede Caserta"
+
+<Frame>
+  <img
+    src="/images/dashboard/calendar/calendario-16.png"
+    alt="Impostazioni di un calendario: nome, gruppi, proprietario, colore"
+    noZoom
+    className="rounded-lg"
+  />
+</Frame>
+
+Ogni calendario ha:
+
+- I propri **tipi di appuntamento** (es. prima visita, controllo, consulenza)
+- Le proprie **disponibilità orarie**
+- Un **proprietario** (o più proprietari, se più persone devono gestirlo)
+
+<Frame>
+  <img
+    src="/images/dashboard/calendar/calendario-17.png"
+    alt="Sezione appuntamenti e disponibilità del calendario"
+    noZoom
+    className="rounded-lg"
+  />
+</Frame>
+
+### Tipi di appuntamento
+
+Per ogni calendario puoi definire diversi tipi di appuntamento, ciascuno con una configurazione tutta sua.
+
+| Parametro | Descrizione |
+|---|---|
+| **Durata** | Quanto dura l'appuntamento |
+| **Buffer prima** | Tempo libero prima dell'appuntamento (es. 30 min per spostamenti fisici) |
+| **Buffer dopo** | Tempo di debrief o preparazione dopo l'appuntamento |
+| **Preavviso minimo** | Quante ore/giorni prima deve essere prenotato (es. nessuna prenotazione nelle ultime 5 ore) |
+| **Reminder** | Promemoria automatico inviato al cliente per ricordargli l'appuntamento |
+| **Tracciamento conferma** | Rileva se il cliente conferma o meno la presenza |
+| **Follow-up** | Messaggio automatico post-appuntamento (es. richiesta di recensione) |
+| **Slot multipli** | Permette a più persone di prenotare lo stesso slot (es. corsi in palestra, tavoli al ristorante) |
+
+<Frame>
+  <img
+    src="/images/dashboard/calendar/calendario-18.png"
+    alt="Configurazione tipo di appuntamento: durata, buffer e preavviso"
+    noZoom
+    className="rounded-lg"
+  />
+</Frame>
+
+<Frame>
+  <img
+    src="/images/dashboard/calendar/calendario-19.png"
+    alt="Configurazione tipo di appuntamento: promemoria, conferma e follow-up"
+    noZoom
+    className="rounded-lg"
+  />
+</Frame>
+
+## Disponibilità
+
+Le disponibilità si impostano a livello di **calendario**, non di tipo di appuntamento. Hai due modalità a disposizione, e puoi anche combinarle tra loro.
+
+<Tabs>
+  <Tab title="Orari ricorrenti">
+    Definisci i giorni e gli orari in cui sei abitualmente disponibile (es. lunedì-venerdì, 9:00–18:00). Perfetto se lavori con una routine settimanale fissa.
+  </Tab>
+  <Tab title="Date specifiche">
+    Aggiungi disponibilità solo per certi giorni dell'anno. Utile se il tuo calendario non segue uno schema ricorrente.
+  </Tab>
+</Tabs>
+
+<Tip>
+**Caso d'uso reale:** un'azienda di installazione mobili che lavora solo in determinati giorni del mese — pianificati di mese in mese — usa esclusivamente date specifiche senza orari ricorrenti.
+</Tip>
+
+<Frame>
+  <img
+    src="/images/dashboard/calendar/calendario-9.png"
+    alt="Configurazione disponibilità settimanale e date specifiche"
+    noZoom
+    className="rounded-lg"
+  />
+</Frame>
+
+## Vista calendario e gestione appuntamenti
+
+Dalla vista principale puoi guardare il calendario in modalità **giorno**, **3 giorni**, **settimana** o **mese**, a seconda di come preferisci organizzare la giornata.
+
+<Frame>
+  <img
+    src="/images/dashboard/calendar/calendario-32.png"
+    alt="Vista principale del calendario in modalità settimana"
+    noZoom
+    className="rounded-lg"
+  />
+</Frame>
+
+<Frame>
+  <img
+    src="/images/dashboard/calendar/calendario-22.png"
+    alt="Opzioni di visualizzazione: giorno, 3 giorni, settimana, mese"
+    noZoom
+    className="rounded-lg"
+  />
+</Frame>
+
+Per ogni appuntamento puoi vedere:
+
+- Il nome del cliente e il suo numero di telefono
+- Lo **stato di conferma** (confermato / non confermato)
+- Le **note** lasciate durante la prenotazione (es. "vuole il colore rosso", "porta la documentazione")
+
+<Frame>
+  <img
+    src="/images/dashboard/calendar/calendario-24.png"
+    alt="Appuntamento visibile nel calendario"
+    noZoom
+    className="rounded-lg"
+  />
+</Frame>
+
+Basta cliccare su un appuntamento per accedere al dettaglio completo, modificare le note o aggiornarne lo stato.
+
+### Creare un appuntamento manualmente
+
+L'AI gestisce la maggior parte delle prenotazioni, ma se serve puoi sempre crearne una a mano dalla vista calendario: clicca su **Nuovo appuntamento**, scegli calendario, tipo di appuntamento, data e ora, e associa un contatto esistente (o creane uno nuovo al volo).
+
+<Frame>
+  <img
+    src="/images/dashboard/calendar/calendario-21.png"
+    alt="Dialog per la creazione manuale di un nuovo appuntamento"
+    noZoom
+    className="rounded-lg"
+  />
+</Frame>
+
+### Calendario multiproprietario
+
+- Il **proprietario dell'account** vede tutti i calendari.
+- I singoli utenti vedono solo i calendari di loro competenza.
+- Puoi aggiungere più proprietari a uno stesso calendario (es. due medici che lavorano a giorni alterni sulla stessa agenda).
+
+## L'AI gestisce tutto in automatico
+
+Una volta configurato il calendario, puoi lasciare che sia l'AI di Keplero a occuparsi delle prenotazioni, direttamente via **chat o voce**.
+
+<CardGroup cols={3}>
+  <Card title="Prendere un appuntamento" icon="calendar-plus" color="#7780D4">
+    L'AI trova la prima disponibilità adatta, crea la prenotazione e, se il cliente non è ancora in rubrica, crea automaticamente la scheda contatto.
+  </Card>
+  <Card title="Cancellare un appuntamento" icon="calendar-xmark" color="#7780D4">
+    Il cliente chiede di cancellare via chat o telefono. L'AI trova la prenotazione e la elimina in pochi secondi.
+  </Card>
+  <Card title="Modificare o spostare" icon="pen-to-square" color="#7780D4">
+    Il cliente chiede di spostare un appuntamento esistente e l'AI se ne occupa da sola, senza passaggi manuali.
+  </Card>
+</CardGroup>
+
+<Note>
+Prenotazione, cancellazione, modifica: con Google Calendar non erano possibili. Con il Calendario Keplero sono native.
+</Note>
+
+### Come l'AI identifica il cliente
+
+- Se il cliente contatta dallo **stesso numero** con cui ha prenotato, viene riconosciuto al volo.
+- Se chiama da un numero diverso, l'AI gli chiede semplicemente nome e cognome per rintracciare la prenotazione.
+
+### Note durante la prenotazione
+
+Tutto quello che il cliente dice durante la prenotazione finisce nelle note dell'appuntamento, senza limiti: preferenze, richieste particolari, qualsiasi informazione utile.
+
+## Reminder e conferma appuntamento
+
+Puoi configurare reminder automatici che vengono inviati al cliente prima dell'appuntamento (es. 3 giorni prima, 24 ore prima).
+
+<Frame>
+  <img
+    src="/images/dashboard/calendar/calendario-12.png"
+    alt="Configurazione promemoria e follow-up nel wizard"
+    noZoom
+    className="rounded-lg"
+  />
+</Frame>
+
+<Frame>
+  <img
+    src="/images/dashboard/calendar/calendario-13.png"
+    alt="Dialog per aggiungere un promemoria"
+    noZoom
+    className="rounded-lg"
+  />
+</Frame>
+
+Il cliente può **confermare** la presenza direttamente dalla chat: lo stato dell'appuntamento si aggiorna da solo e tu vedi subito chi ha confermato e chi no.
+
+<Info>
+**Lista d'attesa (in arrivo):** se un cliente non conferma entro un certo tempo, Keplero potrà contattare automaticamente le persone in lista d'attesa per riempire lo slot liberato. Una funzione preziosa per studi medici e professionisti, dove ogni appuntamento saltato ha un costo reale.
+</Info>
+
+## Sincronizzazione con Google Calendar
+
+Il Calendario Keplero si sincronizza con Google Calendar in **entrambe le direzioni**:
+
+- **Da Google verso Keplero** — gli appuntamenti già presenti su Google compaiono come blocchi sul tuo calendario Keplero (spazi grigi tratteggiati), così eviti sovrapposizioni.
+- **Da Keplero verso Google** — ogni appuntamento creato, modificato o cancellato tramite Keplero (dall'AI o a mano) si aggiorna automaticamente anche sul tuo Google Calendar.
+
+<Tip>
+Stai migrando da Google Calendar? Puoi **convertire** i suoi eventi in appuntamenti Keplero direttamente dalla vista calendario.
+</Tip>
+
+<Frame>
+  <img
+    src="/images/dashboard/calendar/calendario-8.png"
+    alt="Passaggio di sincronizzazione con Google Calendar nel wizard"
+    noZoom
+    className="rounded-lg"
+  />
+</Frame>
+
+## Casi d'uso pratici
+
+<AccordionGroup>
+  <Accordion title="Studio medico">
+    Un medico configura il calendario con tre tipi di appuntamento: *Prima visita* (60 min), *Visita di controllo* (30 min), *Urgenza* (20 min). Il reminder parte 2 giorni prima e chi non conferma viene scalzato dalla lista d'attesa. Tutto senza che la segreteria debba muovere un dito.
+  </Accordion>
+  <Accordion title="Commerciali con spostamenti fisici">
+    Un team di commerciali che si muove fisicamente tra un cliente e l'altro usa il buffer prima e dopo ogni appuntamento (30 minuti) per coprire il tempo di viaggio. Le prenotazioni le gestisce l'AI, via voce.
+  </Accordion>
+  <Accordion title="Azienda con consegne programmate">
+    Un'azienda di installazione cucine pianifica i montaggi mese per mese e usa solo date specifiche, senza orari fissi: ogni mese aggiungono a mano le giornate disponibili. Il cliente prenota via chat e l'AI assegna lo slot in automatico.
+  </Accordion>
+  <Accordion title="Palestra o studio fitness">
+    Un corso di yoga che accoglie al massimo 8 persone sfrutta gli slot multipli: ogni cliente si prenota singolarmente finché i posti non finiscono. L'AI tiene liste e disponibilità aggiornate in tempo reale.
+  </Accordion>
+  <Accordion title="Parrucchiere o estetista">
+    Il cliente prenota via chat e specifica il trattamento che vuole (es. "colore con riflessini"): il messaggio finisce dritto nelle note dell'appuntamento. Dopo la visita, un follow-up automatico chiede la recensione.
+  </Accordion>
+</AccordionGroup>
+
+## Prossimi sviluppi
+
+- **Round Robin** — le prenotazioni vengono distribuite automaticamente tra i membri di un gruppo (es. tra più commerciali)
+- **Pagina di prenotazione pubblica** — un link condivisibile stile Calendly per permettere ai clienti di prenotare da soli
+- **Sincronizzazione con Outlook** — per chi usa la suite Microsoft
+
+## Attivazione
+
+Il Calendario Keplero si attiva dalla sezione **Integrazioni** del tuo account, dove trovi anche Google Calendar come integrazione separata. Contatta il tuo referente Keplero per abilitarlo.
+
+Al primo accesso al calendario parte in automatico una configurazione guidata in quattro passi.
+
+<Frame>
+  <img
+    src="/images/dashboard/calendar/calendario-6.png"
+    alt="Wizard di configurazione: panoramica dei passi"
+    noZoom
+    className="rounded-lg"
+  />
+</Frame>
+
+<Steps>
+  <Step title="Impostazioni del calendario">
+    Definisci nome, gruppo di appartenenza, proprietario e colore del calendario.
+
+    <Frame>
+      <img
+        src="/images/dashboard/calendar/calendario-7.png"
+        alt="Step 1: impostazioni di base del calendario"
+        noZoom
+        className="rounded-lg"
+      />
+    </Frame>
+  </Step>
+
+  <Step title="Sincronizzazione Google Calendar">
+    Collega opzionalmente il calendario al tuo account Google. Puoi consultare i dettagli nella sezione [Sincronizzazione con Google Calendar](#sincronizzazione-con-google-calendar).
+  </Step>
+
+  <Step title="Disponibilità">
+    Imposta orari settimanali ricorrenti, date specifiche, o entrambi. Vedi la sezione [Disponibilità](#disponibilità) per i dettagli.
+  </Step>
+
+  <Step title="Tipo di appuntamento">
+    Configura il primo tipo di appuntamento prenotabile dai clienti: nome, durata, buffer e preavviso minimo.
+
+    <Frame>
+      <img
+        src="/images/dashboard/calendar/calendario-10.png"
+        alt="Step 4: configurazione del primo tipo di appuntamento"
+        noZoom
+        className="rounded-lg"
+      />
+    </Frame>
+
+    <Check>
+    Nessun vincolo: puoi modificare, aggiungere o rimuovere i tipi di appuntamento in qualsiasi momento, anche dopo la configurazione guidata.
+    </Check>
+  </Step>
+</Steps>
+
+Finito il wizard, il calendario è già attivo e pronto all'uso.
+
+<Frame>
+  <img
+    src="/images/dashboard/calendar/calendario-14.png"
+    alt="Schermata di configurazione completata"
+    noZoom
+    className="rounded-lg"
+  />
+</Frame>
