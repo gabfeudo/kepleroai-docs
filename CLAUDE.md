@@ -556,7 +556,8 @@ kepleroai-docs/
 ├── tecnica/                                      # Documentazione tecnica trasversale
 │   ├── eventi-widget.mdx — Eventi del Widget: dettagli tecnici degli eventi JavaScript del widget
 │   ├── installazione-telefono.mdx — Installazione Telefono: setup canale telefono
-│   ├── differenze-voice-pro-e-voice-lite.mdx — Differenze Voice Pro vs Voice Lite: confronto modelli agente vocale (latenza, naturalezza, clonazione)
+│   ├── regole-instradamento-telefono.mdx — Regole di instradamento per giorno e orario: disattivare Keplero Voice in fasce orarie/giorni specifici senza centralino, inoltrando a un numero di supporto
+│   ├── differenze-voice-ultra-pro-e-lite.mdx — Differenze Voice Ultra, Pro e Lite: confronto modelli agente vocale (latenza, naturalezza, clonazione)
 │   └── clona-voce.mdx — Clona Voce: feature di voice cloning (solo Voice Lite)
 │
 ├── faq/
